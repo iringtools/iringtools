@@ -1,0 +1,69 @@
+<Project DefaultTargets="All" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+
+  <PropertyGroup>
+    <SolutionFile>ebDataLayer.sln</SolutionFile>
+    <TestDir>$(MSBuildProjectDirectory)\ebDataLayer.Tests</TestDir>
+    <DocsDir>$(MSBuildProjectDirectory)\docs</DocsDir>
+    <ScriptsDir>$(MSBuildProjectDirectory)\install</ScriptsDir>
+    <DistDir>$(MSBuildProjectDirectory)\dist</DistDir>
+    <NUnitPath>$(MSBuildProjectDirectory)\lib\Nunit</NUnitPath>
+    <ZipCmd>$(MSBuildProjectDirectory)\lib\7-Zip\7z.exe</ZipCmd>
+    <PackageDir>$(DistDir)\ebDataLayer</PackageDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <BinFiles    Include="ebDataLayer\bin\debug\ebDataLayer.dll" />
+    <ConfigFiles Include="conf\*.*" />
+    <DocFiles    Include="$(DocsDir)\*" />
+    <ScriptFiles Include="$(ScriptsDir)\*" />
+    <TestResults Include="$(TestDir)\TestResult.*" />
+    
+    <DeploymentPackage Include="*.*" Exclude="*.zip">
+      <Options>a -tzip -y -r</Options>
+      <FileSet>$(PackageDir)\*</FileSet>
+      <ZipFile>$(DistDir)\ebDataLayer.zip</ZipFile>
+    </DeploymentPackage>
+  </ItemGroup>
+
+  <Target Name="CleanBuild">
+    <Message Text="Performing clean-up ..." />
+    <MSBuild Projects="$(SolutionFile)" Targets="Clean"/>
+  </Target>
+   
+  <Target Name="CoreBuild">
+    <Message Text="Performing build ..." />
+    <MSBuild Projects="$(SolutionFile)" Targets="Build"/>
+  </Target>
+
+  <Target Name="Test">
+    <Message Text="Performing test ..." />
+    <NUnit ToolPath="$(NUnitPath)" DisableShadowCopy="true" Assemblies="ebDataLayer.Tests\bin\Debug\ebDataLayer.Tests.dll" OutputXmlFile="TestResult.xml" />
+	</Target>
+
+  <Target Name="CreatePackages">
+    <Message Text="Removing old deployment..." />
+    <Exec Command="RmDir /S /Q $(DistDir)" />
+    
+    <Message Text="Creating deployment ..." />
+    
+    <Copy SourceFiles="@(BinFiles)"
+          DestinationFiles="@(BinFiles->'$(PackageDir)\bin\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(ConfigFiles)"
+          DestinationFiles="@(ConfigFiles->'$(PackageDir)\conf\%(RecursiveDir)%(Filename)%(Extension)')" />
+          
+    <Exec Command="$(zipCmd) %(DeploymentPackage.Options) %(DeploymentPackage.ZipFile) %(DeploymentPackage.FileSet)" />
+    <Exec Command="RmDir /S /Q $(PackageDir)" />
+    
+    <Copy SourceFiles="@(DocFiles)"
+	      DestinationFiles="@(DocFiles ->'$(DistDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(ScriptFiles)"
+	      DestinationFiles="@(ScriptFiles ->'$(DistDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(TestResults)"
+	      DestinationFiles="@(TestResults ->'$(DistDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="CoreBuild"/>
+  <Target Name="Rebuild" DependsOnTargets="CleanBuild; CoreBuild"/>  
+  <Target Name="All" DependsOnTargets="Rebuild; Test; CreatePackages"/>
+</Project>

@@ -1,0 +1,145 @@
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(MSBuildExtensionsPath32)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+
+  <PropertyGroup>
+    <AssemblyInfoFile>$(MSBuildProjectDirectory)\AssemblyInfo.cs;</AssemblyInfoFile>
+    <Major>2</Major>
+    <Minor>1</Minor>
+    <Build>1</Build>
+    <Revision>0</Revision>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ZipCmd>"$(MSBuildProjectDirectory)\lib\7-Zip\7z.exe"</ZipCmd>
+    <NUnit-ToolPath>C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0</NUnit-ToolPath>
+    <ObjectDataLayerDir>$(MSBuildProjectDirectory)\ObjectDataLayer\ObjectDataLayer</ObjectDataLayerDir>
+	<SQLDataLayerDir>$(MSBuildProjectDirectory)\SQLDataLayer\SQLDataLayer</SQLDataLayerDir>
+	<SamplesDir>$(MSBuildProjectDirectory)</SamplesDir>
+    <DeploymentDir>$(MSBuildProjectDirectory)\deployment</DeploymentDir>
+    <DistDir>C:\iring-tools-web\sdk.iringsandbox.org\Services\bin</DistDir>
+    <SolutionFile>ObjectDataLayer\ObjectDataLayer.sln; SQLDataLayer\SQLDataLayer.sln</SolutionFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <DeploymentPackage Include="*.*">
+      <Options>a -tzip -y -r</Options>
+      <OutputDir></OutputDir>
+      <ZipFile>$(DeploymentDir)\ObjectDataLayer-$(Major).$(Minor).$(Build).zip</ZipFile>
+      <FileSet>$(DeploymentDir)\ObjectDataLayer\*</FileSet>
+    </DeploymentPackage>
+	<DeploymentPackage Include="*.*">
+      <Options>a -tzip -y -r</Options>
+      <OutputDir></OutputDir>
+      <ZipFile>$(DeploymentDir)\SQLDataLayer-$(Major).$(Minor).$(Build).zip</ZipFile>
+      <FileSet>$(DeploymentDir)\SQLDataLayer\*</FileSet>
+    </DeploymentPackage>
+	<DeploymentPackage Include="*.*">
+      <Options>a -tzip -y -r</Options>
+      <OutputDir></OutputDir>
+      <ZipFile>$(DeploymentDir)\iRINGTools-SDK-$(Major).$(Minor).$(Build).zip</ZipFile>
+      <FileSet>$(DeploymentDir)\Source\*</FileSet>
+    </DeploymentPackage>
+    <DeploymentPackage Include="*.*">
+      <Options>x -tzip -y -o</Options>
+      <OutputDir>$(DistDir)</OutputDir>
+      <ZipFile>$(DeploymentDir)\ObjectDataLayer-$(Major).$(Minor).$(Build).zip</ZipFile>
+      <FileSet>ObjectDataLayer.dll; WidgetLibrary.dll</FileSet>
+    </DeploymentPackage>
+	<!--<DeploymentPackage Include="*.*">
+      <Options>x -tzip -y -o</Options>
+      <OutputDir>$(DistDir)</OutputDir>
+      <ZipFile>$(DeploymentDir)\SQLDataLayer-$(Major).$(Minor).$(Build).zip</ZipFile>
+      <FileSet>SQLDataLayer.dll</FileSet>
+    </DeploymentPackage>-->
+    <ObjectExecutableDeployment
+      Include="$(ObjectDataLayerDir)\bin\Debug\**"
+        Exclude="$(ObjectDataLayerDir)\bin\*.pdb;
+                  $(ObjectDataLayerDir)\.svn\**;">
+		<!--some XML files may be included later - none for now -->
+    </ObjectExecutableDeployment>
+	<SQLExecutableDeployment
+      Include="$(SQLDataLayerDir)\bin\Debug\**"
+        Exclude="$(SQLDataLayerDir)\bin\*.pdb;
+                  $(SQLDataLayerDir)\.svn\**;">
+		<!--some XML files may be included later - none for now -->
+    </SQLExecutableDeployment>
+	<SourceDeployment Include="$(SamplesDir)\**"
+		Exclude="$(SamplesDir)\*.*;
+				$(SamplesDir)\lib\**;
+				$(SamplesDir)\deployment\**;
+				$(SamplesDir)\dist\**;
+				$(SamplesDir)\.svn\**;
+				$(SamplesDir)\*\.svn\**;
+				$(SamplesDir)\*\*\.svn\**;
+				$(SamplesDir)\*\*\*\.svn\**;">
+	</SourceDeployment>
+
+  </ItemGroup>
+
+  <Target Name="Version">
+    <Message Text="Updating assembly info ..." />
+
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+
+    <FileUpdate
+      Files="$(AssemblyInfoFile)"
+      Regex="(\d+)\.(\d+)\.(\d+)(\.(\d+))*"
+      ReplacementText="$(Major).$(Minor).$(Build).$(Revision)"/>
+  </Target>
+
+  <Target Name="SvnCleanUp">
+    <Message Text="Performing SVN clean-up ..." />
+    <Exec Command="svn cleanup"/>
+  </Target>
+
+  <Target Name="SvnUpdate">
+    <Message Text="Performing SVN update ..." />
+    <Exec Command="svn update"/>
+  </Target>
+  
+  <Target Name="IISReset">
+	<Message Text="Restarting IIS ..." />
+	<Exec Command="iisreset"/>
+  </Target>
+
+  <Target Name="CleanBuild">
+    <Message Text="Performing MSBuild clean-up ..." />
+    <MSBuild Projects="$(SolutionFile)" Targets="Clean"/>
+  </Target>
+
+  <Target Name="CreateDeployment">
+    <Message Text="Cleaning up old deployment folders..." />
+    <Exec Command="RmDir /S /Q $(DeploymentDir)" />
+    <MakeDir Directories="$(DeploymentDir);"/>
+    <Message Text="Creating DataLayers deployment ..." />
+    <Copy SourceFiles="@(ObjectExecutableDeployment)"
+          DestinationFiles="@(ObjectExecutableDeployment->'$(DeploymentDir)\ObjectDataLayer\%(RecursiveDir)%(Filename)%(Extension)')" />
+	<Copy SourceFiles="@(SQLExecutableDeployment)"
+          DestinationFiles="@(SQLExecutableDeployment->'$(DeploymentDir)\SQLDataLayer\%(RecursiveDir)%(Filename)%(Extension)')" />
+	<Copy SourceFiles="@(SourceDeployment)"
+          DestinationFiles="@(SourceDeployment->'$(DeploymentDir)\Source\%(RecursiveDir)%(Filename)%(Extension)')" />
+		  
+  </Target>
+
+  <Target Name="CreatePackages" DependsOnTargets="IISReset; CreateDeployment">
+    <Exec Command="$(zipCmd) %(DeploymentPackage.Options)%(OutputDir) %(DeploymentPackage.ZipFile) %(DeploymentPackage.FileSet)" />
+  </Target>
+
+  <Target Name="Build">
+    <!--DependsOnTargets="Version"-->
+    <Message Text="Performing MSBuild ..." />
+    <MSBuild Projects="$(SolutionFile)" Targets="Build"/>
+  </Target>
+
+  <Target Name="Test">
+    <NUnit ToolPath="$(NUnit-ToolPath)" DisableShadowCopy="true" Assemblies="ObjectDataLayer\ObjectDataLayer.NUnit\bin\Debug\ObjectDataLayer.NUnit.dll" OutputXmlFile="object-test-results.xml" />  
+	<!--<NUnit ToolPath="$(NUnit-ToolPath)" DisableShadowCopy="true" Assemblies="SQLDataLayer\SQLDataLayer.NUnit\bin\Debug\SQLDataLayer.NUnit.dll" OutputXmlFile="sql-test-results.xml" />-->
+  </Target>
+
+  <Target Name="Rebuild" DependsOnTargets="CleanBuild; Build"/>
+  <Target Name="All" DependsOnTargets="Rebuild; Test; CreatePackages;"/>
+</Project>

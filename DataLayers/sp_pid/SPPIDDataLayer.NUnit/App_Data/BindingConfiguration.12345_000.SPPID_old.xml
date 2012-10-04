@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="12345_000.SPPID">
+   <bind name="DataLayer" 
+        service="org.iringtools.library.IDataLayer2, iRINGLibrary" 
+        to="org.iringtools.datalayers.IIP.SPPID.SPPIDDataLayer, SPPIDDataLayer" />
+<!--
+  <bind name="LMADataSource"
+        service="org.iringtools.datalayers.IIP.SPPID.ILMADataSource, SPPIDDataLayer"
+        to="org.iringtools.datalayers.IIP.SPPID.MockLMADataSource, SPPIDDataLayer" />
+-->
+</module>

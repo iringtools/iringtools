@@ -1,0 +1,82 @@
+<dataDictionary xmlns="http://www.iringtools.org/library" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <dataObjects>
+    <dataObject>
+      <tableName i:nil="true"/>
+      <objectName>Equipment</objectName>
+      <keyDelimeter>_</keyDelimeter>
+      <keyProperties>
+        <keyProperty>
+          <keyPropertyName>Tag</keyPropertyName>
+        </keyProperty>
+      </keyProperties>
+      <dataProperties>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>Tag</propertyName>
+          <dataType>String</dataType>
+          <dataLength>255</dataLength>
+          <isNullable>false</isNullable>
+          <keyType>unassigned</keyType>
+          <showOnIndex>true</showOnIndex>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>PumpType</propertyName>
+          <dataType>String</dataType>
+          <dataLength>255</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>PumpDriverType</propertyName>
+          <dataType>String</dataType>
+          <dataLength>255</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>DesignTemp</propertyName>
+          <dataType>Double</dataType>
+          <dataLength>16</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>DesignPressure</propertyName>
+          <dataType>Double</dataType>
+          <dataLength>16</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>Capacity</propertyName>
+          <dataType>Double</dataType>
+          <dataLength>16</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>SpecificGravity</propertyName>
+          <dataType>Double</dataType>
+          <dataLength>16</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+        <dataProperty>
+          <columnName i:nil="true"/>
+          <propertyName>DifferentialPressure</propertyName>
+          <dataType>Double</dataType>
+          <dataLength>16</dataLength>
+          <isNullable>true</isNullable>
+          <keyType>unassigned</keyType>
+        </dataProperty>
+      </dataProperties>
+      <dataRelationships/>
+    </dataObject>
+  </dataObjects>
+</dataDictionary>

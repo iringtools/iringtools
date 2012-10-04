@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SQLSchemaDS" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PW_IRing_StagingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PW_IRing_StagingConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.org.iringtools.datalayers.IIP.SPPID.My.MySettings.GlobalReference.Default.PW_IRing_StagingConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SPPID_SITEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SPPID_SITEConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.org.iringtools.datalayers.IIP.SPPID.My.MySettings.GlobalReference.Default.SPPID_SITEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SchemaTablesTableAdapter" GeneratorDataComponentClassName="SchemaTablesTableAdapter" Name="SchemaTables" UserDataComponentName="SchemaTablesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PW_IRing_StagingConnectionString (MySettings)" DbObjectName="PW_IRing_Staging.INFORMATION_SCHEMA.TABLES" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TABLE_NAME AS Name, TABLE_SCHEMA AS [Schema], '' AS SchemaType, '' AS QueryAlias
+FROM            INFORMATION_SCHEMA.TABLES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Schema" DataSetColumn="Schema" />
+              <Mapping SourceColumn="SchemaType" DataSetColumn="SchemaType" />
+              <Mapping SourceColumn="QueryAlias" DataSetColumn="QueryAlias" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SchemaColumnsTableAdapter" GeneratorDataComponentClassName="SchemaColumnsTableAdapter" Name="SchemaColumns" UserDataComponentName="SchemaColumnsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PW_IRing_StagingConnectionString (MySettings)" DbObjectName="PW_IRing_Staging.INFORMATION_SCHEMA.COLUMNS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Table_Schema as TableSchema, TABLE_NAME AS TableName, COLUMN_NAME AS ColumnName, '' as StagingFieldName, IS_NULLABLE AS IsNullable, DATA_TYPE AS DataType, ISNULL(CHARACTER_MAXIMUM_LENGTH, - 1) 
+                         AS CharMaxLength, ISNULL(NUMERIC_PRECISION, 0) AS NumericPrecision, ISNULL(NUMERIC_PRECISION_RADIX, - 1) AS NumericPrecisionRadix, 
+                         ISNULL(NUMERIC_SCALE, - 1) AS NumericScale, ISNULL(DATETIME_PRECISION, - 1) AS DateTimePrecision, ISNULL(CHARACTER_SET_NAME, '') 
+                         AS CharacterSetName, ISNULL(COLLATION_NAME, '') AS CollationName
+FROM            INFORMATION_SCHEMA.COLUMNS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TableName" DataSetColumn="TableName" />
+              <Mapping SourceColumn="IsNullable" DataSetColumn="IsNullable" />
+              <Mapping SourceColumn="DataType" DataSetColumn="DataType" />
+              <Mapping SourceColumn="CharMaxLength" DataSetColumn="CharMaxLength" />
+              <Mapping SourceColumn="NumericPrecision" DataSetColumn="NumericPrecision" />
+              <Mapping SourceColumn="NumericPrecisionRadix" DataSetColumn="NumericPrecisionRadix" />
+              <Mapping SourceColumn="NumericScale" DataSetColumn="NumericScale" />
+              <Mapping SourceColumn="DateTimePrecision" DataSetColumn="DateTimePrecision" />
+              <Mapping SourceColumn="CharacterSetName" DataSetColumn="CharacterSetName" />
+              <Mapping SourceColumn="CollationName" DataSetColumn="CollationName" />
+              <Mapping SourceColumn="TableSchema" DataSetColumn="TableSchema" />
+              <Mapping SourceColumn="ColumnName" DataSetColumn="ColumnName" />
+              <Mapping SourceColumn="StagingFieldName" DataSetColumn="StagingFieldName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SiteDataTableAdapter" GeneratorDataComponentClassName="SiteDataTableAdapter" Name="SiteData" UserDataComponentName="SiteDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPPID_SITEConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT 
+                         'DB.Data_base' AS Data_base, 'DB.DBServer' AS DBServer, 'RI.Path' AS Path, 'DB.SP_Schema_Type' AS SP_Schema_Type, 'DB.Username' AS UserName, 
+                         'RI.Description' AS Description, 'RI.PlantGroupTypeName' AS PlantGroupTypeName, '9/9/2099' AS DateCreated, '076BE1D3C0534A7AB03B3BEC2422499F' AS SP_ID,
+                          '4F55BA19B9B84420B769ECE710F0AA90' AS SP_RootItemID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Data_base" DataSetColumn="Data_base" />
+              <Mapping SourceColumn="DBServer" DataSetColumn="DBServer" />
+              <Mapping SourceColumn="Path" DataSetColumn="Path" />
+              <Mapping SourceColumn="SP_Schema_Type" DataSetColumn="SP_Schema_Type" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="PlantGroupTypeName" DataSetColumn="PlantGroupTypeName" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="SP_ID" DataSetColumn="SP_ID" />
+              <Mapping SourceColumn="SP_RootItemID" DataSetColumn="SP_RootItemID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SQLSchemaDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SQLSchemaDS" msprop:Generator_UserDSName="SQLSchemaDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SchemaTables" msprop:Generator_TableClassName="SchemaTablesDataTable" msprop:Generator_TableVarName="tableSchemaTables" msprop:Generator_TablePropName="SchemaTables" msprop:Generator_RowDeletingName="SchemaTablesRowDeleting" msprop:Generator_UserTableName="SchemaTables" msprop:Generator_RowChangingName="SchemaTablesRowChanging" msprop:Generator_RowEvHandlerName="SchemaTablesRowChangeEventHandler" msprop:Generator_RowDeletedName="SchemaTablesRowDeleted" msprop:Generator_RowEvArgName="SchemaTablesRowChangeEvent" msprop:Generator_RowChangedName="SchemaTablesRowChanged" msprop:Generator_RowClassName="SchemaTablesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Schema" msprop:Generator_ColumnVarNameInTable="columnSchema" msprop:Generator_ColumnPropNameInRow="Schema" msprop:Generator_ColumnPropNameInTable="SchemaColumn" msprop:Generator_UserColumnName="Schema" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SchemaType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSchemaType" msprop:Generator_ColumnPropNameInRow="SchemaType" msprop:Generator_ColumnPropNameInTable="SchemaTypeColumn" msprop:Generator_UserColumnName="SchemaType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QueryAlias" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQueryAlias" msprop:Generator_ColumnPropNameInRow="QueryAlias" msprop:Generator_ColumnPropNameInTable="QueryAliasColumn" msprop:Generator_UserColumnName="QueryAlias" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SchemaColumns" msprop:Generator_TableClassName="SchemaColumnsDataTable" msprop:Generator_TableVarName="tableSchemaColumns" msprop:Generator_TablePropName="SchemaColumns" msprop:Generator_RowDeletingName="SchemaColumnsRowDeleting" msprop:Generator_UserTableName="SchemaColumns" msprop:Generator_RowChangingName="SchemaColumnsRowChanging" msprop:Generator_RowEvHandlerName="SchemaColumnsRowChangeEventHandler" msprop:Generator_RowDeletedName="SchemaColumnsRowDeleted" msprop:Generator_RowEvArgName="SchemaColumnsRowChangeEvent" msprop:Generator_RowChangedName="SchemaColumnsRowChanged" msprop:Generator_RowClassName="SchemaColumnsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TableName" msprop:Generator_ColumnVarNameInTable="columnTableName" msprop:Generator_ColumnPropNameInRow="TableName" msprop:Generator_ColumnPropNameInTable="TableNameColumn" msprop:Generator_UserColumnName="TableName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsNullable" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIsNullable" msprop:Generator_ColumnPropNameInRow="IsNullable" msprop:Generator_ColumnPropNameInTable="IsNullableColumn" msprop:Generator_UserColumnName="IsNullable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDataType" msprop:Generator_ColumnPropNameInRow="DataType" msprop:Generator_ColumnPropNameInTable="DataTypeColumn" msprop:Generator_UserColumnName="DataType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CharMaxLength" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCharMaxLength" msprop:Generator_ColumnPropNameInRow="CharMaxLength" msprop:Generator_ColumnPropNameInTable="CharMaxLengthColumn" msprop:Generator_UserColumnName="CharMaxLength" type="xs:int" minOccurs="0" />
+              <xs:element name="NumericPrecision" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNumericPrecision" msprop:Generator_ColumnPropNameInRow="NumericPrecision" msprop:Generator_ColumnPropNameInTable="NumericPrecisionColumn" msprop:Generator_UserColumnName="NumericPrecision" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="NumericPrecisionRadix" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNumericPrecisionRadix" msprop:Generator_ColumnPropNameInRow="NumericPrecisionRadix" msprop:Generator_ColumnPropNameInTable="NumericPrecisionRadixColumn" msprop:Generator_UserColumnName="NumericPrecisionRadix" type="xs:short" minOccurs="0" />
+              <xs:element name="NumericScale" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNumericScale" msprop:Generator_ColumnPropNameInRow="NumericScale" msprop:Generator_ColumnPropNameInTable="NumericScaleColumn" msprop:Generator_UserColumnName="NumericScale" type="xs:int" minOccurs="0" />
+              <xs:element name="DateTimePrecision" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDateTimePrecision" msprop:Generator_ColumnPropNameInRow="DateTimePrecision" msprop:Generator_ColumnPropNameInTable="DateTimePrecisionColumn" msprop:Generator_UserColumnName="DateTimePrecision" type="xs:short" minOccurs="0" />
+              <xs:element name="CharacterSetName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCharacterSetName" msprop:Generator_ColumnPropNameInRow="CharacterSetName" msprop:Generator_ColumnPropNameInTable="CharacterSetNameColumn" msprop:Generator_UserColumnName="CharacterSetName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CollationName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCollationName" msprop:Generator_ColumnPropNameInRow="CollationName" msprop:Generator_ColumnPropNameInTable="CollationNameColumn" msprop:Generator_UserColumnName="CollationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TableSchema" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTableSchema" msprop:Generator_ColumnPropNameInRow="TableSchema" msprop:Generator_ColumnPropNameInTable="TableSchemaColumn" msprop:Generator_UserColumnName="TableSchema" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ColumnName" msprop:Generator_ColumnVarNameInTable="columnColumnName" msprop:Generator_ColumnPropNameInRow="ColumnName" msprop:Generator_ColumnPropNameInTable="ColumnNameColumn" msprop:Generator_UserColumnName="ColumnName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StagingFieldName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStagingFieldName" msprop:Generator_ColumnPropNameInRow="StagingFieldName" msprop:Generator_ColumnPropNameInTable="StagingFieldNameColumn" msprop:Generator_UserColumnName="StagingFieldName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SiteData" msprop:Generator_TableClassName="SiteDataDataTable" msprop:Generator_TableVarName="tableSiteData" msprop:Generator_TablePropName="SiteData" msprop:Generator_RowDeletingName="SiteDataRowDeleting" msprop:Generator_UserTableName="SiteData" msprop:Generator_RowChangingName="SiteDataRowChanging" msprop:Generator_RowEvHandlerName="SiteDataRowChangeEventHandler" msprop:Generator_RowDeletedName="SiteDataRowDeleted" msprop:Generator_RowEvArgName="SiteDataRowChangeEvent" msprop:Generator_RowChangedName="SiteDataRowChanged" msprop:Generator_RowClassName="SiteDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Data_base" msprop:Generator_ColumnVarNameInTable="columnData_base" msprop:Generator_ColumnPropNameInRow="Data_base" msprop:Generator_ColumnPropNameInTable="Data_baseColumn" msprop:Generator_UserColumnName="Data_base" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DBServer" msprop:Generator_ColumnVarNameInTable="columnDBServer" msprop:Generator_ColumnPropNameInRow="DBServer" msprop:Generator_ColumnPropNameInTable="DBServerColumn" msprop:Generator_UserColumnName="DBServer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Path" msprop:Generator_ColumnVarNameInTable="columnPath" msprop:Generator_ColumnPropNameInRow="Path" msprop:Generator_ColumnPropNameInTable="PathColumn" msprop:Generator_UserColumnName="Path" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SP_Schema_Type" msprop:Generator_ColumnVarNameInTable="columnSP_Schema_Type" msprop:Generator_ColumnPropNameInRow="SP_Schema_Type" msprop:Generator_ColumnPropNameInTable="SP_Schema_TypeColumn" msprop:Generator_UserColumnName="SP_Schema_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PlantGroupTypeName" msprop:Generator_ColumnVarNameInTable="columnPlantGroupTypeName" msprop:Generator_ColumnPropNameInRow="PlantGroupTypeName" msprop:Generator_ColumnPropNameInTable="PlantGroupTypeNameColumn" msprop:Generator_UserColumnName="PlantGroupTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateCreated" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" msprop:Generator_UserColumnName="DateCreated" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SP_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSP_ID" msprop:Generator_ColumnPropNameInRow="SP_ID" msprop:Generator_ColumnPropNameInTable="SP_IDColumn" msprop:Generator_UserColumnName="SP_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SP_RootItemID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSP_RootItemID" msprop:Generator_ColumnPropNameInRow="SP_RootItemID" msprop:Generator_ColumnPropNameInTable="SP_RootItemIDColumn" msprop:Generator_UserColumnName="SP_RootItemID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

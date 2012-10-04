@@ -1,0 +1,29 @@
+﻿<senarios xmlns="http://www.iringtools.org/test" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <scenario>
+    <name>Mechanical Tag Test</name>
+    <objectType>Mechanical(Tag)</objectType>
+    <identifierPadding>_</identifierPadding>
+    <properties>
+      <property>
+        <name>Unit</name>
+        <value>01</value>
+      </property>
+      <property>
+        <name>CommGrpCode</name>
+        <value>ME</value>
+      </property>
+      <property>
+        <name>PID</name>
+        <value>11111-001-M6-TRB-10004</value>
+      </property>
+    </properties>
+    <dataFilter>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;dataFilter xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iringtools.org/data/filter"&gt;&lt;expressions&gt;&lt;expression&gt;&lt;propertyName&gt;CommGrpCode&lt;/propertyName&gt;&lt;relationalOperator&gt;EqualTo&lt;/relationalOperator&gt;&lt;values&gt;&lt;value&gt;MT&lt;/value&gt;&lt;/values&gt;&lt;/expression&gt;&lt;expression&gt;&lt;propertyName&gt;Code&lt;/propertyName&gt;&lt;relationalOperator&gt;Contains&lt;/relationalOperator&gt;&lt;values&gt;&lt;value&gt;CCW&lt;/value&gt;&lt;/values&gt;&lt;logicalOperator&gt;And&lt;/logicalOperator&gt;&lt;/expression&gt;&lt;/expressions&gt;&lt;orderExpressions /&gt;&lt;/dataFilter&gt;</dataFilter>
+  </scenario>
+  <scenario>
+    <name>Document Test</name>
+    <objectType>Drawing(Document)</objectType>
+    <identifierPadding>_</identifierPadding>
+    <properties/>
+    <dataFilter xmlns="http://www.iringtools.org/data/filter"/>  
+  </scenario>
+</senarios>

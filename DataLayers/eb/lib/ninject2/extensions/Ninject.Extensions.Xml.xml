@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ninject.Extensions.Xml</name>
+    </assembly>
+    <members>
+        <member name="T:Ninject.Extensions.Xml.Extensions.ExtensionsForXElement">
+            <summary>
+            Extension methods for XElement
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Extensions.ExtensionsForXElement.RequiredAttribute(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            Gets a required attribute from an XElement.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="name">The name of the attribute.</param>
+            <returns>The attribute</returns>
+        </member>
+        <member name="T:Ninject.Extensions.Xml.Handlers.BindElementHandler">
+            <summary>
+            HAndler for the "Bind" Element
+            </summary>
+        </member>
+        <member name="T:Ninject.Extensions.Xml.Handlers.IXmlElementHandler">
+            <summary>
+            Handler for XElements
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.IXmlElementHandler.Handle(Ninject.Extensions.Xml.XmlModule,System.Xml.Linq.XElement)">
+            <summary>
+            Handles the XElement.
+            </summary>
+            <param name="module">The module.</param>
+            <param name="element">The element.</param>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.Handlers.IXmlElementHandler.ElementName">
+            <summary>
+            Gets the name of the element that is handled by this handler.
+            </summary>
+            <value>The name of the element that is handled by this handler.</value>
+        </member>
+        <member name="F:Ninject.Extensions.Xml.Handlers.BindElementHandler.kernel">
+            <summary>
+            The ninject kernel.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.#ctor(Ninject.IKernel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Extensions.Xml.Handlers.BindElementHandler"/> class.
+            </summary>
+            <param name="kernel">The ninject kernel.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.Handle(Ninject.Extensions.Xml.XmlModule,System.Xml.Linq.XElement)">
+            <summary>
+            Handles the XElement.
+            </summary>
+            <param name="module">The module.</param>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.ReadName(System.Xml.Linq.XElement,Ninject.Planning.Bindings.BindingBuilder{System.Object})">
+            <summary>
+            Reads the name attribute.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.ReadMetadata(System.Xml.Linq.XElement,Ninject.Planning.Bindings.BindingBuilder{System.Object})">
+            <summary>
+            Reads the metadata.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.ReadScope(System.Xml.Linq.XElement,Ninject.Planning.Bindings.BindingBuilder{System.Object})">
+            <summary>
+            Reads the scope.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="builder">The builder.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.HandleTarget(System.Xml.Linq.XElement,Ninject.Planning.Bindings.BindingBuilder{System.Object})">
+            <summary>
+            Handles the target attribute.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="builder">The builder.</param>
+            <returns>True if To or ToProvider was found.</returns>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.TryHandleToAttribute(System.Xml.Linq.XElement,Ninject.Planning.Bindings.BindingBuilder{System.Object})">
+            <summary>
+            Tries to handle the to attribute.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="builder">The builder.</param>
+            <returns>True if the To Attribute was found</returns>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.TryHandleToProviderAttribute(System.Xml.Linq.XElement,Ninject.Planning.Bindings.BindingBuilder{System.Object})">
+            <summary>
+            Tries to handle the ToProvider attribute.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="builder">The builder.</param>
+            <returns>True if the attribute was found.</returns>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.Handlers.BindElementHandler.GetTypeFromAttributeValue(System.Xml.Linq.XAttribute)">
+            <summary>
+            Gets the type from attribute value.
+            </summary>
+            <param name="attribute">The attribute.</param>
+            <returns>The type specified by the attribute.</returns>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.Handlers.BindElementHandler.ElementName">
+            <summary>
+            Gets the name of the element that is handled by this handler.
+            </summary>
+            <value>The name of the element that is handled by this handler.</value>
+        </member>
+        <member name="T:Ninject.Extensions.Xml.XmlExtensionModule">
+            <summary>
+            Ninject module for the xml extension.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.XmlExtensionModule.Load">
+            <summary>
+            Loads the module into the kernel.
+            </summary>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlExtensionModule.Name">
+            <summary>
+            Gets the module's name. Only a single module with a given name can be loaded at one time.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Ninject.Extensions.Xml.XmlModule">
+            <summary>
+            Ninject module used for the modules in the xml configurations.
+            </summary>
+        </member>
+        <member name="F:Ninject.Extensions.Xml.XmlModule.name">
+            <summary>
+            The name of the module.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.XmlModule.#ctor(System.Xml.Linq.XElement,System.Collections.Generic.IDictionary{System.String,Ninject.Extensions.Xml.Handlers.IXmlElementHandler})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Extensions.Xml.XmlModule"/> class.
+            </summary>
+            <param name="moduleElement">The module xml element.</param>
+            <param name="elementHandlers">The element handlers.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.XmlModule.Load">
+            <summary>
+            Loads the module into the kernel.
+            </summary>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlModule.ModuleElement">
+            <summary>
+            Gets the module xml element.
+            </summary>
+            <value>The module xml element.</value>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlModule.ElementHandlers">
+            <summary>
+            Gets the element handlers.
+            </summary>
+            <value>The element handlers.</value>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlModule.Name">
+            <summary>
+            Gets the module's name. Only a single module with a given name can be loaded at one time.
+            </summary>
+            <value>The name of the module.</value>
+        </member>
+        <member name="T:Ninject.Extensions.Xml.XmlModuleLoaderPlugin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.Extensions">
+            <summary>
+            The extensions handled by this module loader.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.#ctor(Ninject.IKernel,System.Collections.Generic.IEnumerable{Ninject.Extensions.Xml.Handlers.IXmlElementHandler})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Extensions.Xml.XmlModuleLoaderPlugin"/> class.
+            </summary>
+            <param name="kernel">The kernel.</param>
+            <param name="elementHandlers">The element handlers.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.LoadModules(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Loads modules from the specified files.
+            </summary>
+            <param name="filenames">The names of the files to load modules from.</param>
+        </member>
+        <member name="M:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.GetModules(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the modules.
+            </summary>
+            <param name="filenames">The filenames to be handled.</param>
+            <returns>The modules found by this module loader.</returns>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.SupportedExtensions">
+            <summary>
+            Gets the file extensions that the plugin understands how to load.
+            </summary>
+            <value>The file extensions supported by this loader.</value>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.Kernel">
+            <summary>
+            Gets the kernel.
+            </summary>
+            <value>The kernel.</value>
+        </member>
+        <member name="P:Ninject.Extensions.Xml.XmlModuleLoaderPlugin.ElementHandlers">
+            <summary>
+            Gets the xml element handlers.
+            </summary>
+            <value>The xml element handlers.</value>
+        </member>
+    </members>
+</doc>

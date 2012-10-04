@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<template>
+		<objecttype>212</objecttype>
+		<name>TMP-MECH-{0}-{1}</name>
+		<placeholders>
+			<placeholder id="0">Comm Grp Code</placeholder>
+			<placeholder id="1">Unit</placeholder>
+		</placeholders>
+	</template>
+	<mappings>
+    <map columnname="Code" destination="3"/>
+    <map columnname="Unit" destination="2">
+      <rule order="0">5</rule>
+      <rule order="1">20</rule>
+    </map>
+    <map columnname="Safety Designator" destination="1"/>
+    <map columnname="System" destination="2">
+      <rule order="0">1</rule>
+    </map>
+    <!--<map columnname="Comm Grp Code" destination="0"/>-->
+    <!--<map columnname="Description" destination="5"/>-->
+    <map columnname="Component Function Name (CFN)" destination="1"/>
+    <map columnname="P&amp;ID" destination="2">
+      <rule order="0">2</rule>
+    </map>
+    <!--<map columnname="P&amp;ID Rev" destination="0"/>-->
+    <map columnname="Equipment Rating" destination="1"/>
+    <map columnname="Reference Calc" destination="2"/>
+    <map columnname="Commodity Code" destination="1"/>
+    <map columnname="Material Req No" destination="2"/>
+    <map columnname="Data Sheet No." destination="2"/>
+    <map columnname="Power Reqd" destination="1"/>
+    <map columnname="HP (Est/Act/Calc)" destination="1"/>
+    <map columnname="Approved Load" destination="1"/>
+    <!--<map columnname="LOAD UOM" destination="0"/>-->
+    <map columnname="Manufacturer" destination="1"/>
+    <map columnname="Model No" destination="1"/>
+    <map columnname="Vendor Drawing" destination="2"/>
+    <map columnname="Area /VNS" destination="2">
+      <rule order="0">3</rule>
+      <rule order="1">25</rule>
+    </map>
+    <map columnname="PO Number" destination="2"/>
+    <map columnname="Vendor Supplied (Y/N)" destination="1"/>
+    <map columnname="Q-List (Y/N)" destination="1"/>
+    <map columnname="Approved Seismic Class" destination="1"/>
+    <map columnname="Approved Pressure Boundry Quality Group" destination="1"/>
+    <map columnname="Approved Non-Pressure Boundry Quality Group" destination="1"/>
+    <map columnname="Approved Quality Class" destination="1"/>
+    <map columnname="Approved AQ Class" destination="1"/>
+    <!--<map columnname="Facility/BLDG" destination="0"/>
+    <map columnname="Location Elev/Area" destination="0"/>-->
+	</mappings>
+</configuration>

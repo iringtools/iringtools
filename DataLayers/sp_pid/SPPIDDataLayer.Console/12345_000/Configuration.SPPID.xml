@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <commodities>
+    <commodity name="Equipment">
+      <attributes>
+        <attribute name="Adapter_ParentTag" displayName="Parent Tag" appSource="Adapter" nativeName="ParentTag" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_DateCreated" displayName="Date Created" appSource="Drawing" nativeName="DateCreated" datatype="DateTime" readonly="True" />
+        <attribute name="Drawing_Description" displayName="Description" appSource="Drawing" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_DocumentCategory" displayName="Document Category" appSource="Drawing" nativeName="DocumentCategory" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DocumentType" displayName="Document Type" appSource="Drawing" nativeName="DocumentType" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DrawingNumber" displayName="Drawing Number" appSource="Drawing" nativeName="DrawingNumber" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_ItemStatus" displayName="Item Status" appSource="Drawing" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_Name" displayName="Name" appSource="Drawing" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Path" displayName="Path" appSource="Drawing" nativeName="Path" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Revision" displayName="Revision" appSource="Drawing" nativeName="Revision" datatype="String" length="40" readonly="True" />
+        <attribute name="Drawing_Template" displayName="Template" appSource="Drawing" nativeName="Template" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Title" displayName="Title" appSource="Drawing" nativeName="Title" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Version" displayName="Version" appSource="Drawing" nativeName="Version" datatype="String" length="40" readonly="True" />
+        <attribute name="Representation_InStockpile" displayName="In Stockpile" appSource="Representation" nativeName="InStockpile" datatype="Picklist" readonly="True" />
+        <attribute name="Symbol_FileName" displayName="File Name" appSource="Symbol" nativeName="FileName" datatype="String" length="4000" readonly="True" />
+        <attribute name="Symbol_XCoordinate" displayName="X Coordinate" appSource="Symbol" nativeName="XCoordinate" datatype="Real" readonly="True" />
+        <attribute name="Symbol_YCoordinate" displayName="Y Coordinate" appSource="Symbol" nativeName="YCoordinate" datatype="Real" readonly="True" />
+        <attribute name="EquipmentOther_AbsorbedDuty" displayName="Absorbed Duty" subclass="EquipmentOther" nativeName="AbsorbedDuty" datatype="String" length="40" />
+        <attribute name="EquipmentOther_Area" displayName="Area" subclass="EquipmentOther" nativeName="Area" datatype="String" length="40" />
+        <attribute name="EquipmentOther_EquipmentOrientation" displayName="Equip Orientation" subclass="EquipmentOther" nativeName="EquipmentOrientation" datatype="Picklist"/>
+        <attribute name="EquipmentOther_RatedDuty" displayName="Rated Duty" subclass="EquipmentOther" nativeName="RatedDuty" datatype="String" length="40" />
+        <attribute name="EquipmentOther_Revision_ApprovalTimestamp" displayName="Approval Timestamp" subclass="EquipmentOther" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="EquipmentOther_Revision_ApprovedBy" displayName="Approved By" subclass="EquipmentOther" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="EquipmentOther_Revision_Responsibility" displayName="Responsibility" subclass="EquipmentOther" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="EquipmentOther_Revision_RevisionNumber" displayName="Revision Number" subclass="EquipmentOther" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="EquipmentOther_Revision_StatusTimestamp" displayName="Status Timestamp" subclass="EquipmentOther" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="EquipmentOther_Revision_StatusType" displayName="Status Type" subclass="EquipmentOther" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="EquipmentOther_Revision_StatusValue" displayName="Status Value" subclass="EquipmentOther" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="EquipmentOther_Revision_Text" displayName="Text" subclass="EquipmentOther" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Exchanger_AbsorbedDuty" displayName="Absorbed Duty" subclass="Exchanger" nativeName="AbsorbedDuty" datatype="String" length="40" parse="Value" />
+        <attribute name="Exchanger_AbsorbedDutyUOM" subclass="Exchanger" nativeName="AbsorbedDuty" datatype="String" length="40" parse="UOM" />
+        <attribute name="Exchanger_CleaningReqmtsTube" displayName="Cleaning Reqr Tube" subclass="Exchanger" nativeName="CleaningReqmtsTube" datatype="Picklist"/>
+        <attribute name="Exchanger_CoatingReqmtsTube" displayName="Coating Reqr Tube" subclass="Exchanger" nativeName="CoatingReqmtsTube" datatype="Picklist"/>
+        <attribute name="Exchanger_CorrosionAllowanceTube" displayName="Corrosion Allowance Tube" subclass="Exchanger" nativeName="CorrosionAllowanceTube" datatype="String" length="40" />
+        <attribute name="Exchanger_DraftType" displayName="Draft Type" subclass="Exchanger" nativeName="DraftType" datatype="Picklist"/>
+        <attribute name="Exchanger_EquipmentOrientation" displayName="Equip Orientation" subclass="Exchanger" nativeName="EquipmentOrientation" datatype="Picklist"/>
+        <attribute name="Exchanger_HeatTransferAreaPerUnit" displayName="Heat Transfer Area per Unit" subclass="Exchanger" nativeName="HeatTransferAreaPerUnit" datatype="String" length="40" />
+        <attribute name="Exchanger_HeatTransferRating" displayName="Heat Transfer Rating" subclass="Exchanger" nativeName="HeatTransferRating" datatype="String" length="40" />
+        <attribute name="Exchanger_InsulationSpecTube" displayName="Insulation Spec Tube" subclass="Exchanger" nativeName="InsulationSpecTube" datatype="String" length="80" />
+        <attribute name="Exchanger_MaterialOfConstClassTube" displayName="MOC Class Tube" subclass="Exchanger" nativeName="MaterialOfConstClassTube" datatype="Picklist"/>
+        <attribute name="Exchanger_MotorPowerPerFan" displayName="Motor Power per Fan" subclass="Exchanger" nativeName="MotorPowerPerFan" datatype="String" length="40" />
+        <attribute name="Exchanger_NumberofBays" displayName="Number of Bays" subclass="Exchanger" nativeName="NumberofBays" datatype="String" length="40" />
+        <attribute name="Exchanger_NumberofBundles" displayName="Number of Bundles" subclass="Exchanger" nativeName="NumberofBundles" datatype="String" length="40" />
+        <attribute name="Exchanger_NumberofFans" displayName="Number of Fans" subclass="Exchanger" nativeName="NumberofFans" datatype="String" length="40" />
+        <attribute name="Exchanger_NumberofTubes" displayName="Number of Tubes" subclass="Exchanger" nativeName="NumberofTubes" datatype="String" length="40" />
+        <attribute name="Exchanger_PipingMaterialsClassTube" displayName="Piping Matl Class Tube" subclass="Exchanger" nativeName="PipingMaterialsClassTube" datatype="String" length="80" />
+        <attribute name="Exchanger_PowerAbsorbedPerFan" displayName="Power Absorbed per Fan" subclass="Exchanger" nativeName="PowerAbsorbedPerFan" datatype="String" length="40" />
+        <attribute name="Exchanger_RatedDuty" displayName="Rated Duty" subclass="Exchanger" nativeName="RatedDuty" datatype="String" length="40" parse="Value" />
+        <attribute name="Exchanger_RatedDutyUOM" subclass="Exchanger" nativeName="RatedDuty" datatype="String" length="40" parse="UOM" />
+        <attribute name="Exchanger_Revision_ApprovalTimestamp" displayName="Approval Timestamp" subclass="Exchanger" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="Exchanger_Revision_ApprovedBy" displayName="Approved By" subclass="Exchanger" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="Exchanger_Revision_Responsibility" displayName="Responsibility" subclass="Exchanger" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="Exchanger_Revision_RevisionNumber" displayName="Revision Number" subclass="Exchanger" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="Exchanger_Revision_StatusTimestamp" displayName="Status Timestamp" subclass="Exchanger" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="Exchanger_Revision_StatusType" displayName="Status Type" subclass="Exchanger" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="Exchanger_Revision_StatusValue" displayName="Status Value" subclass="Exchanger" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="Exchanger_Revision_Text" displayName="Text" subclass="Exchanger" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Exchanger_ShellDiameter" displayName="Shell Diameter" subclass="Exchanger" nativeName="ShellDiameter" datatype="String" length="40" parse="Value" />
+        <attribute name="Exchanger_ShellDiameterUOM" subclass="Exchanger" nativeName="ShellDiameter" datatype="String" length="40" parse="UOM" />
+        <attribute name="Exchanger_TEMA_Designation" displayName="TEMA Designation" subclass="Exchanger" nativeName="TEMA_Designation" datatype="String" length="40" />
+        <attribute name="Exchanger_TubeLength" displayName="Tube Length" subclass="Exchanger" nativeName="TubeLength" datatype="String" length="40" />
+        <attribute name="Exchanger_TypeOfLouvers" displayName="Type of Louvers" subclass="Exchanger" nativeName="TypeOfLouvers" datatype="Picklist"/>
+        <attribute name="Exchanger_UnitWidth" displayName="Unit Width" subclass="Exchanger" nativeName="UnitWidth" datatype="String" length="40" />
+        <attribute name="Mechanical_CWPipingPlan" displayName="CW Piping Plan" subclass="Mechanical" nativeName="CWPipingPlan" datatype="Picklist"/>
+        <attribute name="Mechanical_DifferentialPressure" displayName="Differential Press" subclass="Mechanical" nativeName="DifferentialPressure" datatype="String" length="40" parse="Value" />
+        <attribute name="Mechanical_DifferentialPressureUOM" subclass="Mechanical" nativeName="DifferentialPressure" datatype="String" length="40" parse="UOM" />
+        <attribute name="Mechanical_DriverRatedPower" displayName="Power Driver Rated" subclass="Mechanical" nativeName="DriverRatedPower" datatype="String" length="40" parse="Value" />
+        <attribute name="Mechanical_DriverRatedPowerUOM" subclass="Mechanical" nativeName="DriverRatedPower" datatype="String" length="40" parse="UOM" />
+        <attribute name="Mechanical_ElectricalReqmt" displayName="Electrical Requirement" subclass="Mechanical" nativeName="ElectricalReqmt" datatype="String" length="40" />
+        <attribute name="Mechanical_MaterialOfConstClassInternal" displayName="MOC Class Internal" subclass="Mechanical" nativeName="MaterialOfConstClassInternal" datatype="Picklist"/>
+        <attribute name="Mechanical_MechRating" displayName="Mech Rating" subclass="Mechanical" nativeName="MechRating" datatype="Picklist"/>
+        <attribute name="Mechanical_PowerAbsorbed" displayName="Power Absorbed" subclass="Mechanical" nativeName="PowerAbsorbed" datatype="String" length="40" />
+        <attribute name="Mechanical_PowerConsumption" displayName="Power Consumption" subclass="Mechanical" nativeName="PowerConsumption" datatype="String" length="40" />
+        <attribute name="Mechanical_RatedCapacity" displayName="Rated Capacity" subclass="Mechanical" nativeName="RatedCapacity" datatype="String" length="40" parse="Value" />
+        <attribute name="Mechanical_RatedCapacityUOM" subclass="Mechanical" nativeName="RatedCapacity" datatype="String" length="40" parse="UOM" />
+        <attribute name="Mechanical_RatedDischargePressure" displayName="Rated Discharge Press" subclass="Mechanical" nativeName="RatedDischargePressure" datatype="String" length="40" />
+        <attribute name="Mechanical_RatedSuctionPressure" displayName="Rated Suction Press" subclass="Mechanical" nativeName="RatedSuctionPressure" datatype="String" length="40" />
+        <attribute name="Mechanical_Revision_ApprovalTimestamp" displayName="Approval Timestamp" subclass="Mechanical" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="Mechanical_Revision_ApprovedBy" displayName="Approved By" subclass="Mechanical" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="Mechanical_Revision_Responsibility" displayName="Responsibility" subclass="Mechanical" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="Mechanical_Revision_RevisionNumber" displayName="Revision Number" subclass="Mechanical" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="Mechanical_Revision_StatusTimestamp" displayName="Status Timestamp" subclass="Mechanical" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="Mechanical_Revision_StatusType" displayName="Status Type" subclass="Mechanical" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="Mechanical_Revision_StatusValue" displayName="Status Value" subclass="Mechanical" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="Mechanical_Revision_Text" displayName="Text" subclass="Mechanical" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Mechanical_SealPipingPlan" displayName="Seal Piping Plan" subclass="Mechanical" nativeName="SealPipingPlan" datatype="Picklist"/>
+        <attribute name="Mechanical_TypeOfDriver" displayName="Type Of Driver" subclass="Mechanical" nativeName="TypeOfDriver" datatype="Picklist"/>
+        <attribute name="Vessel_DiameterInternal" displayName="Diameter Internal" subclass="Vessel" nativeName="DiameterInternal" datatype="String" length="40" />
+        <attribute name="Vessel_EquipmentOrientation" displayName="Equip Orientation" subclass="Vessel" nativeName="EquipmentOrientation" datatype="Picklist"/>
+        <attribute name="Vessel_LengthTanToTan" displayName="Length (Tan To Tan)" subclass="Vessel" nativeName="LengthTanToTan" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LengthTanToTanUOM" subclass="Vessel" nativeName="LengthTanToTan" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LevelReference" displayName="Level Reference" subclass="Vessel" nativeName="LevelReference" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LevelReferenceUOM" subclass="Vessel" nativeName="LevelReference" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LiquidLevelHigh" displayName="Liquid Level High" subclass="Vessel" nativeName="LiquidLevelHigh" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LiquidLevelHighUOM" subclass="Vessel" nativeName="LiquidLevelHigh" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LiquidLevelHighHigh" displayName="Liquid Level High-High" subclass="Vessel" nativeName="LiquidLevelHighHigh" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LiquidLevelHighHighUOM" subclass="Vessel" nativeName="LiquidLevelHighHigh" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LiquidLevelLow" displayName="Liquid Level Low" subclass="Vessel" nativeName="LiquidLevelLow" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LiquidLevelLowUOM" subclass="Vessel" nativeName="LiquidLevelLow" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LiquidLevelLowLow" displayName="Liquid Level Low-Low" subclass="Vessel" nativeName="LiquidLevelLowLow" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LiquidLevelLowLowUOM" subclass="Vessel" nativeName="LiquidLevelLowLow" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LiquidLevelNormal" displayName="Liquid Level Normal" subclass="Vessel" nativeName="LiquidLevelNormal" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LiquidLevelNormalUOM" subclass="Vessel" nativeName="LiquidLevelNormal" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_LiquidLevelOverflow" displayName="Liquid Level Overflow" subclass="Vessel" nativeName="LiquidLevelOverflow" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_LiquidLevelOverflowUOM" subclass="Vessel" nativeName="LiquidLevelOverflow" datatype="String" length="40" parse="UOM" />
+        <attribute name="Vessel_MaterialOfConstClassInternal" displayName="MOC Class Internal" subclass="Vessel" nativeName="MaterialOfConstClassInternal" datatype="Picklist"/>
+        <attribute name="Vessel_Revision_ApprovalTimestamp" displayName="Approval Timestamp" subclass="Vessel" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="Vessel_Revision_ApprovedBy" displayName="Approved By" subclass="Vessel" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="Vessel_Revision_Responsibility" displayName="Responsibility" subclass="Vessel" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="Vessel_Revision_RevisionNumber" displayName="Revision Number" subclass="Vessel" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="Vessel_Revision_StatusTimestamp" displayName="Status Timestamp" subclass="Vessel" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="Vessel_Revision_StatusType" displayName="Status Type" subclass="Vessel" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="Vessel_Revision_StatusValue" displayName="Status Value" subclass="Vessel" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="Vessel_Revision_Text" displayName="Text" subclass="Vessel" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Vessel_VolumeRating" displayName="Volume Rating" subclass="Vessel" nativeName="VolumeRating" datatype="String" length="40" parse="Value" />
+        <attribute name="Vessel_VolumeRatingUOM" subclass="Vessel" nativeName="VolumeRating" datatype="String" length="40" parse="UOM" />
+        <attribute name="Class" displayName="Equipment Class" nativeName="Class" datatype="Picklist" readonly="True" />
+        <attribute name="CleaningReqmts" displayName="Cleaning Requirements" nativeName="CleaningReqmts" datatype="Picklist"/>
+        <attribute name="CoatingReqmts" displayName="Coating Requirements" nativeName="CoatingReqmts" datatype="Picklist"/>
+        <attribute name="ConstructionBy" displayName="ConstructionBy" nativeName="ConstructionBy" datatype="Picklist"/>
+        <attribute name="ConstructionStatus" displayName="Construction Status" nativeName="ConstructionStatus" datatype="Picklist"/>
+        <attribute name="CorrosionAllowance" displayName="Corrosion Allowance" nativeName="CorrosionAllowance" datatype="String" length="40" />
+        <attribute name="Description" displayName="Description" nativeName="Description" datatype="String" length="240" />
+        <attribute name="DesignBy" displayName="Design By" nativeName="DesignBy" datatype="Picklist"/>
+        <attribute name="ERPAssetNo" displayName="ERP Asset No" nativeName="ERPAssetNo" datatype="String" length="80" />
+        <attribute name="EquipmentSubclass" displayName="Equipment Subclass" nativeName="EquipmentSubclass" datatype="Picklist" readonly="True" />
+        <attribute name="EquipmentType" displayName="Equipment Type" nativeName="EquipmentType" datatype="Picklist" readonly="True" receiveScope="None" symbolKey="True"/>
+        <attribute name="FabricationCategory" displayName="Fabrication Category" nativeName="FabricationCategory" datatype="Picklist"/>
+        <attribute name="HTraceMedium" displayName="Heat Trace Medium" nativeName="HTraceMedium" datatype="Picklist"/>
+        <attribute name="HTraceMediumTemp" displayName="Heat Trace Medium Temperature" nativeName="HTraceMediumTemp" datatype="String" length="40" />
+        <attribute name="HTraceReqmt" displayName="Heat Trace Requirement" nativeName="HTraceReqmt" datatype="Picklist"/>
+        <attribute name="Height" displayName="Height" nativeName="Height" datatype="String" length="40" parse="Value" />
+        <attribute name="HeightUOM" nativeName="Height" datatype="String" length="40" parse="UOM" />
+        <attribute name="HoldStatus_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="HoldStatus.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_ApprovedBy" displayName="Approved By" nativeName="HoldStatus.ApprovedBy" datatype="String" length="40" />
+        <attribute name="HoldStatus_Responsibility" displayName="Responsibility" nativeName="HoldStatus.Responsibility" datatype="Picklist"/>
+        <attribute name="HoldStatus_RevisionNumber" displayName="Revision Number" nativeName="HoldStatus.RevisionNumber" datatype="String" length="40" />
+        <attribute name="HoldStatus_StatusTimestamp" displayName="Status Timestamp" nativeName="HoldStatus.StatusTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_StatusType" displayName="Status Type" nativeName="HoldStatus.StatusType" datatype="Picklist" readonly="True" />
+        <attribute name="HoldStatus_StatusValue" displayName="Status Value" nativeName="HoldStatus.StatusValue" datatype="Picklist"/>
+        <attribute name="HoldStatus_Text" displayName="Text" nativeName="HoldStatus.Text" datatype="String" length="240" />
+        <attribute name="HoldStatus_UpdateCount" displayName="Update Count" nativeName="HoldStatus.UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="InsulDensity" displayName="Insulation Density" nativeName="InsulDensity" datatype="String" length="40" />
+        <attribute name="InsulPurpose" displayName="Insulation Purpose" nativeName="InsulPurpose" datatype="Picklist"/>
+        <attribute name="InsulTemp" displayName="Insulation Temperature" nativeName="InsulTemp" datatype="String" length="40" />
+        <attribute name="InsulThick" displayName="Insulation Thickness" nativeName="InsulThick" datatype="String" length="40" parse="Value" />
+        <attribute name="InsulThickUOM" nativeName="InsulThick" datatype="String" length="40" parse="UOM" />
+        <attribute name="InsulType" displayName="Insulation Type" nativeName="InsulType" datatype="Picklist"/>
+        <attribute name="InsulationSpec" displayName="Insulation Spec" nativeName="InsulationSpec" datatype="String" length="80" />
+        <attribute name="InsulationThkSource" displayName="Insulation Thk Source" nativeName="InsulationThkSource" datatype="Picklist" readonly="True" />
+        <attribute name="InventoryTag" displayName="Inventory Tag" nativeName="InventoryTag" datatype="String" length="80" />
+        <attribute name="IsBulkItem" displayName="Is Bulk Item" nativeName="IsBulkItem" datatype="Picklist"/>
+        <attribute name="IsUnchecked" displayName="Is Unchecked" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="ItemStatus" displayName="Item Status" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="ItemTag" displayName="Item Tag" nativeName="ItemTag" datatype="String" length="80" readonly="True" receiveScope="None" />
+        <attribute name="ItemTypeName" displayName="Item Type Name" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="MaterialOfConstClass" displayName="Material Of Construction Class" nativeName="MaterialOfConstClass" datatype="Picklist"/>
+        <attribute name="ModelItemType" displayName="Model Item Type" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="Name" displayName="Name" nativeName="Name" datatype="String" length="80" />
+        <attribute name="PartOfType" displayName="Part Of Type" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="PipingMaterialsClass" displayName="Piping Materials Class" nativeName="PipingMaterialsClass" datatype="String" length="80" />
+        <attribute name="PlantItemType" displayName="Plant Item Type" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="RequisitionBy" displayName="Requisition By" nativeName="RequisitionBy" datatype="Picklist"/>
+        <attribute name="RequisitionNo" displayName="Requisition No" nativeName="RequisitionNo" datatype="String" length="80" />
+        <attribute name="SP_ID" displayName="ID" nativeName="SP_ID" datatype="String" length="32" isKey="True" readonly="True" />
+        <attribute name="Slope" displayName="Slope" nativeName="Slope" datatype="String" length="40" />
+        <attribute name="SlopeRise" displayName="Slope Rise" nativeName="SlopeRise" datatype="String" length="40" />
+        <attribute name="SlopeRun" displayName="Slope Run" nativeName="SlopeRun" datatype="String" length="40" />
+        <attribute name="SteamOutPressure" displayName="Steam Out Press" nativeName="SteamOutPressure" datatype="String" length="40" />
+        <attribute name="SteamOutReqmt" displayName="Steam Out Req" nativeName="SteamOutReqmt" datatype="Picklist"/>
+        <attribute name="SteamOutTemperature" displayName="Steam Out Temp" nativeName="SteamOutTemperature" datatype="String" length="40" />
+        <attribute name="StressReliefReqmt" displayName="Pwht Reqmt" nativeName="StressReliefReqmt" datatype="Picklist"/>
+        <attribute name="SupplyBy" displayName="Supply By" nativeName="SupplyBy" datatype="Picklist"/>
+        <attribute name="TagPrefix" displayName="Tag Prefix" nativeName="TagPrefix" datatype="String" length="40" />
+        <attribute name="TagReqdFlag" displayName="Tag Required Flag" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="TagSequenceNo" displayName="Tag Sequence No" nativeName="TagSequenceNo" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TagSuffix" displayName="Tag Suffix" nativeName="TagSuffix" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TrimSpec" displayName="Trim Spec" nativeName="TrimSpec" datatype="String" length="80" />
+        <attribute name="UpdateCount" displayName="Update Count" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="aabbcc_code" displayName="AABBCC Code" nativeName="aabbcc_code" datatype="String" length="40" readonly="True" />
+      </attributes>
+    </commodity>
+    <commodity name="Instrument">
+      <attributes>
+        <attribute name="Adapter_SignalType" displayName="Signal Type" appSource="Adapter" nativeName="SignalType" datatype="String" length="40" readonly="True" />
+        <attribute name="Drawing_DateCreated" displayName="Date Created" appSource="Drawing" nativeName="DateCreated" datatype="DateTime" readonly="True" />
+        <attribute name="Drawing_Description" displayName="Description" appSource="Drawing" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_DocumentCategory" displayName="Document Category" appSource="Drawing" nativeName="DocumentCategory" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DrawingNumber" displayName="Drawing Number" appSource="Drawing" nativeName="DrawingNumber" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_ItemStatus" displayName="Item Status" appSource="Drawing" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_Name" displayName="Name" appSource="Drawing" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Path" displayName="Path" appSource="Drawing" nativeName="Path" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Revision" displayName="Revision" appSource="Drawing" nativeName="Revision" datatype="String" length="40" readonly="True" />
+        <attribute name="Drawing_Template" displayName="Template" appSource="Drawing" nativeName="Template" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Title" displayName="Title" appSource="Drawing" nativeName="Title" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Version" displayName="Version" appSource="Drawing" nativeName="Version" datatype="String" length="40" readonly="True" />
+        <attribute name="InstrLoop_ConstructionBy" displayName="ConstructionBy" appSource="InstrLoop" nativeName="ConstructionBy" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_ConstructionStatus" displayName="Construction Status" appSource="InstrLoop" nativeName="ConstructionStatus" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_Description" displayName="Description" appSource="InstrLoop" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="InstrLoop_DesignBy" displayName="Design By" appSource="InstrLoop" nativeName="DesignBy" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_ERPAssetNo" displayName="ERP Asset No" appSource="InstrLoop" nativeName="ERPAssetNo" datatype="String" length="80" readonly="True" />
+        <attribute name="InstrLoop_FabricationCategory" displayName="Fabrication Category" appSource="InstrLoop" nativeName="FabricationCategory" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_InventoryTag" displayName="Inventory Tag" appSource="InstrLoop" nativeName="InventoryTag" datatype="String" length="80" readonly="True" />
+        <attribute name="InstrLoop_IsBulkItem" displayName="Is Bulk Item" appSource="InstrLoop" nativeName="IsBulkItem" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_IsOwner" displayName="Is Owner" appSource="InstrLoop" nativeName="IsOwner" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_IsShared" displayName="Is Shared" appSource="InstrLoop" nativeName="IsShared" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_IsUnchecked" displayName="Is Unchecked" appSource="InstrLoop" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_ItemStatus" displayName="Item Status" appSource="InstrLoop" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_ItemTag" displayName="Item Tag" appSource="InstrLoop" nativeName="ItemTag" datatype="String" length="80" readonly="True" />
+        <attribute name="InstrLoop_ItemTypeName" displayName="Item Type Name" appSource="InstrLoop" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="InstrLoop_LoopFunction" displayName="Loop Function" appSource="InstrLoop" nativeName="LoopFunction" datatype="String" length="40" readonly="True" />
+        <attribute name="InstrLoop_LoopType" displayName="Loop Type" appSource="InstrLoop" nativeName="LoopType" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_ModelItemType" displayName="Model Item Type" appSource="InstrLoop" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_Name" displayName="Name" appSource="InstrLoop" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="InstrLoop_PartOfType" displayName="Part Of Type" appSource="InstrLoop" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_PlantItemGroupClass" displayName="Plant Item Group Class" appSource="InstrLoop" nativeName="PlantItemGroupClass" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_PlantItemGroupType" displayName="Plant Item Group Type" appSource="InstrLoop" nativeName="PlantItemGroupType" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_PlantItemType" displayName="Plant Item Type" appSource="InstrLoop" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_RequisitionBy" displayName="Requisition By" appSource="InstrLoop" nativeName="RequisitionBy" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_RequisitionNo" displayName="Requisition No" appSource="InstrLoop" nativeName="RequisitionNo" datatype="String" length="80" readonly="True" />
+        <attribute name="InstrLoop_SP_ID" displayName="ID" appSource="InstrLoop" nativeName="SP_ID" datatype="String" length="32" readonly="True" />
+        <attribute name="InstrLoop_SupplyBy" displayName="Supply By" appSource="InstrLoop" nativeName="SupplyBy" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_TagReqdFlag" displayName="Tag Required Flag" appSource="InstrLoop" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="InstrLoop_TagSequenceNo" displayName="Tag Sequence No" appSource="InstrLoop" nativeName="TagSequenceNo" datatype="String" length="40" readonly="True" />
+        <attribute name="InstrLoop_TagSuffix" displayName="Tag Suffix" appSource="InstrLoop" nativeName="TagSuffix" datatype="String" length="40" readonly="True" />
+        <attribute name="InstrLoop_UpdateCount" displayName="Update Count" appSource="InstrLoop" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="InstrLoop_aabbcc_code" displayName="AABBCC Code" appSource="InstrLoop" nativeName="aabbcc_code" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_CleaningReqmts" displayName="Cleaning Requirements" appSource="PipeRun" nativeName="CleaningReqmts" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_CoatingReqmts" displayName="Coating Requirements" appSource="PipeRun" nativeName="CoatingReqmts" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_CodeCategoryHazardClass" displayName="CodeCategory HazardClass" appSource="PipeRun" nativeName="CodeCategoryHazardClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ConstructionBy" displayName="ConstructionBy" appSource="PipeRun" nativeName="ConstructionBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ConstructionStatus" displayName="Construction Status" appSource="PipeRun" nativeName="ConstructionStatus" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_CorrosionAllowance" displayName="Corrosion Allowance" appSource="PipeRun" nativeName="CorrosionAllowance" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_Description" displayName="Description" appSource="PipeRun" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="PipeRun_DesignBy" displayName="Design By" appSource="PipeRun" nativeName="DesignBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ERPAssetNo" displayName="ERP Asset No" appSource="PipeRun" nativeName="ERPAssetNo" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_EstimatedLength" displayName="Estimated Length" appSource="PipeRun" nativeName="EstimatedLength" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_FabricationCategory" displayName="Fabrication Category" appSource="PipeRun" nativeName="FabricationCategory" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_FlowDirection" displayName="Flow Direction" appSource="PipeRun" nativeName="FlowDirection" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_FluidSystem" displayName="Fluid System" appSource="PipeRun" nativeName="FluidSystem" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_HTraceMedium" displayName="Heat Trace Medium" appSource="PipeRun" nativeName="HTraceMedium" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_HTraceMediumTemp" displayName="Heat Trace Medium Temperature" appSource="PipeRun" nativeName="HTraceMediumTemp" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_HTraceReqmt" displayName="Heat Trace Requirement" appSource="PipeRun" nativeName="HTraceReqmt" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulDensity" displayName="Insulation Density" appSource="PipeRun" nativeName="InsulDensity" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_InsulPurpose" displayName="Insulation Purpose" appSource="PipeRun" nativeName="InsulPurpose" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulTemp" displayName="Insulation Temperature" appSource="PipeRun" nativeName="InsulTemp" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_InsulThick" displayName="Insulation Thickness" appSource="PipeRun" nativeName="InsulThick" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_InsulType" displayName="Insulation Type" appSource="PipeRun" nativeName="InsulType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulationNomDia" displayName="Insulation Nominal Diameter" appSource="PipeRun" nativeName="InsulationNomDia" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulationSpec" displayName="Insulation Spec" appSource="PipeRun" nativeName="InsulationSpec" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_InsulationThkSource" displayName="Insulation Thk Source" appSource="PipeRun" nativeName="InsulationThkSource" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InventoryTag" displayName="Inventory Tag" appSource="PipeRun" nativeName="InventoryTag" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_IsBulkItem" displayName="Is Bulk Item" appSource="PipeRun" nativeName="IsBulkItem" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_IsUnchecked" displayName="Is Unchecked" appSource="PipeRun" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ItemStatus" displayName="Item Status" appSource="PipeRun" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ItemTag" displayName="Item Tag" appSource="PipeRun" nativeName="ItemTag" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_ItemTypeName" displayName="Item Type Name" appSource="PipeRun" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_MaterialOfConstClass" displayName="Material Of Construction Class" appSource="PipeRun" nativeName="MaterialOfConstClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ModelItemType" displayName="Model Item Type" appSource="PipeRun" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_Name" displayName="Name" appSource="PipeRun" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_NominalDiameter" displayName="Nominal Diameter" appSource="PipeRun" nativeName="NominalDiameter" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_OperFluidCode" displayName="Fluid Code" appSource="PipeRun" nativeName="OperFluidCode" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PartOfType" displayName="Part Of Type" appSource="PipeRun" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PipeRunClass" displayName="PipeRunClass" appSource="PipeRun" nativeName="PipeRunClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PipeRunType" displayName="Pipe Run Type" appSource="PipeRun" nativeName="PipeRunType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PipingMaterialsClass" displayName="Piping Materials Class" appSource="PipeRun" nativeName="PipingMaterialsClass" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_PlantItemType" displayName="Plant Item Type" appSource="PipeRun" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_RequisitionBy" displayName="Requisition By" appSource="PipeRun" nativeName="RequisitionBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_RequisitionNo" displayName="Requisition No" appSource="PipeRun" nativeName="RequisitionNo" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_SafetyClassification" displayName="Safety Classification" appSource="PipeRun" nativeName="SafetyClassification" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ScheduleOrThickness" displayName="Schedule Or Thickness" appSource="PipeRun" nativeName="ScheduleOrThickness" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_Slope" displayName="Slope" appSource="PipeRun" nativeName="Slope" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SlopeDirection" displayName="Slope Direction" appSource="PipeRun" nativeName="SlopeDirection" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_SlopeRise" displayName="Slope Rise" appSource="PipeRun" nativeName="SlopeRise" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SlopeRun" displayName="Slope Run" appSource="PipeRun" nativeName="SlopeRun" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SteamOutPressure" displayName="Steam Out Press" appSource="PipeRun" nativeName="SteamOutPressure" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SteamOutReqmt" displayName="Steam Out Req" appSource="PipeRun" nativeName="SteamOutReqmt" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_SteamOutTemperature" displayName="Steam Out Temp" appSource="PipeRun" nativeName="SteamOutTemperature" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_StreamNo" displayName="Stream No" appSource="PipeRun" nativeName="StreamNo" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_StressAnalysisReqmts" displayName="Stress Analysis Requirements" appSource="PipeRun" nativeName="StressAnalysisReqmts" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_StressReliefReqmt" displayName="Pwht Reqmt" appSource="PipeRun" nativeName="StressReliefReqmt" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_SupplyBy" displayName="Supply By" appSource="PipeRun" nativeName="SupplyBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_TagReqdFlag" displayName="Tag Required Flag" appSource="PipeRun" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_TagSequenceNo" displayName="Tag Sequence No" appSource="PipeRun" nativeName="TagSequenceNo" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_TagSuffix" displayName="Tag Suffix" appSource="PipeRun" nativeName="TagSuffix" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_UpdateCount" displayName="Update Count" appSource="PipeRun" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="Representation_InStockpile" displayName="In Stockpile" appSource="Representation" nativeName="InStockpile" datatype="Picklist" readonly="True" />
+        <attribute name="Symbol_FileName" displayName="File Name" appSource="Symbol" nativeName="FileName" datatype="String" length="4000" readonly="True" />
+        <attribute name="Symbol_XCoordinate" displayName="X Coordinate" appSource="Symbol" nativeName="XCoordinate" datatype="Real" readonly="True" />
+        <attribute name="Symbol_YCoordinate" displayName="Y Coordinate" appSource="Symbol" nativeName="YCoordinate" datatype="Real" readonly="True" />
+        <attribute name="ActuatorType" displayName="Actuator Type" nativeName="ActuatorType" datatype="Picklist"/>
+        <attribute name="CleaningReqmts" displayName="Cleaning Requirements" nativeName="CleaningReqmts" datatype="Picklist"/>
+        <attribute name="CoatingReqmts" displayName="Coating Requirements" nativeName="CoatingReqmts" datatype="Picklist"/>
+        <attribute name="CommodityCode" displayName="Commodity Code" nativeName="CommodityCode" datatype="String" length="40" />
+        <attribute name="ConstructionBy" displayName="ConstructionBy" nativeName="ConstructionBy" datatype="Picklist"/>
+        <attribute name="ConstructionStatus" displayName="Construction Status" nativeName="ConstructionStatus" datatype="Picklist"/>
+        <attribute name="ControlSchemeReference" displayName="Control Scheme Reference" nativeName="ControlSchemeReference" datatype="String" length="80" readonly="True" />
+        <attribute name="Description" displayName="Description" nativeName="Description" datatype="String" length="240" />
+        <attribute name="DesignBy" displayName="Design By" nativeName="DesignBy" datatype="Picklist"/>
+        <attribute name="ERPAssetNo" displayName="ERP Asset No" nativeName="ERPAssetNo" datatype="String" length="80" />
+        <attribute name="ExpansionQualifier" displayName="Expansion Qualifier" nativeName="ExpansionQualifier" datatype="Picklist"/>
+        <attribute name="FabricationCategory" displayName="Fabrication Category" nativeName="FabricationCategory" datatype="Picklist"/>
+        <attribute name="FailModeHigh_FailureAction" displayName="Failure Action" nativeName="FailModeHigh.FailureAction" datatype="Picklist"/>
+        <attribute name="HTraceMedium" displayName="Heat Trace Medium" nativeName="HTraceMedium" datatype="Picklist"/>
+        <attribute name="HTraceMediumTemp" displayName="Heat Trace Medium Temperature" nativeName="HTraceMediumTemp" datatype="String" length="40" />
+        <attribute name="HTraceReqmt" displayName="Heat Trace Requirement" nativeName="HTraceReqmt" datatype="Picklist"/>
+        <attribute name="HoldStatus_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="HoldStatus.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_ApprovedBy" displayName="Approved By" nativeName="HoldStatus.ApprovedBy" datatype="String" length="40" />
+        <attribute name="HoldStatus_Responsibility" displayName="Responsibility" nativeName="HoldStatus.Responsibility" datatype="Picklist"/>
+        <attribute name="HoldStatus_RevisionNumber" displayName="Revision Number" nativeName="HoldStatus.RevisionNumber" datatype="String" length="40" />
+        <attribute name="HoldStatus_StatusTimestamp" displayName="Status Timestamp" nativeName="HoldStatus.StatusTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_StatusType" displayName="Status Type" nativeName="HoldStatus.StatusType" datatype="Picklist" readonly="True" />
+        <attribute name="HoldStatus_StatusValue" displayName="Status Value" nativeName="HoldStatus.StatusValue" datatype="Picklist"/>
+        <attribute name="HoldStatus_Text" displayName="Text" nativeName="HoldStatus.Text" datatype="String" length="240" />
+        <attribute name="HoldStatus_UpdateCount" displayName="Update Count" nativeName="HoldStatus.UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="InlineComp_CorrosionAllowance" displayName="Corrosion Allowance" nativeName="InlineComp.CorrosionAllowance" datatype="String" length="40" />
+        <attribute name="InlineComp_FlowDirection" displayName="Flow Direction" nativeName="InlineComp.FlowDirection" datatype="Picklist" readonly="True" />
+        <attribute name="InlineComp_SP_ID" displayName="ID" nativeName="InlineComp.SP_ID" datatype="String" length="32" readonly="True" />
+        <attribute name="InstrumentClass" displayName="Instrument Class" nativeName="InstrumentClass" datatype="Picklist" readonly="True" />
+        <attribute name="InstrumentInstrFunction_InstrFunctionID" displayName="Instrument Function ID" nativeName="InstrumentInstrFunction.InstrFunctionID" datatype="String" length="40" readonly="True" />
+        <attribute name="InstrumentInstrFunction_InstrFunctionType" displayName="Instrument Function Type" nativeName="InstrumentInstrFunction.InstrFunctionType" datatype="Picklist"/>
+        <attribute name="InstrumentInstrFunction_InstrFunctionValue" displayName="Instrument Function Value" nativeName="InstrumentInstrFunction.InstrFunctionValue" datatype="String" length="40" />
+        <attribute name="InstrumentType" displayName="Instrument Type" nativeName="InstrumentType" datatype="Picklist" readonly="True" receiveScope="None" symbolKey="True"/>
+        <attribute name="InstrumentTypeModifier" displayName="Instrument Type Modifier" nativeName="InstrumentTypeModifier" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="InsulDensity" displayName="Insulation Density" nativeName="InsulDensity" datatype="String" length="40" />
+        <attribute name="InsulPurpose" displayName="Insulation Purpose" nativeName="InsulPurpose" datatype="Picklist"/>
+        <attribute name="InsulTemp" displayName="Insulation Temperature" nativeName="InsulTemp" datatype="String" length="40" />
+        <attribute name="InsulThick" displayName="Insulation Thickness" nativeName="InsulThick" datatype="String" length="40" />
+        <attribute name="InsulType" displayName="Insulation Type" nativeName="InsulType" datatype="Picklist"/>
+        <attribute name="InsulationNomDia" displayName="Insulation Nominal Diameter" nativeName="InsulationNomDia" datatype="Picklist"/>
+        <attribute name="InsulationSpec" displayName="Insulation Spec" nativeName="InsulationSpec" datatype="String" length="80" />
+        <attribute name="InsulationThkSource" displayName="Insulation Thk Source" nativeName="InsulationThkSource" datatype="Picklist"/>
+        <attribute name="InventoryTag" displayName="Inventory Tag" nativeName="InventoryTag" datatype="String" length="80" />
+        <attribute name="IsBulkItem" displayName="Is Bulk Item" nativeName="IsBulkItem" datatype="Picklist"/>
+        <attribute name="IsInline" displayName="Is Inline" nativeName="IsInline" datatype="Picklist" readonly="True" />
+        <attribute name="IsReducing" displayName="Is Reducing" nativeName="IsReducing" datatype="Picklist" readonly="True" />
+        <attribute name="IsUnchecked" displayName="Is Unchecked" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="ItemStatus" displayName="Item Status" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="ItemTag" displayName="Item Tag" nativeName="ItemTag" datatype="String" length="80" readonly="True" receiveScope="None" />
+        <attribute name="ItemTypeName" displayName="Item Type Name" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="Location" displayName="Location" nativeName="Location" datatype="Picklist"/>
+        <attribute name="LoopTagSuffix" displayName="Loop Tag Suffix" nativeName="LoopTagSuffix" datatype="String" length="40" />
+        <attribute name="MaterialOfConstClass" displayName="Material Of Construction Class" nativeName="MaterialOfConstClass" datatype="Picklist"/>
+        <attribute name="MeasuredVariableCode" displayName="Measured Variable Code" nativeName="MeasuredVariableCode" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="ModelItemType" displayName="Model Item Type" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="Name" displayName="Name" nativeName="Name" datatype="String" length="80" />
+        <attribute name="NominalDiameter" displayName="Nominal Diameter" nativeName="NominalDiameter" datatype="Picklist" parse="Value" />
+        <attribute name="NominalDiameterUOM" nativeName="NominalDiameter" datatype="Picklist" parse="UOM" />
+        <attribute name="OpeningAction" displayName="Opening Action" nativeName="OpeningAction" datatype="Picklist"/>
+        <attribute name="OrificePortSize" displayName="Orifice Port Size" nativeName="OrificePortSize" datatype="String" length="40" parse="Value" />
+        <attribute name="OrificePortSizeUOM" nativeName="OrificePortSize" datatype="String" length="40" parse="UOM" />
+        <attribute name="PartOfType" displayName="Part Of Type" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="PipingMaterialsClass" displayName="Piping Materials Class" nativeName="PipingMaterialsClass" datatype="String" length="80" />
+        <attribute name="PlantItemType" displayName="Plant Item Type" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="PressureDrop" displayName="Pressure Drop" nativeName="PressureDrop" datatype="String" length="40" />
+        <attribute name="Rating" displayName="Rating" nativeName="Rating" datatype="Picklist"/>
+        <attribute name="RequisitionBy" displayName="Requisition By" nativeName="RequisitionBy" datatype="Picklist"/>
+        <attribute name="RequisitionNo" displayName="Requisition No" nativeName="RequisitionNo" datatype="String" length="80" />
+        <attribute name="Revision_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="Revision_ApprovedBy" displayName="Approved By" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="Revision_Responsibility" displayName="Responsibility" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="Revision_RevisionNumber" displayName="Revision Number" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="Revision_StatusTimestamp" displayName="Status Timestamp" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="Revision_StatusType" displayName="Status Type" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="Revision_StatusValue" displayName="Status Value" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="Revision_Text" displayName="Text" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Revision_UpdateCount" displayName="Update Count" nativeName="Revision.UpdateCount" datatype="Integer" length="10" />
+        <attribute name="SP_ID" displayName="ID" nativeName="SP_ID" datatype="String" length="32" isKey="True" readonly="True" />
+        <attribute name="SafetyClassification" displayName="Safety Classification" nativeName="SafetyClassification" datatype="Picklist"/>
+        <attribute name="ScheduleOrThickness" displayName="Schedule Or Thickness" nativeName="ScheduleOrThickness" datatype="String" length="40" />
+        <attribute name="SupplyBy" displayName="Supply By" nativeName="SupplyBy" datatype="Picklist"/>
+        <attribute name="TagReqdFlag" displayName="Tag Required Flag" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="TagSequenceNo" displayName="Tag Sequence No" nativeName="TagSequenceNo" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TagSuffix" displayName="Tag Suffix" nativeName="TagSuffix" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TrimSpec" displayName="Trim Spec" nativeName="TrimSpec" datatype="String" length="80" />
+        <attribute name="UpdateCount" displayName="Update Count" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="aabbcc_code" displayName="AABBCC Code" nativeName="aabbcc_code" datatype="String" length="40" readonly="True" />
+      </attributes>
+    </commodity>
+    <commodity name="PipingSegment">
+      <attributes>
+        <attribute name="Drawing_DateCreated" displayName="Date Created" appSource="Drawing" nativeName="DateCreated" datatype="DateTime" readonly="True" />
+        <attribute name="Drawing_Description" displayName="Description" appSource="Drawing" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_DocumentCategory" displayName="Document Category" appSource="Drawing" nativeName="DocumentCategory" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DocumentType" displayName="Document Type" appSource="Drawing" nativeName="DocumentType" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DrawingNumber" displayName="Drawing Number" appSource="Drawing" nativeName="DrawingNumber" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_ItemStatus" displayName="Item Status" appSource="Drawing" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_Name" displayName="Name" appSource="Drawing" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Path" displayName="Path" appSource="Drawing" nativeName="Path" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Revision" displayName="Revision" appSource="Drawing" nativeName="Revision" datatype="String" length="40" readonly="True" />
+        <attribute name="Drawing_Template" displayName="Template" appSource="Drawing" nativeName="Template" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Title" displayName="Title" appSource="Drawing" nativeName="Title" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Version" displayName="Version" appSource="Drawing" nativeName="Version" datatype="String" length="40" readonly="True" />
+        <attribute name="Representation_InStockpile" displayName="In Stockpile" appSource="Representation" nativeName="InStockpile" datatype="Picklist" readonly="True" />
+        <attribute name="CleaningReqmts" displayName="Cleaning Requirements" nativeName="CleaningReqmts" datatype="Picklist"/>
+        <attribute name="CoatingReqmts" displayName="Coating Requirements" nativeName="CoatingReqmts" datatype="Picklist"/>
+        <attribute name="CodeCategoryHazardClass" displayName="CodeCategory HazardClass" nativeName="CodeCategoryHazardClass" datatype="Picklist"/>
+        <attribute name="ConstructionBy" displayName="ConstructionBy" nativeName="ConstructionBy" datatype="Picklist"/>
+        <attribute name="ConstructionStatus" displayName="Construction Status" nativeName="ConstructionStatus" datatype="Picklist"/>
+        <attribute name="CorrosionAllowance" displayName="Corrosion Allowance" nativeName="CorrosionAllowance" datatype="String" length="40" />
+        <attribute name="Description" displayName="Description" nativeName="Description" datatype="String" length="240" />
+        <attribute name="DesignBy" displayName="Design By" nativeName="DesignBy" datatype="Picklist"/>
+        <attribute name="ERPAssetNo" displayName="ERP Asset No" nativeName="ERPAssetNo" datatype="String" length="80" />
+        <attribute name="EstimatedLength" displayName="Estimated Length" nativeName="EstimatedLength" datatype="String" length="40" />
+        <attribute name="FabricationCategory" displayName="Fabrication Category" nativeName="FabricationCategory" datatype="Picklist"/>
+        <attribute name="FlowDirection" displayName="Flow Direction" nativeName="FlowDirection" datatype="Picklist"/>
+        <attribute name="FluidSystem" displayName="Fluid System" nativeName="FluidSystem" datatype="Picklist"/>
+        <attribute name="HTraceMedium" displayName="Heat Trace Medium" nativeName="HTraceMedium" datatype="Picklist"/>
+        <attribute name="HTraceMediumTemp" displayName="Heat Trace Medium Temperature" nativeName="HTraceMediumTemp" datatype="String" length="40" />
+        <attribute name="HTraceReqmt" displayName="Heat Trace Requirement" nativeName="HTraceReqmt" datatype="Picklist"/>
+        <attribute name="HoldStatus_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="HoldStatus.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_ApprovedBy" displayName="Approved By" nativeName="HoldStatus.ApprovedBy" datatype="String" length="40" />
+        <attribute name="HoldStatus_Responsibility" displayName="Responsibility" nativeName="HoldStatus.Responsibility" datatype="Picklist"/>
+        <attribute name="HoldStatus_RevisionNumber" displayName="Revision Number" nativeName="HoldStatus.RevisionNumber" datatype="String" length="40" />
+        <attribute name="HoldStatus_StatusTimestamp" displayName="Status Timestamp" nativeName="HoldStatus.StatusTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_StatusType" displayName="Status Type" nativeName="HoldStatus.StatusType" datatype="Picklist" readonly="True" />
+        <attribute name="HoldStatus_StatusValue" displayName="Status Value" nativeName="HoldStatus.StatusValue" datatype="Picklist"/>
+        <attribute name="HoldStatus_Text" displayName="Text" nativeName="HoldStatus.Text" datatype="String" length="240" />
+        <attribute name="HoldStatus_UpdateCount" displayName="Update Count" nativeName="HoldStatus.UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="InsulDensity" displayName="Insulation Density" nativeName="InsulDensity" datatype="String" length="40" />
+        <attribute name="InsulPurpose" displayName="Insulation Purpose" nativeName="InsulPurpose" datatype="Picklist"/>
+        <attribute name="InsulTemp" displayName="Insulation Temperature" nativeName="InsulTemp" datatype="String" length="40" parse="Value" />
+        <attribute name="InsulTempUOM" nativeName="InsulTemp" datatype="String" length="40" parse="UOM" />
+        <attribute name="InsulThick" displayName="Insulation Thickness" nativeName="InsulThick" datatype="String" length="40" parse="Value" />
+        <attribute name="InsulThickUOM" nativeName="InsulThick" datatype="String" length="40" parse="UOM" />
+        <attribute name="InsulType" displayName="Insulation Type" nativeName="InsulType" datatype="Picklist"/>
+        <attribute name="InsulationNomDia" displayName="Insulation Nominal Diameter" nativeName="InsulationNomDia" datatype="Picklist"/>
+        <attribute name="InsulationSpec" displayName="Insulation Spec" nativeName="InsulationSpec" datatype="String" length="80" />
+        <attribute name="InsulationThkSource" displayName="Insulation Thk Source" nativeName="InsulationThkSource" datatype="Picklist" readonly="True" />
+        <attribute name="InventoryTag" displayName="Inventory Tag" nativeName="InventoryTag" datatype="String" length="80" />
+        <attribute name="IsBulkItem" displayName="Is Bulk Item" nativeName="IsBulkItem" datatype="Picklist"/>
+        <attribute name="IsUnchecked" displayName="Is Unchecked" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="ItemStatus" displayName="Item Status" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="ItemTag" displayName="Item Tag" nativeName="ItemTag" datatype="String" length="80" readonly="True" receiveScope="None" />
+        <attribute name="ItemTypeName" displayName="Item Type Name" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="MaterialOfConstClass" displayName="Material Of Construction Class" nativeName="MaterialOfConstClass" datatype="Picklist"/>
+        <attribute name="ModelItemType" displayName="Model Item Type" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="Name" displayName="Name" nativeName="Name" datatype="String" length="80" />
+        <attribute name="NominalDiameter" displayName="Nominal Diameter" nativeName="NominalDiameter" datatype="Picklist" parse="Value" />
+        <attribute name="NominalDiameterUOM" nativeName="NominalDiameter" datatype="Picklist" parse="UOM" />
+        <attribute name="OperFluidCode" displayName="Fluid Code" nativeName="OperFluidCode" datatype="Picklist" receiveScope="Add only" />
+        <attribute name="PartOfType" displayName="Part Of Type" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRunClass" displayName="PipeRunClass" nativeName="PipeRunClass" datatype="Picklist"/>
+        <attribute name="PipeRunType" displayName="Pipe Run Type" nativeName="PipeRunType" datatype="Picklist" readonly="True" receiveScope="None" symbolKey="True"/>
+        <attribute name="PipingMaterialsClass" displayName="Piping Materials Class" nativeName="PipingMaterialsClass" datatype="String" length="80" />
+        <attribute name="PlantItemType" displayName="Plant Item Type" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="RequisitionBy" displayName="Requisition By" nativeName="RequisitionBy" datatype="Picklist"/>
+        <attribute name="RequisitionNo" displayName="Requisition No" nativeName="RequisitionNo" datatype="String" length="80" />
+        <attribute name="Revision_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="Revision_ApprovedBy" displayName="Approved By" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="Revision_Responsibility" displayName="Responsibility" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="Revision_RevisionNumber" displayName="Revision Number" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="Revision_StatusTimestamp" displayName="Status Timestamp" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="Revision_StatusType" displayName="Status Type" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="Revision_StatusValue" displayName="Status Value" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="Revision_Text" displayName="Text" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Revision_UpdateCount" displayName="Update Count" nativeName="Revision.UpdateCount" datatype="Integer" length="10" />
+        <attribute name="SP_ID" displayName="ID" nativeName="SP_ID" datatype="String" length="32" isKey="True" readonly="True" />
+        <attribute name="SafetyClassification" displayName="Safety Classification" nativeName="SafetyClassification" datatype="Picklist"/>
+        <attribute name="ScheduleOrThickness" displayName="Schedule Or Thickness" nativeName="ScheduleOrThickness" datatype="String" length="40" />
+        <attribute name="Slope" displayName="Slope" nativeName="Slope" datatype="String" length="40" />
+        <attribute name="SlopeDirection" displayName="Slope Direction" nativeName="SlopeDirection" datatype="Picklist"/>
+        <attribute name="SlopeRise" displayName="Slope Rise" nativeName="SlopeRise" datatype="String" length="40" />
+        <attribute name="SlopeRun" displayName="Slope Run" nativeName="SlopeRun" datatype="String" length="40" />
+        <attribute name="SteamOutPressure" displayName="Steam Out Press" nativeName="SteamOutPressure" datatype="String" length="40" />
+        <attribute name="SteamOutReqmt" displayName="Steam Out Req" nativeName="SteamOutReqmt" datatype="Picklist"/>
+        <attribute name="SteamOutTemperature" displayName="Steam Out Temp" nativeName="SteamOutTemperature" datatype="String" length="40" />
+        <attribute name="StreamNo" displayName="Stream No" nativeName="StreamNo" datatype="String" length="80" />
+        <attribute name="StressAnalysisReqmts" displayName="Stress Analysis Requirements" nativeName="StressAnalysisReqmts" datatype="Picklist"/>
+        <attribute name="StressReliefReqmt" displayName="Pwht Reqmt" nativeName="StressReliefReqmt" datatype="Picklist"/>
+        <attribute name="SupplyBy" displayName="Supply By" nativeName="SupplyBy" datatype="Picklist"/>
+        <attribute name="TagReqdFlag" displayName="Tag Required Flag" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="TagSequenceNo" displayName="Tag Sequence No" nativeName="TagSequenceNo" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TagSuffix" displayName="Tag Suffix" nativeName="TagSuffix" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="UpdateCount" displayName="Update Count" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="aabbcc_code" displayName="AABBCC Code" nativeName="aabbcc_code" datatype="String" length="40" readonly="True" />
+      </attributes>
+    </commodity>
+    <commodity name="PipingComponent">
+      <attributes>
+        <attribute name="Drawing_DateCreated" displayName="Date Created" appSource="Drawing" nativeName="DateCreated" datatype="DateTime" readonly="True" />
+        <attribute name="Drawing_Description" displayName="Description" appSource="Drawing" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_DocumentCategory" displayName="Document Category" appSource="Drawing" nativeName="DocumentCategory" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DocumentType" displayName="Document Type" appSource="Drawing" nativeName="DocumentType" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_DrawingNumber" displayName="Drawing Number" appSource="Drawing" nativeName="DrawingNumber" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_ItemStatus" displayName="Item Status" appSource="Drawing" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="Drawing_Name" displayName="Name" appSource="Drawing" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Path" displayName="Path" appSource="Drawing" nativeName="Path" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Revision" displayName="Revision" appSource="Drawing" nativeName="Revision" datatype="String" length="40" readonly="True" />
+        <attribute name="Drawing_Template" displayName="Template" appSource="Drawing" nativeName="Template" datatype="String" length="240" readonly="True" />
+        <attribute name="Drawing_Title" displayName="Title" appSource="Drawing" nativeName="Title" datatype="String" length="80" readonly="True" />
+        <attribute name="Drawing_Version" displayName="Version" appSource="Drawing" nativeName="Version" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_CleaningReqmts" displayName="Cleaning Requirements" appSource="PipeRun" nativeName="CleaningReqmts" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_CoatingReqmts" displayName="Coating Requirements" appSource="PipeRun" nativeName="CoatingReqmts" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_CodeCategoryHazardClass" displayName="CodeCategory HazardClass" appSource="PipeRun" nativeName="CodeCategoryHazardClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ConstructionBy" displayName="ConstructionBy" appSource="PipeRun" nativeName="ConstructionBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ConstructionStatus" displayName="Construction Status" appSource="PipeRun" nativeName="ConstructionStatus" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_CorrosionAllowance" displayName="Corrosion Allowance" appSource="PipeRun" nativeName="CorrosionAllowance" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_Description" displayName="Description" appSource="PipeRun" nativeName="Description" datatype="String" length="240" readonly="True" />
+        <attribute name="PipeRun_DesignBy" displayName="Design By" appSource="PipeRun" nativeName="DesignBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ERPAssetNo" displayName="ERP Asset No" appSource="PipeRun" nativeName="ERPAssetNo" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_EstimatedLength" displayName="Estimated Length" appSource="PipeRun" nativeName="EstimatedLength" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_FabricationCategory" displayName="Fabrication Category" appSource="PipeRun" nativeName="FabricationCategory" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_FlowDirection" displayName="Flow Direction" appSource="PipeRun" nativeName="FlowDirection" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_FluidSystem" displayName="Fluid System" appSource="PipeRun" nativeName="FluidSystem" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_HTraceMedium" displayName="Heat Trace Medium" appSource="PipeRun" nativeName="HTraceMedium" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_HTraceMediumTemp" displayName="Heat Trace Medium Temperature" appSource="PipeRun" nativeName="HTraceMediumTemp" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_HTraceReqmt" displayName="Heat Trace Requirement" appSource="PipeRun" nativeName="HTraceReqmt" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulDensity" displayName="Insulation Density" appSource="PipeRun" nativeName="InsulDensity" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_InsulPurpose" displayName="Insulation Purpose" appSource="PipeRun" nativeName="InsulPurpose" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulTemp" displayName="Insulation Temperature" appSource="PipeRun" nativeName="InsulTemp" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_InsulThick" displayName="Insulation Thickness" appSource="PipeRun" nativeName="InsulThick" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_InsulType" displayName="Insulation Type" appSource="PipeRun" nativeName="InsulType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulationNomDia" displayName="Insulation Nominal Diameter" appSource="PipeRun" nativeName="InsulationNomDia" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InsulationSpec" displayName="Insulation Spec" appSource="PipeRun" nativeName="InsulationSpec" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_InsulationThkSource" displayName="Insulation Thk Source" appSource="PipeRun" nativeName="InsulationThkSource" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_InventoryTag" displayName="Inventory Tag" appSource="PipeRun" nativeName="InventoryTag" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_IsBulkItem" displayName="Is Bulk Item" appSource="PipeRun" nativeName="IsBulkItem" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_IsUnchecked" displayName="Is Unchecked" appSource="PipeRun" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ItemStatus" displayName="Item Status" appSource="PipeRun" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ItemTag" displayName="Item Tag" appSource="PipeRun" nativeName="ItemTag" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_ItemTypeName" displayName="Item Type Name" appSource="PipeRun" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_MaterialOfConstClass" displayName="Material Of Construction Class" appSource="PipeRun" nativeName="MaterialOfConstClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ModelItemType" displayName="Model Item Type" appSource="PipeRun" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_Name" displayName="Name" appSource="PipeRun" nativeName="Name" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_NominalDiameter" displayName="Nominal Diameter" appSource="PipeRun" nativeName="NominalDiameter" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_OperFluidCode" displayName="Fluid Code" appSource="PipeRun" nativeName="OperFluidCode" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PartOfType" displayName="Part Of Type" appSource="PipeRun" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PipeRunClass" displayName="PipeRunClass" appSource="PipeRun" nativeName="PipeRunClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PipeRunType" displayName="Pipe Run Type" appSource="PipeRun" nativeName="PipeRunType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_PipingMaterialsClass" displayName="Piping Materials Class" appSource="PipeRun" nativeName="PipingMaterialsClass" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_PlantItemType" displayName="Plant Item Type" appSource="PipeRun" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_RequisitionBy" displayName="Requisition By" appSource="PipeRun" nativeName="RequisitionBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_RequisitionNo" displayName="Requisition No" appSource="PipeRun" nativeName="RequisitionNo" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_SP_ID" displayName="ID" appSource="PipeRun" nativeName="SP_ID" datatype="String" length="32" readonly="True" />
+        <attribute name="PipeRun_SafetyClassification" displayName="Safety Classification" appSource="PipeRun" nativeName="SafetyClassification" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_ScheduleOrThickness" displayName="Schedule Or Thickness" appSource="PipeRun" nativeName="ScheduleOrThickness" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_Slope" displayName="Slope" appSource="PipeRun" nativeName="Slope" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SlopeDirection" displayName="Slope Direction" appSource="PipeRun" nativeName="SlopeDirection" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_SlopeRise" displayName="Slope Rise" appSource="PipeRun" nativeName="SlopeRise" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SlopeRun" displayName="Slope Run" appSource="PipeRun" nativeName="SlopeRun" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SteamOutPressure" displayName="Steam Out Press" appSource="PipeRun" nativeName="SteamOutPressure" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_SteamOutReqmt" displayName="Steam Out Req" appSource="PipeRun" nativeName="SteamOutReqmt" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_SteamOutTemperature" displayName="Steam Out Temp" appSource="PipeRun" nativeName="SteamOutTemperature" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_StreamNo" displayName="Stream No" appSource="PipeRun" nativeName="StreamNo" datatype="String" length="80" readonly="True" />
+        <attribute name="PipeRun_StressAnalysisReqmts" displayName="Stress Analysis Requirements" appSource="PipeRun" nativeName="StressAnalysisReqmts" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_StressReliefReqmt" displayName="Pwht Reqmt" appSource="PipeRun" nativeName="StressReliefReqmt" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_SupplyBy" displayName="Supply By" appSource="PipeRun" nativeName="SupplyBy" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_TagReqdFlag" displayName="Tag Required Flag" appSource="PipeRun" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="PipeRun_TagSequenceNo" displayName="Tag Sequence No" appSource="PipeRun" nativeName="TagSequenceNo" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_TagSuffix" displayName="Tag Suffix" appSource="PipeRun" nativeName="TagSuffix" datatype="String" length="40" readonly="True" />
+        <attribute name="PipeRun_UpdateCount" displayName="Update Count" appSource="PipeRun" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="PipeRun_aabbcc_code" displayName="AABBCC Code" appSource="PipeRun" nativeName="aabbcc_code" datatype="String" length="40" readonly="True" />
+        <attribute name="Representation_InStockpile" displayName="In Stockpile" appSource="Representation" nativeName="InStockpile" datatype="Picklist" readonly="True" />
+        <attribute name="Symbol_FileName" displayName="File Name" appSource="Symbol" nativeName="FileName" datatype="String" length="4000" readonly="True" />
+        <attribute name="Symbol_XCoordinate" displayName="X Coordinate" appSource="Symbol" nativeName="XCoordinate" datatype="Real" readonly="True" />
+        <attribute name="Symbol_YCoordinate" displayName="Y Coordinate" appSource="Symbol" nativeName="YCoordinate" datatype="Real" readonly="True" />
+        <attribute name="ActuatorType" displayName="Actuator Type" nativeName="ActuatorType" datatype="Picklist"/>
+        <attribute name="CleaningReqmts" displayName="Cleaning Requirements" nativeName="CleaningReqmts" datatype="Picklist"/>
+        <attribute name="CoatingReqmts" displayName="Coating Requirements" nativeName="CoatingReqmts" datatype="Picklist"/>
+        <attribute name="CommodityCode" displayName="Commodity Code" nativeName="CommodityCode" datatype="String" length="40" />
+        <attribute name="ConstructionBy" displayName="ConstructionBy" nativeName="ConstructionBy" datatype="Picklist"/>
+        <attribute name="ConstructionStatus" displayName="Construction Status" nativeName="ConstructionStatus" datatype="Picklist"/>
+        <attribute name="Description" displayName="Description" nativeName="Description" datatype="String" length="240" />
+        <attribute name="DesignBy" displayName="Design By" nativeName="DesignBy" datatype="Picklist"/>
+        <attribute name="ERPAssetNo" displayName="ERP Asset No" nativeName="ERPAssetNo" datatype="String" length="80" />
+        <attribute name="FabricationCategory" displayName="Fabrication Category" nativeName="FabricationCategory" datatype="Picklist"/>
+        <attribute name="HTraceMedium" displayName="Heat Trace Medium" nativeName="HTraceMedium" datatype="Picklist"/>
+        <attribute name="HTraceMediumTemp" displayName="Heat Trace Medium Temperature" nativeName="HTraceMediumTemp" datatype="String" length="40" />
+        <attribute name="HTraceReqmt" displayName="Heat Trace Requirement" nativeName="HTraceReqmt" datatype="Picklist"/>
+        <attribute name="HoldStatus_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="HoldStatus.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_ApprovedBy" displayName="Approved By" nativeName="HoldStatus.ApprovedBy" datatype="String" length="40" />
+        <attribute name="HoldStatus_Responsibility" displayName="Responsibility" nativeName="HoldStatus.Responsibility" datatype="Picklist"/>
+        <attribute name="HoldStatus_RevisionNumber" displayName="Revision Number" nativeName="HoldStatus.RevisionNumber" datatype="String" length="40" />
+        <attribute name="HoldStatus_StatusTimestamp" displayName="Status Timestamp" nativeName="HoldStatus.StatusTimestamp" datatype="DateTime" />
+        <attribute name="HoldStatus_StatusType" displayName="Status Type" nativeName="HoldStatus.StatusType" datatype="Picklist" readonly="True" />
+        <attribute name="HoldStatus_StatusValue" displayName="Status Value" nativeName="HoldStatus.StatusValue" datatype="Picklist"/>
+        <attribute name="HoldStatus_Text" displayName="Text" nativeName="HoldStatus.Text" datatype="String" length="240" />
+        <attribute name="InlineComp_CorrosionAllowance" displayName="Corrosion Allowance" nativeName="InlineComp.CorrosionAllowance" datatype="String" length="40" />
+        <attribute name="InlineComp_FlowDirection" displayName="Flow Direction" nativeName="InlineComp.FlowDirection" datatype="Picklist" readonly="True" />
+        <attribute name="InlineComp_SP_ID" displayName="ID" nativeName="InlineComp.SP_ID" datatype="String" length="32" readonly="True" />
+        <attribute name="InlineComp_UpdateCount" displayName="Update Count" nativeName="InlineComp.UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="InsulDensity" displayName="Insulation Density" nativeName="InsulDensity" datatype="String" length="40" />
+        <attribute name="InsulPurpose" displayName="Insulation Purpose" nativeName="InsulPurpose" datatype="Picklist"/>
+        <attribute name="InsulTemp" displayName="Insulation Temperature" nativeName="InsulTemp" datatype="String" length="40" />
+        <attribute name="InsulThick" displayName="Insulation Thickness" nativeName="InsulThick" datatype="String" length="40" parse="Value" />
+        <attribute name="InsulThickUOM" nativeName="InsulThick" datatype="String" length="40" parse="UOM" />
+        <attribute name="InsulType" displayName="Insulation Type" nativeName="InsulType" datatype="Picklist"/>
+        <attribute name="InsulationNomDia" displayName="Insulation Nominal Diameter" nativeName="InsulationNomDia" datatype="Picklist"/>
+        <attribute name="InsulationSpec" displayName="Insulation Spec" nativeName="InsulationSpec" datatype="String" length="80" />
+        <attribute name="InsulationThkSource" displayName="Insulation Thk Source" nativeName="InsulationThkSource" datatype="Picklist"/>
+        <attribute name="InventoryTag" displayName="Inventory Tag" nativeName="InventoryTag" datatype="String" length="80" />
+        <attribute name="IsBulkItem" displayName="Is Bulk Item" nativeName="IsBulkItem" datatype="Picklist"/>
+        <attribute name="IsInline" displayName="Is Inline" nativeName="IsInline" datatype="Picklist" readonly="True" />
+        <attribute name="IsReducing" displayName="Is Reducing" nativeName="IsReducing" datatype="Picklist" readonly="True" />
+        <attribute name="IsUnchecked" displayName="Is Unchecked" nativeName="IsUnchecked" datatype="Picklist" readonly="True" />
+        <attribute name="ItemStatus" displayName="Item Status" nativeName="ItemStatus" datatype="Picklist" readonly="True" />
+        <attribute name="ItemTag" displayName="Item Tag" nativeName="ItemTag" datatype="String" length="80" receiveScope="None" />
+        <attribute name="ItemTypeName" displayName="Item Type Name" nativeName="ItemTypeName" datatype="String" length="40" readonly="True" />
+        <attribute name="MaterialOfConstClass" displayName="Material Of Construction Class" nativeName="MaterialOfConstClass" datatype="Picklist"/>
+        <attribute name="ModelCode" displayName="Model Code" nativeName="ModelCode" datatype="String" length="40" readonly="True" />
+        <attribute name="ModelItemType" displayName="Model Item Type" nativeName="ModelItemType" datatype="Picklist" readonly="True" />
+        <attribute name="Name" displayName="Name" nativeName="Name" datatype="String" length="80" />
+        <attribute name="NominalDiameter" displayName="Nominal Diameter" nativeName="NominalDiameter" datatype="Picklist" parse="Value" />
+        <attribute name="NominalDiameterUOM" nativeName="NominalDiameter" datatype="Picklist" parse="UOM" />
+        <attribute name="OpeningAction" displayName="Opening Action" nativeName="OpeningAction" datatype="Picklist"/>
+        <attribute name="OptionCode" displayName="Option Code" nativeName="OptionCode" datatype="Picklist"/>
+        <attribute name="OrificePortSize" displayName="Orifice Port Size" nativeName="OrificePortSize" datatype="String" length="40" />
+        <attribute name="PartOfType" displayName="Part Of Type" nativeName="PartOfType" datatype="Picklist" readonly="True" />
+        <attribute name="PipingCompClass" displayName="Piping Component Class" nativeName="PipingCompClass" datatype="Picklist" readonly="True" />
+        <attribute name="PipingCompSubclass" displayName="Piping Component Subclass" nativeName="PipingCompSubclass" datatype="Picklist" readonly="True" />
+        <attribute name="PipingCompType" displayName="Piping Component Type" nativeName="PipingCompType" datatype="Picklist" readonly="True" receiveScope="None" symbolKey="True"/>
+        <attribute name="PlantItemType" displayName="Plant Item Type" nativeName="PlantItemType" datatype="Picklist" readonly="True" />
+        <attribute name="PressureDrop" displayName="Pressure Drop" nativeName="PressureDrop" datatype="String" length="40" />
+        <attribute name="Rating" displayName="Rating" nativeName="Rating" datatype="Picklist"/>
+        <attribute name="RequisitionBy" displayName="Requisition By" nativeName="RequisitionBy" datatype="Picklist"/>
+        <attribute name="RequisitionNo" displayName="Requisition No" nativeName="RequisitionNo" datatype="String" length="80" />
+        <attribute name="Revision_ApprovalTimestamp" displayName="Approval Timestamp" nativeName="Revision.ApprovalTimestamp" datatype="DateTime" />
+        <attribute name="Revision_ApprovedBy" displayName="Approved By" nativeName="Revision.ApprovedBy" datatype="String" length="40" />
+        <attribute name="Revision_Responsibility" displayName="Responsibility" nativeName="Revision.Responsibility" datatype="Picklist"/>
+        <attribute name="Revision_RevisionNumber" displayName="Revision Number" nativeName="Revision.RevisionNumber" datatype="String" length="40" />
+        <attribute name="Revision_StatusTimestamp" displayName="Status Timestamp" nativeName="Revision.StatusTimestamp" datatype="DateTime" />
+        <attribute name="Revision_StatusType" displayName="Status Type" nativeName="Revision.StatusType" datatype="Picklist"/>
+        <attribute name="Revision_StatusValue" displayName="Status Value" nativeName="Revision.StatusValue" datatype="Picklist"/>
+        <attribute name="Revision_Text" displayName="Text" nativeName="Revision.Text" datatype="String" length="240" />
+        <attribute name="Revision_UpdateCount" displayName="Update Count" nativeName="Revision.UpdateCount" datatype="Integer" length="10" />
+        <attribute name="SP_ID" displayName="ID" nativeName="SP_ID" datatype="String" length="32" isKey="True" readonly="True" />
+        <attribute name="ScheduleOrThickness" displayName="Schedule Or Thickness" nativeName="ScheduleOrThickness" datatype="String" length="40" />
+        <attribute name="StressReliefReqmt" displayName="Pwht Reqmt" nativeName="StressReliefReqmt" datatype="Picklist"/>
+        <attribute name="SupplyBy" displayName="Supply By" nativeName="SupplyBy" datatype="Picklist"/>
+        <attribute name="TagReqdFlag" displayName="Tag Required Flag" nativeName="TagReqdFlag" datatype="Picklist" readonly="True" />
+        <attribute name="TagSequenceNo" displayName="TagSequenceNo" nativeName="TagSequenceNo" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TagSuffix" displayName="Tag Suffix" nativeName="TagSuffix" datatype="String" length="40" receiveScope="Add only" />
+        <attribute name="TrimSpec" displayName="Trim Spec" nativeName="TrimSpec" datatype="String" length="80" />
+        <attribute name="UpdateCount" displayName="Update Count" nativeName="UpdateCount" datatype="Integer" length="10" readonly="True" />
+        <attribute name="aabbcc_code" displayName="AABBCC Code" nativeName="aabbcc_code" datatype="String" length="40" readonly="True" />
+      </attributes>
+    </commodity>
+  </commodities>
+</configuration>

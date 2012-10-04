@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rules>
+  <rule id="1">
+    <name>Tag to System</name>
+    <relationshiptemplate>TMP-System-01</relationshiptemplate>
+    <relatedobjecttype>123</relatedobjecttype>
+    <eql>START WITH GroupedVirtualItem SELECT Id WHERE VirtualItem.Code = '{0}' AND VirtualItemGroup.Class.Code = 'SYSTEMS'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">System</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="2">
+    <name>Tag to PID</name>
+    <relationshiptemplate>TMP-Tag-PID-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'M6' AND Code = '{0}'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">P&amp;ID</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="3">
+    <name>Mechanical Tag to Raceway</name>
+    <relationshiptemplate>TMP-MEquiptag-Raceway-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'ER' AND IsTemplate = 'N' AND Code LIKE '11111-{0}-ER-{1}%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Unit</parameter>
+      <parameter position="0" placeholder="1" seperator="">Area /VNS</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Power Required (Y/N)" value="Y" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="4">
+    <name>Instrument to Line</name>
+    <relationshiptemplate>TMP-Line Tag-Instrument-01</relationshiptemplate>
+    <relatedobjecttype>212</relatedobjecttype>
+    <eql>START WITH Tag	SELECT Id WHERE Code = '{0}' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Approved Line Number</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="5">
+    <name>Mechanical Tag to General Assembly</name>
+    <relationshiptemplate>TMP-MEquip Tag-GA-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'P1' AND IsTemplate = 'N' AND Code LIKE '11111-{0}-P1-{1}%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Unit</parameter>
+      <parameter position="0" placeholder="1" seperator="">Area /VNS</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="6">
+    <name>PID to System</name>
+    <relationshiptemplate>TMP-Doc-to-VI</relationshiptemplate>
+    <relatedobjecttype>123</relatedobjecttype>
+    <eql>START WITH GroupedVirtualItem SELECT Id WHERE VirtualItem.Code = '{0}' AND VirtualItemGroup.Class.Code = 'SYSTEMS'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="M6" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="7">
+    <name>Tag to System</name>
+    <relationshiptemplate>TMP-System-01</relationshiptemplate>
+    <relatedobjecttype>123</relatedobjecttype>
+    <eql>START WITH GroupedVirtualItem SELECT Id WHERE VirtualItem.Code = '{0}' AND VirtualItemGroup.Class.Code = 'SYSTEMS'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Bechtel System</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="8">
+    <name>P&amp;ID to System Description</name>
+    <relationshiptemplate>TMP-PID-SysDesc</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = '3YD'	AND Code LIKE '%-3YD-{0}-%'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="M6" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="9">
+    <name>Datasheet to MR</name>
+    <relationshiptemplate>TMP-DS-MR</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>
+      START WITH Document SELECT Id WHERE Class.Code = 'MRA'	AND Code LIKE '11111-000-MRA-{0}-%'
+    </eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="-D" operator="endswith" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="10">
+    <name>Spec to MR - 3SS</name>
+    <relationshiptemplate>TMP-Spec-MR</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>
+      START WITH Document SELECT Id WHERE Class.Code = 'MRA'	AND Code LIKE '11111-000-MRA-{0}-%'
+    </eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="3SS" operator="=" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="11">
+    <name>Spec to MR - 3PS</name>
+    <relationshiptemplate>TMP-Spec-MR</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>
+      START WITH Document SELECT Id WHERE Class.Code = 'MRA'	AND Code LIKE '11111-000-MRA-{0}-%'
+    </eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="3PS" operator="=" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="12">
+    <name>Oneline to System</name>
+    <relationshiptemplate>TMP-Sys-OneLine-01</relationshiptemplate>
+    <relatedobjecttype>123</relatedobjecttype>
+    <eql>START WITH GroupedVirtualItem SELECT Id WHERE VirtualItem.Code = '{0}' AND VirtualItemGroup.Class.Code = 'SYSTEMS'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="E1" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="13">
+    <name>Oneline to System Description</name>
+    <relationshiptemplate>TMP-Sys-OneLine</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = '3YD'	AND Code LIKE '%-3YD-{0}-%'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="E1" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="14">
+    <name>Calculation to System</name>
+    <relationshiptemplate>TMP-Sys-Calc</relationshiptemplate>
+    <relatedobjecttype>123</relatedobjecttype>
+    <eql>START WITH GroupedVirtualItem SELECT Id WHERE VirtualItem.Code = '{0}' AND VirtualItemGroup.Class.Code = 'SYSTEMS'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="-C" operator="endswith" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="15">
+    <name>MR to PO</name>
+    <relationshiptemplate>TMP-MR-PO</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'POA' AND Code LIKE '%-POA-{0}-%' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="MRA" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="16">
+    <name>YA One Line to Other One lines</name>
+    <relationshiptemplate>TMP-OneLines-E1</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'E1' AND IsTemplate = 'N' AND Code LIKE '{0}-{1}-E1-%' AND Code &lt;&gt; '{2}' </eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="-">Code</parameter>
+      <parameter position="1" placeholder="1" seperator="-">Code</parameter>
+      <parameter position="0" placeholder="2" seperator="">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="E1" />
+      <check column="Code" value="-E1-YA-" operator="contains" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="17">
+    <name>Raceway to GA</name>
+    <relationshiptemplate>TMP-RCW-GA</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE IsTemplate = 'N' AND Class.Code = 'P1' AND Code LIKE '{0}-0{1}-%-{2}-%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="-">Code</parameter>
+      <parameter position="1" placeholder="1" seperator="-">Code</parameter>
+      <parameter position="3" placeholder="2" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="ER" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="17">
+    <name>Equipment Location to GA</name>
+    <relationshiptemplate>TMP-GA-EqLoc</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE IsTemplate = 'N' AND Class.Code = 'P1' AND Code LIKE '{0}-0{1}-%-{2}-%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="-">Code</parameter>
+      <parameter position="1" placeholder="1" seperator="-">Code</parameter>
+      <parameter position="3" placeholder="2" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="E4" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="18">
+    <name>Line to ISO</name>
+    <relationshiptemplate>TMP-LineTag-Iso-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>
+      START WITH Document SELECT Id WHERE Class.Code = 'P3' AND IsTemplate = 'N' AND Code LIKE '%-%{0}-P3-{1}-%{2}'
+    </eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Unit</parameter>
+      <parameter position="0" placeholder="1" seperator="">System</parameter>
+      <parameter position="4" placeholder="2" seperator="-">Tag Number</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="19">
+    <name>Electrical Tag to Raceway</name>
+    <relationshiptemplate>TMP-ElecEqTag-Raceway-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'ER' AND IsTemplate = 'N' AND Code LIKE '11111-{0}-ER-{1}%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Unit/Module</parameter>
+      <parameter position="0" placeholder="1" seperator="">Area /VNS</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="20">
+    <name>Mechanical Tag to Raceway</name>
+    <relationshiptemplate>TMP-MEquiptag-Raceway-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'ER' AND IsTemplate = 'N' AND Code LIKE '11111-{0}-ER-{1}%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Unit</parameter>
+      <parameter position="0" placeholder="1" seperator="">Area /VNS</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Power Required (Y/N)" value="Y" />
+    </selfchecks>
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="21">
+    <name>Instrument Tag to Raceway</name>
+    <relationshiptemplate>TMP-Instr tag-Raceway-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'ER' AND IsTemplate = 'N' AND Code LIKE '11111-{0}-ER-{1}%'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Unit</parameter>
+      <parameter position="0" placeholder="1" seperator="">Area Locator Code</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="22">
+    <name>GA to Location</name>
+    <relationshiptemplate>TMP-Model-Area-02</relationshiptemplate>
+    <relatedobjecttype>12</relatedobjecttype>
+    <eql>START WITH Location SELECT Id WHERE Class.Code = 'ELEV' AND Code = '{0}'</eql>
+    <parameters>
+      <parameter position="3" placeholder="0" seperator="-">Code</parameter>
+    </parameters>
+    <selfchecks>
+      <check column="Class.Code" value="P1" />
+    </selfchecks >
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="23">
+    <name>Tag to Parent</name>
+    <relationshiptemplate>TMP-Child-Tag</relationshiptemplate>
+    <relatedobjecttype>212</relatedobjecttype>
+    <eql>START WITH Tag	SELECT Id WHERE Code = '{0}' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Parent Tag</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="24">
+    <name>Elec Tag to PID</name>
+    <relationshiptemplate>TMP-Tag-PID-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'M6' AND Code = '{0}' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">PID Drawing No.</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="25">
+    <name>Elec Tag to Location</name>
+    <relationshiptemplate>TMP-Model-Area-01</relationshiptemplate>
+    <relatedobjecttype>12</relatedobjecttype>
+    <eql>START WITH Location SELECT Id WHERE Code = '{0}' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Area /VNS</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="26">
+    <name>Instrument Tag to Instrument Location Diagram</name>
+    <relationshiptemplate>TMP-Instr tag-Raceway-01</relationshiptemplate>
+    <relatedobjecttype>3</relatedobjecttype>
+    <eql>START WITH Document SELECT Id WHERE Class.Code = 'J2' AND IsTemplate = 'N' AND Code = '{0}'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Location Drawing</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="27">
+    <name>Elec Tag to Location</name>
+    <relationshiptemplate>TMP-Model-Area-01</relationshiptemplate>
+    <relatedobjecttype>12</relatedobjecttype>
+    <eql>START WITH Location SELECT Id WHERE Code = '{0}' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Area Locator Code</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+  <rule id="28">
+    <name>Valve Tag to Location</name>
+    <relationshiptemplate>TMP-Model-Area-01</relationshiptemplate>
+    <relatedobjecttype>12</relatedobjecttype>
+    <eql>START WITH Location SELECT Id WHERE Code = '{0}' AND IsTemplate = 'N'</eql>
+    <parameters>
+      <parameter position="0" placeholder="0" seperator="">Area</parameter>
+    </parameters>
+    <selfchecks />
+    <create>false</create>
+    <createtemplate />
+  </rule>
+</rules>

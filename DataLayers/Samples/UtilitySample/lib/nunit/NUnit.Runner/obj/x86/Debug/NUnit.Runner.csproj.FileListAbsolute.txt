@@ -1,0 +1,11 @@
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\NUnit.Runner.exe
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\NUnit.Runner.pdb
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\nunit-gui-runner.dll
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\nunit.util.dll
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\nunit.uikit.dll
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\nunit.core.dll
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\nunit.core.interfaces.dll
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\bin\Debug\nunit.uiexception.dll
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\obj\x86\Debug\NUnit.Runner.exe
+C:\svncorp-dmz\ipix_api_documents\trunk\lib\nunit\NUnit.Runner\obj\x86\Debug\NUnit.Runner.pdb

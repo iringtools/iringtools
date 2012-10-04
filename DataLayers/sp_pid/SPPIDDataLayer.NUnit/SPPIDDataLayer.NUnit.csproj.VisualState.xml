@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Project\Branches\datalayers\SPPIDDataLayer\SPPIDDataLayer.NUnit\SPPIDDataLayer.NUnit.csproj</TopNode>
+  <SelectedNode>[0-1000]C:\Project\Branches\datalayers\SPPIDDataLayer\SPPIDDataLayer.NUnit\SPPIDDataLayer.NUnit.csproj</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Project\Branches\datalayers\SPPIDDataLayer\SPPIDDataLayer.NUnit\SPPIDDataLayer.NUnit.csproj" Expanded="true" />
+    <Node UniqueName="[0-1009]C:\Project\Branches\datalayers\SPPIDDataLayer\SPPIDDataLayer.NUnit\bin\Debug\SPPIDDataLayer.NUnit.dll" Expanded="true" />
+    <Node UniqueName="[0-1010]org" Expanded="true" />
+    <Node UniqueName="[0-1011]org.iringtools" Expanded="true" />
+    <Node UniqueName="[0-1012]org.iringtools.datalayers" Expanded="true" />
+    <Node UniqueName="[0-1013]org.iringtools.datalayers.IIP" Expanded="true" />
+    <Node UniqueName="[0-1014]org.iringtools.datalayers.IIP.SPPID" Expanded="true" />
+    <Node UniqueName="[0-1015]org.iringtools.datalayers.IIP.SPPID.Test" Expanded="true" />
+    <Node UniqueName="[0-1001]org.iringtools.datalayers.IIP.SPPID.Test.Tests" Expanded="true" />
+  </Nodes>
+</VisualState>
