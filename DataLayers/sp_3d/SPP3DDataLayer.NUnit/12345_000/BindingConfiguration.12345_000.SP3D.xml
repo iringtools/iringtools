@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<module name="12345_000.SP3D">
-  <bind name="DataLayer"
-        service="org.iringtools.library.IDataLayer2, iRINGLibrary" to="iRINGTools.SDK.SP3DDataLayer.SP3DDataLayer, SP3DDataLayer" />
-  <!--<bind name="LMADataSource"
-        service="iRINGTools.SDK.SP3DDataLayer.ILMADataSource, SP3DDataLayer" to="iRINGTools.SDK.SP3DDataLayer.MockLMADataSource, SP3DDataLayer" />-->
-</module>
