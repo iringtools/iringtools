@@ -1,0 +1,9 @@
+PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?qualifies ?name ?reference
+WHERE {	?r a tpl:R40103148466 .
+	      ?r tpl:R49267603385 tpl:param1 .
+	      ?r tpl:R30741601855 ?qualifies .
+	      ?r tpl:R21129944603 ?reference .
+OPTIONAL { ?qualifies rdfs:label ?name }.      
+}

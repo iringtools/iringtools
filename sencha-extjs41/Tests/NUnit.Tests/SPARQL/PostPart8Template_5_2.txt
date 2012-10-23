@@ -1,0 +1,5 @@
+_:bparam1 rdf:first _:bparam2 ; 
+		rdf:rest _:bparam3 .
+	_:bparam4 rdf:type owl:restriction ; 
+		owl:onProperty param5 ; 
+		owl:param6 param7 .

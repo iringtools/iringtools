@@ -1,0 +1,269 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mapping.ValueListForm",
+        "designer|userAlias": "valuelistform",
+        "height": null,
+        "width": null,
+        "defaults": [
+            "{anchor: '100%', msgTarget: 'side'}"
+        ],
+        "bodyPadding": null,
+        "bodyStyle": [
+            "padding:10px 5px 0"
+        ],
+        "title": null,
+        "method": "POST",
+        "url": "mapping/valueList"
+    },
+    "id": "ExtBox1-ext-gen24004",
+    "designerId": "a1867af7-06bf-4fe9-ae9e-a94df63a166a",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyToolbar12"
+            },
+            "designerId": "fc0ae82b-6b50-4155-b540-e5aff12706f0",
+            "cn": [
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill8"
+                    },
+                    "designerId": "f8126642-5d4f-4b46-a7f4-91fc7acf9bcc"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton20",
+                        "text": "Ok"
+                    },
+                    "designerId": "35c1a0b9-d2a1-409a-a9fd-1bc9b5d89560",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onSave();"
+                                ]
+                            },
+                            "designerId": "860dfca3-1541-4f6a-9acc-1fce653e8676"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton21",
+                        "text": "Cancel"
+                    },
+                    "designerId": "bb1aa268-2544-4be3-85c2-c7f0e197b5fd",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onReset();"
+                                ]
+                            },
+                            "designerId": "36cd86f7-d6f9-464b-a457-18389c7f6877"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField65",
+                "name": "state",
+                "fieldLabel": null
+            },
+            "designerId": "d83abe74-ad5c-4e72-b6fd-81338431f447"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField65",
+                "name": "oldValueList",
+                "fieldLabel": null
+            },
+            "designerId": "8fa5220e-5c27-4421-91c2-ed14e90e4dd1"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField65",
+                "name": "contextName",
+                "fieldLabel": null
+            },
+            "designerId": "600d9cb4-dd29-40fd-a35c-71dbc55a919a"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField65",
+                "name": "endpoint",
+                "fieldLabel": null
+            },
+            "designerId": "3e4659a8-50ba-4b60-8ef2-c8bca59c7c89"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField65",
+                "name": "baseUrl",
+                "fieldLabel": null
+            },
+            "designerId": "d3d8d85a-53c6-4372-9539-56a611150dce"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyTextField7",
+                "name": "valueList",
+                "fieldLabel": "Value List Name",
+                "allowBlank": false
+            },
+            "designerId": "8af46865-7b06-48a2-a7a6-a7e54b4a9b19"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSave",
+                "fn": "onSave",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.up('window');\r",
+                    "var form = me.getForm();\r",
+                    "if (form.findField('valueList').getValue() === '') {\r",
+                    "  showDialog(400, 100, 'Warning', 'Please type in a value list name before saving.', Ext.Msg.OK, null);\r",
+                    "  return;\r",
+                    "}\r",
+                    "form.submit({\r",
+                    "  waitMsg: 'Saving Data...',\r",
+                    "  success: function (f, a) {\r",
+                    "    win.fireEvent('Save', me);\r",
+                    "  },\r",
+                    "  failure: function (f, a) {\r",
+                    "    var message = 'Error saving changes!';\r",
+                    "    showDialog(400, 100, 'Warning', message, Ext.Msg.OK, null);\r",
+                    "  }\r",
+                    "});"
+                ]
+            },
+            "designerId": "ef9eabc9-3166-4716-9799-880f4add057c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onReset",
+                "fn": "onReset",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.up('window');\r",
+                    "win.fireEvent('reset', me);"
+                ]
+            },
+            "designerId": "0e4b2a46-bb15-4478-a59b-152028e9d57a"
+        }
+    ]
+}

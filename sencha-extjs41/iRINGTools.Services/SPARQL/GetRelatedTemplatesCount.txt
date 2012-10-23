@@ -1,0 +1,9 @@
+PREFIX rdl: <http://rdl.rdlfacade.org/data#>
+PREFIX dm: <http://dm.rdlfacade.org/data#>
+PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+PREFIX p8: <http://standards.tc184-sc4.org/iso/15926/-8/template-model#>
+SELECT (COUNT(DISTINCT  ?uri) AS ?label)
+{
+ ?classRole p8:hasRoleFillerType rdl:param1 .
+ ?classRole p8:hasTemplate ?uri .
+}

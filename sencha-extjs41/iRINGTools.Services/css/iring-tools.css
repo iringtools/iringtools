@@ -1,0 +1,50 @@
+@import "reset.css";
+
+body {
+  margin-left: 10px;
+  background: #f0f0f0 url(../img/blue-fade.png) repeat-x;
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12;
+  color: #30332D;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+li {
+	text-align:left;
+	margin-left:2em;
+}
+
+div.banner {
+  margin-top: 10px;
+  width: 662px;
+}
+
+div.banner h1 img {
+  vertical-align: text-bottom;
+}
+
+div.main {
+  margin-top: 18px;
+  width: 662px;
+}
+
+form {
+  margin-top: 10px;
+  width: 662px;
+  text-align: right;
+}
+
+textarea {
+  padding: 8px;
+}
+
+input.button {
+  margin: 8px 0px 0px auto;
+}
+
+a {
+  color: #3E62A6;
+}

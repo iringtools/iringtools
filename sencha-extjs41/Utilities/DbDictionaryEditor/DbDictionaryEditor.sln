@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbDictionaryEditor", "DbDictionaryEditor\DbDictionaryEditor.csproj", "{0E89BCC7-792C-4317-9951-3A3892718BA8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88377877-6FA3-4570-B4AC-14F9D0A7BBEC} = {88377877-6FA3-4570-B4AC-14F9D0A7BBEC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbDictionaryEditor.Web", "DbDictionaryEditor.Web\DbDictionaryEditor.Web.csproj", "{88377877-6FA3-4570-B4AC-14F9D0A7BBEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behaviors", "Behaviors\Behaviors.csproj", "{2E2D6E2D-99B2-438F-B44B-1F292817E623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbDictionaryService", "DbDictionaryService\DbDictionaryService.csproj", "{1D82BC46-91F5-441F-A664-0EF9226B1892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterService", "..\..\Adapter\AdapterService\AdapterService.csproj", "{4C5B3DE0-EFCF-497B-BF62-8DB71436361D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E89BCC7-792C-4317-9951-3A3892718BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E89BCC7-792C-4317-9951-3A3892718BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E89BCC7-792C-4317-9951-3A3892718BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E89BCC7-792C-4317-9951-3A3892718BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88377877-6FA3-4570-B4AC-14F9D0A7BBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88377877-6FA3-4570-B4AC-14F9D0A7BBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88377877-6FA3-4570-B4AC-14F9D0A7BBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88377877-6FA3-4570-B4AC-14F9D0A7BBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2D6E2D-99B2-438F-B44B-1F292817E623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2D6E2D-99B2-438F-B44B-1F292817E623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2D6E2D-99B2-438F-B44B-1F292817E623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2D6E2D-99B2-438F-B44B-1F292817E623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D82BC46-91F5-441F-A664-0EF9226B1892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D82BC46-91F5-441F-A664-0EF9226B1892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D82BC46-91F5-441F-A664-0EF9226B1892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D82BC46-91F5-441F-A664-0EF9226B1892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5B3DE0-EFCF-497B-BF62-8DB71436361D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5B3DE0-EFCF-497B-BF62-8DB71436361D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5B3DE0-EFCF-497B-BF62-8DB71436361D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5B3DE0-EFCF-497B-BF62-8DB71436361D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module name="Adapter">
+  <bind name="IdentityLayer" service="org.iringtools.adapter.identity.IIdentityLayer, AdapterLibrary" to="org.iringtools.adapter.identity.WindowsIdentityProvider, AdapterLibrary"/>
+</module>

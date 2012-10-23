@@ -1,0 +1,38 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "spreadsheet.SpreadsheetWindow",
+        "designer|userAlias": "spreadsheetwindow",
+        "border": false,
+        "floating": true,
+        "frame": false,
+        "height": 130,
+        "width": 430,
+        "layout": "fit",
+        "bodyPadding": 1,
+        "title": null
+    },
+    "configAlternates": {
+        "bodyPadding": "number",
+        "border": "boolean"
+    },
+    "id": "ExtBox1-ext-gen74684",
+    "designerId": "b7622ca2-41f1-493c-9625-bda146463a7d",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "163ca52f-30ca-44b8-8606-c4156ab7cde2",
+            "masterInstanceId": "ExtBox1-ext-gen75382"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+2012-09-13 20:33:59,031 [7] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-13 20:59:17,072 [18] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-13 21:20:40,711 [42] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-13 21:22:47,266 [43] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-13 21:28:27,831 [55] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-13 21:30:04,111 [61] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69

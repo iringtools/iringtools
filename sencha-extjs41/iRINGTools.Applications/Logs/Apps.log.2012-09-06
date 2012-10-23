@@ -1,0 +1,61 @@
+2012-09-06 09:48:59,352 [19] ERROR org.iringtools.web.controllers.DirectoryController - System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.web.controllers.DirectoryController.GetNode(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\DirectoryController.cs:line 400
+2012-09-06 12:21:19,976 [19] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate///tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Service</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Service</p>
+      <p xmlns="">Endpoint not found. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-06 12:29:40,812 [15] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate///tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Service</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Service</p>
+      <p xmlns="">Endpoint not found. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-06 12:31:56,566 [14] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-06 13:08:07,170 [53] ERROR org.iringtools.web.controllers.DatagridController - Error getting DatabaseDictionary.System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.web.controllers.DatagridController.GetDatadictionary(String context, String endpoint, String baseurl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\DataGridController.cs:line 243
+2012-09-06 13:08:07,192 [53] ERROR org.iringtools.web.controllers.DatagridController - System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.web.controllers.DatagridController.GetData(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\DataGridController.cs:line 66  Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2012-09-06 18:44:37,898 [92] ERROR org.iringtools.web.controllers.DatagridController - Error getting DatabaseDictionary.System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.web.controllers.DatagridController.GetDatadictionary(String context, String endpoint, String baseurl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\DataGridController.cs:line 243
+2012-09-06 18:44:37,936 [92] ERROR org.iringtools.web.controllers.DatagridController - System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.web.controllers.DatagridController.GetData(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\DataGridController.cs:line 66  Object reference not set to an instance of an object. Object reference not set to an instance of an object.

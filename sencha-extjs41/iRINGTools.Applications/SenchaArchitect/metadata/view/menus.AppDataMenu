@@ -1,0 +1,40 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.AppDataMenu",
+        "designer|userAlias": "appdatamenu",
+        "floating": true,
+        "width": 130
+    },
+    "id": "ExtBox1-ext-gen32857",
+    "designerId": "ed24cb4c-689d-4c1c-b268-d122c9d3ed12",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "showdata",
+                "designer|userClassName": "MyMenuItem19",
+                "icon": "Content/img/16x16/document-properties.png",
+                "text": "Open Grid"
+            },
+            "designerId": "9708ce33-2748-4615-9805-e0e043d1c5ca",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

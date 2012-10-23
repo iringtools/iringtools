@@ -1,0 +1,199 @@
+2012-10-03 23:21:47,617 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-10-03 23:21:49,108 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-10-03 23:21:49,144 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-10-03 23:21:49,180 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-10-03 23:21:49,428 [12] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-10-03 23:24:47,262 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-10-03 23:25:18,031 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-10-03 23:25:18,053 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-10-03 23:29:10,583 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-10-03 23:29:10,604 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-10-03 23:29:10,619 [12] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-10-03 23:44:23,920 [12] ERROR org.iringtools.nhibernate.ext.NHibernateAuthorization - KeyRing is empty.
+2012-10-03 23:44:23,980 [12] ERROR org.iringtools.adapter.AdapterProvider - Error in GetProjection: System.UnauthorizedAccessException: User not authorized to access NHibernate data layer of [12345_000.DEF]
+   at org.iringtools.adapter.datalayer.NHibernateDataLayer.Get(String objectType, DataFilter filter, Int32 pageSize, Int32 startIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateDataLayer.cs:line 357
+   at org.iringtools.adapter.AdapterProvider.GetDataProjection(String projectName, String applicationName, String resourceName, DataFilter filter, String& format, Int32 start, Int32 limit, Boolean fullIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 2158
+2012-10-03 23:44:24,174 [12] ERROR org.iringtools.nhibernate.ext.NHibernateAuthorization - KeyRing is empty.
+2012-10-03 23:44:24,194 [12] ERROR org.iringtools.adapter.AdapterProvider - Error in GetProjection: System.UnauthorizedAccessException: User not authorized to access NHibernate data layer of [12345_000.DEF]
+   at org.iringtools.adapter.datalayer.NHibernateDataLayer.Get(String objectType, DataFilter filter, Int32 pageSize, Int32 startIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateDataLayer.cs:line 357
+   at org.iringtools.adapter.AdapterProvider.GetDataProjection(String projectName, String applicationName, String resourceName, DataFilter filter, String& format, Int32 start, Int32 limit, Boolean fullIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 2158
+2012-10-03 23:54:53,400 [13] ERROR org.iringtools.adapter.AdapterProvider - Error adding application [12345_000.myendpoint]: System.Exception: Application [myendpoint] is not found in scope [12345_000].
+   at org.iringtools.adapter.AdapterProvider.Generate(String scopeName, String newAppName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 723
+2012-10-03 23:55:56,659 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-10-03 23:55:56,773 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-10-03 23:55:56,787 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-10-03 23:55:56,803 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-10-03 23:55:56,977 [13] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-10-03 23:56:16,798 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-10-03 23:56:16,904 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-10-03 23:56:16,926 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-10-03 23:56:16,942 [13] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-10-03 23:56:17,451 [13] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name

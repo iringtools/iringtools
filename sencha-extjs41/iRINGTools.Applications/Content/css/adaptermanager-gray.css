@@ -1,0 +1,293 @@
+html, body {
+  font: normal 12px verdana;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  overflow: hidden;
+  height: 100%;
+}
+
+a:link {color: black}
+a:visited {color: black}
+a:hover {color: black}
+a:active {color: black}
+
+.x-tree { 
+  background-color: #fff; 
+}
+.upload-icon {
+     background: url('../img/image_add.png') no-repeat 0 0 !important;
+}
+.x-tree-panel .x-grid-row .x-grid-cell-inner .scopes {
+  background-image: url("../img/internet-web-browser.png") !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .scope  {
+  background-image: url(../img/cabinet.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeObject{
+  background-image: url(../img/object.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeProperty {
+  background-image: url(../img/property.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeKey {
+  background-image: url(../img/key.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeRelation  {
+  background-image: url(../img/relation.png) !important;
+}
+
+.x-tree-node-collapsed .folder {
+  background-image: url(../img/folder-close.png);
+}
+
+.x-tree-node-expanded .folder {
+  background-image: url(../img/folder-open.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .exchange {
+  background-image: url(../img/exchange-grid.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .application {
+  background-image: url(../img/application.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .graphmap {
+  background-image: url(../img/graph-map.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .templatemap {
+  background-image: url(../img/template-map.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .rolemap {
+  background-image: url(../img/role-map.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .commodity {
+  background-image: url(../img/class-badge-small.png) !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .valuemap {
+  background-image: url("../img/value.png") !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .valuelistmap {
+  background-image: url("../img/valuelist.png") !important;
+}
+
+.x-tree-node .treeObject {
+  background-image: url(../img/object.png);
+}
+.x-tree-node .folder {
+  background-image: url(../img/folder.png);
+}
+
+.x-tree-node .treeProperty {
+  background-image: url(../img/property.png);
+}
+
+.x-tree-node .treeValue {
+  background-image: url(../img/valuelist.png);
+}
+
+.x-tree-node .treeValuelist {
+  background-image: url(../img/value.png);
+}
+
+.x-tree-node .treeKey {
+  background-image: url(../img/key.png);
+}
+
+.x-tree-node .treeRelation {
+  background-image: url(../img/relation.png);
+}
+
+.x-tree-node-collapsed .folder {
+  background-image: url(../img/folder-close.png);
+}
+
+.x-tree-node-expanded .folder {
+  background-image: url(../img/folder-open.png);
+}
+
+.blue-fade {
+  background-image: url(../img/blue-fade.png);
+  background-repeat: repeat-x;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: default;
+}
+
+/* change default property grid */
+.x-grid3-row td {
+  font-family: tahoma;
+}
+
+/* change default tree node */
+.x-tree-panel .x-grid-row .x-grid-cell-inner {
+  font-family: tahoma;
+}
+
+.sync {
+  color: #000000;
+}
+
+.add {
+  color: #df0000;
+}
+
+.change {
+  color: #0000df;
+}
+
+.delete {
+  color: #00df00;
+}
+
+
+
+.headerLnkBlack {
+  font-family: Calibri, Arial;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.exchangeBanner{
+  background-image:url('../img/blue-fade.png');
+  background-repeat:repeat-x;
+  background-position:left bottom;
+  height: 65px;
+}
+.tabsData {
+  background-image:url('../img/app-grid.png') !important;
+}
+
+.tabsScope {
+  background-image:url('../img/system-file-manager.png') !important;
+}
+.tabsApplication {
+  background-image:url('../img/applications-internet.png') !important;
+}
+.tabsClass {
+  background-image:url('../img/class.png') !important;
+}
+.tabsMapping {
+  background-image:url('../img/16x16/mapping.png') !important;
+}
+.tabsNhibernate {
+  background-image:url('../img/16x16/preferences-system.png') !important;
+}
+.tabsValueList{
+  background-image:url('../img/valuelist.png') !important;
+}
+
+.tabsValueListMap{
+  background-image:url('../img/value.png') !important;
+}
+  
+.tabsGraph{
+  background-image:url('../img/graph-map.png') !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeGraph 
+{
+  background-image: url("../img/graph-map.png")  !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeClass 
+{
+  background-image: url("../img/class.png")  !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeTemplate 
+{
+  background-image: url("../img/template.png")  !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .treeRole
+{
+  background-image: url("../img/role.png")  !important;
+}
+
+.x-tree-panel .x-grid-row .x-grid-cell-inner .folder
+{
+  background-image: url("../img/folder.png")  !important;
+}
+
+.form-title 
+{
+  font-weight:bold;  
+}
+
+.x-form-multiselect-body .x-boundlist .x-mask {
+    background: none;
+}
+
+.x-form-itemselector-body .x-form-item {
+    margin: 0;
+}
+
+.am-edit-clear
+{
+  background-image: url("../img/16x16/edit-clear.png") !important;
+}
+
+.am-apply
+{
+  background-image: url("../img/16x16/apply.png") !important;
+}
+
+.am-list-add
+{
+  background-image: url("../img/16x16/list-add.png") !important;
+}
+
+.am-list-remove
+{
+  background-image: url("../img/16x16/list-remove.png") !important;
+}
+
+.am-view-refresh
+{
+  background-image: url("../img/16x16/view-refresh.png") !important;
+}
+
+.am-document-properties
+{
+  background-image: url("../img/16x16/document-properties.png") !important;
+}
+
+.am-document-save
+{
+  background-image: url("../img/16x16/document-save.png") !important;
+}
+
+.am-document-up
+{
+  background-image: url("../img/16x16/document-up.png") !important;
+}
+
+.am-document-down
+{
+  background-image: url("../img/16x16/document-down.png") !important;
+}
+
+.mapping-target {
+    border: 1px solid red;
+    margin: 5px;
+    padding: 5px;
+    font-size: small;
+    cursor: default;
+}
+
+.mapping-target.mapping-target-hover {
+    background-color: #C0C0C0;
+}

@@ -1,0 +1,12 @@
+PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX p8: <http://standards.tc184-sc4.org/iso/15926/-8/template-model#>
+
+SELECT ?role ?index
+WHERE 
+{
+  ?roleDescription	p8:hasTemplate  tpl:param1 ; 
+      p8:hasRole  ?role ; 
+      p8:valRoleIndex  ?index .
+}

@@ -1,0 +1,29 @@
+<DatabaseDictionary xmlns="http://ns.iringtools.org/library" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <connectionString>Data Source=.\SQLEXPRESS;Initial Catalog=Camelot_test;User Id=camelot;Password=camelot</connectionString>  
+  <provider>MsSql2000, MsSql2005, MsSql2008, MySql3, MySql4, Mysql5, Oracle9i, or Oracle10g</provider>  
+  <tables>
+    <Table>
+      <columns>        
+        <Column>
+          <columnName>column1name</columnName>
+          <columnType>Boolean, Byte, Char, DateTime, Double, Int16, Int32, Int64, or String</columnType>
+          <propertyName>column1name or column1renamedto</propertyName>
+        </Column>        
+        ...
+      </columns>
+      <entityName>table1name|table1renamedto</entityName>
+      <keys>
+        <Key>
+          <columnName>keycolumn1name</columnName>
+          <columnType>Boolean, Byte, Char, DateTime, Double, Int16, Int32, Int64, or String</columnType>
+          <propertyName>keycolumn1name or keycolumn1renamedto</propertyName>          
+          <keyType>assigned, identity, or sequence</keyType>
+        </Key>
+        ...
+      </keys>
+      <lazyLoading>true or false</lazyLoading>
+      <tableName>table1name</tableName>
+    </Table>      
+    ...
+  </tables>
+</DatabaseDictionary>

@@ -1,0 +1,16 @@
+<resource xmlns="http://www.iringtools.org/directory" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <baseUrl>http:..localhost:54321.adapter</baseUrl>
+    <locators>
+      <locator>
+        <context>12345_000</context>
+        <applications>
+          <application>
+            <endpoint>ABC</endpoint>
+          </application>
+          <application>
+            <endpoint>DEF</endpoint>
+          </application>          
+        </applications>
+      </locator>      
+    </locators>
+  </resource>

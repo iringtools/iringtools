@@ -1,0 +1,618 @@
+2012-09-28 06:12:11,087 [13] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 06:16:08,215 [11] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 06:16:43,471 [20] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 06:16:58,616 [19] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 06:34:25,231 [48] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 06:34:35,540 [44] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate/12345_000/DEF/dictionary]. ---> System.Exception: Error deserializing stream to [DatabaseDictionary]. ---> System.Xml.XmlException: Unexpected end of file.
+   at System.Xml.EncodingStreamWrapper.ReadBOMEncoding(Boolean notOutOfBand)
+   at System.Xml.EncodingStreamWrapper..ctor(Stream stream, Encoding encoding)
+   at System.Xml.XmlUTF8TextReader.SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose)
+   at System.Xml.XmlDictionaryReader.CreateTextReader(Stream stream, XmlDictionaryReaderQuotas quotas)
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1018
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1034
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 353
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBDictionary(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 170
+2012-09-28 06:38:30,864 [54] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:19:32,033 [72] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:20:10,589 [72] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:20:11,709 [80] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:20:31,370 [78] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:23:57,260 [62] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:24:34,110 [70] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:24:35,324 [72] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:25:58,009 [78] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:26:34,813 [57] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:26:36,228 [57] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:27:57,273 [50] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:28:40,997 [51] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:29:31,434 [47] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:31:08,749 [26] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:31:53,522 [16] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:32:06,439 [13] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:33:37,325 [32] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:34:15,155 [40] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:34:52,344 [57] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:35:28,378 [34] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:39:42,731 [34] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:40:18,552 [31] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:45:37,048 [8] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:46:21,407 [83] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:47:50,509 [83] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:48:23,991 [92] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:55:09,427 [98] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 07:55:45,056 [35] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:55:58,637 [35] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 07:56:46,602 [110] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/objects]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetDBObjects(String contextName, String endpoint, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String tableNames, String portNumber, String serName, String baseUrl, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 218
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 73
+2012-09-28 07:57:21,924 [35] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error with HTTP POST from URI [http://localhost:54321/hibernate/12345_000/DEF/tables]. <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Request Error</title>
+    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>
+  </head>
+  <body>
+    <div id="content">
+      <p class="heading1">Request Error</p>
+      <p xmlns="">The server encountered an error processing the request. Please see the <a rel="help-page" href="http://localhost:54321/hibernate/help">service help page</a> for constructing valid requests to the service.</p>
+    </div>
+  </body>
+</html>
+   at org.iringtools.utility.WebHttpClient.Post[T,R](String relativeUri, T requestEntity, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 491
+   at org.iringtools.web.Models.NHibernateRepository.GetTableNames(String scope, String application, String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 193
+   at org.iringtools.web.Controllers.NHibernateController.TableNames(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 186
+2012-09-28 08:05:47,623 [96] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate///dictionary]. ---> System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 340
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69
+2012-09-28 08:07:30,672 [96] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate/12345_000/DEF/dictionary]. ---> System.Exception: Error deserializing stream to [DatabaseDictionary]. ---> System.Xml.XmlException: Unexpected end of file.
+   at System.Xml.EncodingStreamWrapper.ReadBOMEncoding(Boolean notOutOfBand)
+   at System.Xml.EncodingStreamWrapper..ctor(Stream stream, Encoding encoding)
+   at System.Xml.XmlUTF8TextReader.SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose)
+   at System.Xml.XmlDictionaryReader.CreateTextReader(Stream stream, XmlDictionaryReaderQuotas quotas)
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1018
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1034
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 353
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBDictionary(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 170
+2012-09-28 08:24:29,071 [41] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate/12345_000/ABC/dictionary]. ---> System.Exception: Error deserializing stream to [DatabaseDictionary]. ---> System.Xml.XmlException: Unexpected end of file.
+   at System.Xml.EncodingStreamWrapper.ReadBOMEncoding(Boolean notOutOfBand)
+   at System.Xml.EncodingStreamWrapper..ctor(Stream stream, Encoding encoding)
+   at System.Xml.XmlUTF8TextReader.SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose)
+   at System.Xml.XmlDictionaryReader.CreateTextReader(Stream stream, XmlDictionaryReaderQuotas quotas)
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1018
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1034
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 353
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBDictionary(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 170
+2012-09-28 08:26:52,328 [49] ERROR org.iringtools.web.controllers.BaseController - System.Exception: Error while executing HTTP GET request [http://localhost:54321/hibernate/12345_000/ABC/dictionary]. ---> System.Exception: Error deserializing stream to [DatabaseDictionary]. ---> System.Xml.XmlException: Unexpected end of file.
+   at System.Xml.EncodingStreamWrapper.ReadBOMEncoding(Boolean notOutOfBand)
+   at System.Xml.EncodingStreamWrapper..ctor(Stream stream, Encoding encoding)
+   at System.Xml.XmlUTF8TextReader.SetInput(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose)
+   at System.Xml.XmlDictionaryReader.CreateTextReader(Stream stream, XmlDictionaryReaderQuotas quotas)
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1018
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.Utility.DeserializeFromStream[T](Stream stream, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\Utility.cs:line 1034
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 353
+   --- End of inner exception stack trace ---
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri, Boolean useDataContractSerializer) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 360
+   at org.iringtools.utility.WebHttpClient.Get[T](String relativeUri) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\WebClient.cs:line 315
+   at org.iringtools.web.Models.NHibernateRepository.GetDBDictionary(String context, String application, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Models\NHibernateRepository.cs:line 165
+   at org.iringtools.web.Controllers.NHibernateController.GetDbDictionary(String contextName, String endpoint, String baseUrl) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 52
+   at org.iringtools.web.Controllers.NHibernateController.DBObjects(FormCollection form) in E:\iring-tools\branches\sencha-extjs41\iRINGTools.Applications\Controllers\NHibernateController.cs:line 69

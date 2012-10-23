@@ -1,0 +1,497 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "record": "",
+        "designer|userClassName": "directory.ApplicationForm",
+        "designer|userAlias": "applicationform",
+        "border": true,
+        "frame": false,
+        "height": null,
+        "width": null,
+        "defaults": [
+            "{msgTarget: 'side', anchor: '100%'}"
+        ],
+        "bodyPadding": null,
+        "bodyStyle": [
+            "padding:10px 5px 0"
+        ],
+        "title": null,
+        "method": "POST",
+        "url": "directory/endpoint"
+    },
+    "configAlternates": {
+        "border": "boolean"
+    },
+    "id": "ExtBox1-ext-gen19163",
+    "designerId": "140dde75-d72b-47c5-a76b-9c6cf6c94388",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "record",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyToolbar4"
+            },
+            "designerId": "9bb1588e-4fb4-48a2-a780-98d8467a8c9a",
+            "cn": [
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill1"
+                    },
+                    "designerId": "e871ddfa-0204-4b1d-bca2-ff47ea4d22d7"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton4",
+                        "text": "Ok"
+                    },
+                    "designerId": "66c0774f-4366-43fb-9718-10da33a15199",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onSave();"
+                                ]
+                            },
+                            "designerId": "680aca02-f0e9-4b4b-9644-9543eb061d4c"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton5",
+                        "text": "Cancel"
+                    },
+                    "designerId": "e1dc46fd-0f14-4e67-a434-d6eee614dd2d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onReset();"
+                                ]
+                            },
+                            "designerId": "2a88547e-0cc7-426f-b490-701842f45c48"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSave",
+                "fn": "onSave",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.up('window');\r",
+                    "var endpointName = me.getForm().findField('endpoint').getValue();\r",
+                    "var urlCombo = me.down('form').down('combo');\r",
+                    "var dlCombo = me.down('combo');\r",
+                    "var baseUrl;\r",
+                    "var state = me.getForm().findField('state').getValue();\r",
+                    "if (urlCombo.value !== '' && dlCombo.value !== null) {\r",
+                    "  me.getForm().findField('baseUrl').setValue(urlCombo.value);\r",
+                    "  baseUrl = urlCombo.value;\r",
+                    "}\r",
+                    "\r",
+                    "if(baseUrl) {\r",
+                    "  Ext.Ajax.request({\r",
+                    "    url: 'directory/testBaseUrl',\r",
+                    "    timeout: 600000,\r",
+                    "    method: 'POST',\r",
+                    "    params: {\r",
+                    "      baseUrl: baseUrl\r",
+                    "    },\r",
+                    "    success: function (response, request) {\r",
+                    "      if (response.responseText.indexOf('error') > -1) {\r",
+                    "        showDialog(400, 100, 'Testing Result', 'Connection failed. Please enter/select a valid base url.', Ext.Msg.OK, null);\r",
+                    "        return;\r",
+                    "      }\r",
+                    "      else {\r",
+                    "        if (ifExistSibling(endpointName, win.node, state)) {\r",
+                    "          showDialog(400, 100, 'Warning', 'The name \\\"' + endpointName + '\\\" already exits in this level, please choose a different name.', Ext.Msg.OK, null);\r",
+                    "          return;\r",
+                    "        }\r",
+                    "  \r",
+                    "        me.getForm().submit({\r",
+                    "          waitMsg: 'Saving Data...',\r",
+                    "          success: function (response, request) {\r",
+                    "            \r",
+                    "            win.fireEvent('save', me);\r",
+                    "          },\r",
+                    "          failure: function (response, request) {\r",
+                    "            var rtext = request.result;\r",
+                    "            if (rtext.toUpperCase().indexOf('FALSE') > 0) {\r",
+                    "            var ind = rtext.indexOf('}');\r",
+                    "            var len = rtext.length - ind - 1;\r",
+                    "            var msg = rtext.substring(ind + 1, rtext.length - 1);\r",
+                    "            showDialog(400, 100, 'Error saving endpoint changes', msg, Ext.Msg.OK, null);\r",
+                    "            return;\r",
+                    "          }\r",
+                    "          var message = 'Error saving changes!';\r",
+                    "          showDialog(400, 100, 'Warning', message, Ext.Msg.OK, null);\r",
+                    "        }\r",
+                    "      });\r",
+                    "    }\r",
+                    "  },\r",
+                    "  failure: function (response, request) {\r",
+                    "    showDialog(400, 100, 'Testing Result', 'Connection failed. Please enter/select a valid base url.', Ext.Msg.OK, null);\r",
+                    "    return;\r",
+                    "  }\r",
+                    "  });\r",
+                    "} else {\r",
+                    "  showDialog(400, 100, 'Testing Result', 'Enter values for required fields.', Ext.Msg.OK, null);\r",
+                    "  return;\r",
+                    "}"
+                ]
+            },
+            "designerId": "a394ae97-1a06-435d-aaeb-4f8276426129"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onReset",
+                "fn": "onReset",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.up('window');\r",
+                    "win.fireEvent('Cancel', me);"
+                ]
+            },
+            "designerId": "33208ca5-1f85-4eaa-a544-bf7b2b58f48b"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField44",
+                "name": "oldAssembly",
+                "fieldLabel": null
+            },
+            "designerId": "7ccde611-28c3-49a4-86d1-2f4e1050f323"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField43",
+                "name": "baseUrl",
+                "fieldLabel": null
+            },
+            "designerId": "959c5153-f950-4d39-8c18-7e15b73433c2"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField42",
+                "name": "assembly",
+                "fieldLabel": null
+            },
+            "designerId": "d601416f-a1ee-44c6-a140-dde500319a01"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField41",
+                "name": "oldBaseUrl",
+                "fieldLabel": null
+            },
+            "designerId": "c0bb73b2-5b47-4f89-96e6-75df0c2281ba"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField40",
+                "name": "contextValue",
+                "fieldLabel": null
+            },
+            "designerId": "40ca7705-d93d-461c-a8ca-27d674a7dc5d"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField39",
+                "name": "state",
+                "fieldLabel": null
+            },
+            "designerId": "113b3811-54f6-4be9-806d-df079da7d719"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField38",
+                "name": "path",
+                "fieldLabel": null
+            },
+            "designerId": "57f49f85-8f2e-4c15-b54b-b8d04bdc52df"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyTextField5",
+                "name": "endpoint",
+                "fieldLabel": "Endpoint Name"
+            },
+            "designerId": "5e270425-4108-41d2-95f4-cb0c3292a47c"
+        },
+        {
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyTextArea1",
+                "name": "description",
+                "fieldLabel": "Description"
+            },
+            "designerId": "ad4d7859-d760-4de9-b0e4-48973c51ce94"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyTextField6",
+                "disabled": true,
+                "name": "context",
+                "fieldLabel": "Context Name"
+            },
+            "designerId": "2617fadf-03b2-420e-aea2-2aa90b6db62c"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "DataLayerCombo"
+            },
+            "designerId": "eebfb9f9-0d2a-4775-9fda-c6aa962e1aa5",
+            "masterInstanceId": "ExtBox1-ext-gen23010"
+        },
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm12",
+                "border": false,
+                "frame": false,
+                "itemId": "baseurlform",
+                "layout": "column",
+                "bodyPadding": null,
+                "title": null
+            },
+            "configAlternates": {
+                "border": "boolean"
+            },
+            "designerId": "ce2d1441-07e3-4574-8e5c-7dad42b8f106",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "BaseUrlCombo",
+                        "layout|columnWidth": 0.87
+                    },
+                    "designerId": "86857215-1472-4824-9c0a-a657af32ad20",
+                    "masterInstanceId": "ExtBox1-ext-gen27243"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|columnWidth": 0.13,
+                        "designer|userClassName": "MyButton15",
+                        "style": [
+                            "float: right;"
+                        ],
+                        "text": "Test Url",
+                        "tooltip": [
+                            "Test the entered Url"
+                        ]
+                    },
+                    "designerId": "8cda2bec-1f0c-4229-bf65-ad1cf21eff6b",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var me = this;\r",
+                                    "var urlCombo = me.up('form').down('combo');\r",
+                                    "var baseUrl = urlCombo.value;\r",
+                                    "Ext.Ajax.request({\r",
+                                    "  url: 'directory/testBaseUrl',\r",
+                                    "  timeout: 600000,\r",
+                                    "  method: 'POST',\r",
+                                    "  params: {\r",
+                                    "    baseUrl: baseUrl\r",
+                                    "  },\r",
+                                    "  success: function (response, request) {\r",
+                                    "    if (response.responseText.indexOf('error') == -1)\r",
+                                    "    showDialog(400, 100, 'Testing Result', 'The url is valid and the server is connected.', Ext.Msg.OK, null);\r",
+                                    "    else\r",
+                                    "    showDialog(400, 100, 'Testing Result', 'Connection failed. Please enter/select a valid url.', Ext.Msg.OK, null);\r",
+                                    "  },\r",
+                                    "  failure: function (response, request) {\r",
+                                    "    showDialog(400, 100, 'Testing Result', 'Connection failed. Please enter/select a valid url.', Ext.Msg.OK, null);\r",
+                                    "  }\r",
+                                    "});"
+                                ]
+                            },
+                            "designerId": "a91b05e3-9513-4635-9711-52957f6f327e"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

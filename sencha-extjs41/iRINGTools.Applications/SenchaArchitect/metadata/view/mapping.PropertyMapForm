@@ -1,0 +1,419 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mapping.PropertyMapForm",
+        "designer|userAlias": "propertymapform",
+        "height": null,
+        "width": null,
+        "bodyPadding": 10,
+        "title": null,
+        "method": "POST",
+        "url": "mapping/mapproperty"
+    },
+    "id": "ExtBox1-ext-gen73812",
+    "designerId": "6a016f72-b8ed-445c-8693-8e07b3c965cf",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyToolbar5"
+            },
+            "designerId": "92c93aaa-9b85-4d09-bd2e-7820ff319ae9",
+            "cn": [
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill2"
+                    },
+                    "designerId": "e832dc97-47c7-4cb6-9928-f97a24b86f64"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton6",
+                        "text": "Ok"
+                    },
+                    "designerId": "71bf27f2-fe74-4fd8-a55f-4cabaece2357",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onSave();"
+                                ]
+                            },
+                            "designerId": "5727f87b-75f8-4fbc-b143-81a48237616e"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton7",
+                        "text": "Cancel"
+                    },
+                    "designerId": "7ff503d2-98c9-4830-bda4-5160035b6cd0",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onReset();"
+                                ]
+                            },
+                            "designerId": "6709b91b-08ac-4fc5-b421-8b3b7176a77a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField13",
+                "name": "propertyName",
+                "fieldLabel": null
+            },
+            "designerId": "d4dbb585-db35-42e9-89d8-35450e1e811e"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField14",
+                "name": "graphName",
+                "fieldLabel": null
+            },
+            "designerId": "c16d8fe8-0a60-4dfc-8942-20947cbe53a1"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField15",
+                "name": "relatedObject",
+                "fieldLabel": null
+            },
+            "designerId": "78228ff0-fbfa-465d-8269-0d6ab002233e"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField16",
+                "name": "roleName",
+                "fieldLabel": null
+            },
+            "designerId": "c41d4a45-9906-4195-80a6-5d2ff9b0acb6"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField17",
+                "name": "classId",
+                "fieldLabel": null
+            },
+            "designerId": "9585d846-90d5-46fc-8432-45896414b33f"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField18",
+                "name": "index",
+                "fieldLabel": null
+            },
+            "designerId": "94a81dcc-4196-41f3-9dd7-f703bb5c7b11"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField19",
+                "name": "contextName",
+                "fieldLabel": null
+            },
+            "designerId": "07a31bc2-d3df-4f7d-b404-866a39b4f325"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField20",
+                "name": "endpoint",
+                "fieldLabel": null
+            },
+            "designerId": "7d53c8ac-e6f9-48da-bebd-e887188b5d60"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": null,
+                "designer|userClassName": "MyHiddenField21",
+                "name": "baseUrl",
+                "fieldLabel": null
+            },
+            "designerId": "7fbf5116-9dd3-4489-9c97-30fee07e2da8"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFormAfterRender",
+                "fn": "onFormAfterRender",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var pcont = me.down('#pmfpcontainer');\r",
+                    "var propertyDropTarget = new Ext.dd.DropTarget(pcont.getEl(),{\r",
+                    "  scope: me,\r",
+                    "  ddGroup: 'propertyGroup',\r",
+                    "  copy: false,\r",
+                    "  overClass: 'over',\r",
+                    "  notifyOver: function(dragSource, event, data){\r",
+                    "    if (data.records[0].data.type != 'DataPropertyNode' && data.records[0].data.type != 'KeyDataPropertyNode')\r",
+                    "    return this.dropNotAllowed;\r",
+                    "    else\r",
+                    "    return this.dropAllowed;\r",
+                    "  },\r",
+                    "  notifyDrop: function(dragSource, event, data){\r",
+                    "    if (data.records[0].data.type != 'DataPropertyNode' && data.records[0].data.type != 'KeyDataPropertyNode') {\r",
+                    "      return false;\r",
+                    "    }\r",
+                    "    else {\r",
+                    "      me.getForm().findField('propertyName').setValue(data.records[0].data.record.Name);\r",
+                    "      if (data.records[0].parentNode !== undefined && \r",
+                    "      data.records[0].parentNode.data.record !== undefined && \r",
+                    "      data.records[0].parentNode.data.type != 'DataObjectNode')\r",
+                    "      me.getForm().findField('relatedObject').setValue(data.records[0].parentNode.data.record.Name);\r",
+                    "\r",
+                    "      var msg = 'Property: ' + data.records[0].data.record.Name;\r",
+                    "      pcont.update(msg);\r",
+                    "      return true;\r",
+                    "    }\r",
+                    "  },\r",
+                    "  notifyEnter: function(dd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'DataPropertyNode' && data.records[0].data.type != 'KeyDataPropertyNode')\r",
+                    "    return this.dropNotAllowed;\r",
+                    "    else\r",
+                    "    return this.dropAllowed;\r",
+                    "  }\r",
+                    "});"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "designerId": "20e34c9b-f2f1-43d8-973e-2e7b0e6a85d0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onReset",
+                "fn": "onReset",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.up('window');\r",
+                    "me.getForm().reset();\r",
+                    "win.close();"
+                ]
+            },
+            "designerId": "219fe960-9e32-4a7e-a97d-fd49e07ad8c7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSave",
+                "fn": "onSave",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var message;\r",
+                    "if(me.getForm().isValid()) {\r",
+                    "me.submit({\r",
+                    "  waitMsg: 'Saving Data...',\r",
+                    "  success: function (f, a) {\r",
+                    "\r",
+                    "    me.fireEvent('Save', me);\r",
+                    "  },\r",
+                    "  failure: function (f, a) {\r",
+                    "    message = 'Failed to map property';\r",
+                    "    showDialog(400, 100, 'Warning', message, Ext.Msg.OK, null);\r",
+                    "  }\r",
+                    "});\r",
+                    "} else {\r",
+                    "  message = 'Form is not complete. Cannot save record.';\r",
+                    "  showDialog(400, 100, 'Warning', message, Ext.Msg.OK, null);   \r",
+                    "}"
+                ]
+            },
+            "designerId": "97d8429e-c878-4838-b853-d758eb9f7613"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent",
+                "name": "reset"
+            },
+            "designerId": "0b536f77-cc5f-4f20-a426-658ab41c0b75"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "anchor": "100%",
+                "designer|userClassName": "mapping.PropertyContainer",
+                "designer|userAlias": "propertycontainer",
+                "designer|displayName": "PropertyContainer",
+                "html": [
+                    "Drop a Property Node here."
+                ],
+                "itemId": "pmfpcontainer",
+                "style": [
+                    "border:1px silver solid;margin:5px;padding:8px;height:40px"
+                ],
+                "styleHtmlContent": true,
+                "anchorSize": null
+            },
+            "designerId": "5f50ac49-b269-4754-80a1-2149b81ee5ea",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "anchor",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent1",
+                "name": "save"
+            },
+            "designerId": "d057978c-43f5-46b0-8eb0-d98bde1bc99d"
+        }
+    ]
+}

@@ -1,0 +1,509 @@
+{
+    "type": "treepanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "contextName": null,
+        "endpoint": null,
+        "baseUrl": null,
+        "designer|userClassName": "mapping.MappingTree",
+        "designer|userAlias": "mappingtree",
+        "border": true,
+        "height": null,
+        "minWidth": null,
+        "width": null,
+        "stateEvents": " ['itemcollapse', 'itemexpand']",
+        "stateful": true,
+        "collapsible": null,
+        "title": null,
+        "store": "MappingStore",
+        "rootVisible": false
+    },
+    "configAlternates": {
+        "border": "boolean"
+    },
+    "id": "ExtBox1-ext-gen54902",
+    "designerId": "37ca6ad3-7180-4c3d-bcd8-22f9493320a6",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "contextName",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "endpoint",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "baseUrl",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "treeview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTreeView1"
+            },
+            "designerId": "a291d01c-747c-4845-9481-a6e55174dd98",
+            "cn": [
+                {
+                    "type": "treedragdropplugin",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.tree.plugin.TreeViewDragDrop",
+                    "userConfig": {
+                        "designer|userClassName": "MyTreeDragDropPlugin1",
+                        "ddGroup": "refdataGroup",
+                        "enableDrag": false
+                    },
+                    "designerId": "2adf315c-0398-4c85-919d-2f78e1eff691",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onBeforeNodeDrop",
+                                "fn": "onBeforeNodeDrop",
+                                "implHandler": [
+                                    "var me = this;\r",
+                                    "var pan = me.up('mappingpanel');\r",
+                                    "me.getParentClass(overModel);\r",
+                                    "var nodetype, thistype, icn, txt, templateId, rec, parentId, context;\r",
+                                    "var graphName = pan.graphName;\r",
+                                    "if (overModel.data.type == 'RoleMapNode') {\r",
+                                    "  reference = data.records[0].data.record.Uri;\r",
+                                    "  label = data.records[0].data.record.Label;\r",
+                                    "  roleId = overModel.data.record.id;\r",
+                                    "  roleName = overModel.data.record.name;\r",
+                                    "  rec = data.records[0].data.record;\r",
+                                    "  txt = data.records[0].data.record.Label;\r",
+                                    "  parentId = me.parentClass;\r",
+                                    "  f = false;\r",
+                                    "  var index = overModel.parentNode.parentNode.indexOf(overModel.parentNode);\r",
+                                    "  this.getEl().mask('Loading...');\r",
+                                    "  Ext.Ajax.request({\r",
+                                    "    url: 'mapping/mapreference',\r",
+                                    "    method: 'POST',\r",
+                                    "    params: {\r",
+                                    "      reference: reference,\r",
+                                    "      classId: parentId,\r",
+                                    "      label: label,\r",
+                                    "      roleId: roleId,\r",
+                                    "      roleName: roleName,\r",
+                                    "      contextName: pan.contextName,\r",
+                                    "      endpoint: pan.endpoint,\r",
+                                    "      index: index,\r",
+                                    "      graphName: graphName,\r",
+                                    "      baseUrl: pan.baseUrl\r",
+                                    "    },\r",
+                                    "    success: function (result, request) {\r",
+                                    "      tree.getEl().unmask();\r",
+                                    "      me.onReload();\r",
+                                    "    },\r",
+                                    "    failure: function (result, request) {\r",
+                                    "      //don't drop it\r",
+                                    "      return false;\r",
+                                    "    }\r",
+                                    "  });\r",
+                                    "}\r",
+                                    "if (data.records[0].data.type == 'TemplateNode') {\r",
+                                    "  ntype = overModel.data.type;\r",
+                                    "  parentid = overModel.data.identifier;\r",
+                                    "  thistype = data.records[0].data.type;\r",
+                                    "  icn = 'Content/img/template-map.png';\r",
+                                    "  txt = data.records[0].data.record.Label;\r",
+                                    "  templateId = data.records[0].data.identifier;\r",
+                                    "  rec = data.records[0].data.record;\r",
+                                    "  //context = overModel.data.id + '/' + txt;\r",
+                                    "  lf = false;\r",
+                                    "  me.getEl().mask('Loading...');\r",
+                                    "  Ext.Ajax.request({\r",
+                                    "    url: 'mapping/addtemplatemap',\r",
+                                    "    method: 'POST',\r",
+                                    "    params: {\r",
+                                    "      contextName: pan.contextName,\r",
+                                    "      endpoint: pan.endpoint,\r",
+                                    "      baseUrl: pan.baseUrl,\r",
+                                    "      nodetype: thistype,\r",
+                                    "      parentType: ntype,\r",
+                                    "      parentId: parentid,\r",
+                                    "      id: templateId,\r",
+                                    "      graphName: graphName\r",
+                                    "    },\r",
+                                    "    success: function (result, request) {\r",
+                                    "      me.getEl().unmask();\r",
+                                    "      me.onReload();\r",
+                                    "      return false;\r",
+                                    "    },\r",
+                                    "    failure: function (result, request) {\r",
+                                    "      return false;\r",
+                                    "    }\r",
+                                    "  });\r",
+                                    "}\r",
+                                    "else {\r",
+                                    "  return false;\r",
+                                    "}\r",
+                                    "return false;\r",
+                                    ""
+                                ],
+                                "name": "beforedrop",
+                                "scope": "me"
+                            },
+                            "designerId": "95094aab-ec9f-4634-b1a4-bbe5fa1a1dfb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar6",
+                "width": null
+            },
+            "designerId": "2c635a91-7155-4759-93ac-8c9b1fb7c4a9",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton8",
+                        "icon": "Content/img/16x16/view-refresh.png",
+                        "text": "Reload Tree"
+                    },
+                    "designerId": "04534e97-86da-4915-867c-97f0e1aa28f9",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var tree = button.up('toolbar').up('panel');\r",
+                                    "var node = tree.getRootNode();\r",
+                                    "tree.onReload(node);"
+                                ]
+                            },
+                            "designerId": "1a6dcaee-5838-4ef5-aa56-8e8998924204"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton31",
+                        "icon": "Content/img/16x16/document-save.png",
+                        "text": "Save"
+                    },
+                    "designerId": "2adf3184-ac0d-46d8-b1c7-c480fe35c97c",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onSave();"
+                                ]
+                            },
+                            "designerId": "82bbf5e6-2b97-4acb-bd8e-0373f85e7191"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showContextMenu",
+                "fn": "showContextMenu",
+                "implHandler": [
+                    "var me = this;\r",
+                    "e.stopEvent();\r",
+                    "var obj = record.store.getAt(index).data;\r",
+                    "\r",
+                    "if (obj.type == \"TemplateMapNode\") {\r",
+                    "  var templatemapMenu = Ext.widget('templatemapmenu');\r",
+                    "  templatemapMenu.showAt(e.getXY());\r",
+                    "} else if (obj.type == \"RoleMapNode\") {\r",
+                    "  var rolemapMenu = Ext.widget('rolemapmenu');\r",
+                    "  rolemapMenu.showAt(e.getXY());\r",
+                    "} else if (obj.type == \"ClassMapNode\") {\r",
+                    "  var classmapMenu = Ext.widget('classmapmenu');\r",
+                    "  classmapMenu.showAt(e.getXY());\r",
+                    "}"
+                ],
+                "name": "itemcontextmenu",
+                "scope": "me"
+            },
+            "designerId": "59e5cfbb-a06d-4dfe-9929-c8a2781031c8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "applyState",
+                "fn": "applyState",
+                "designer|params": [
+                    "state"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "var nodes = state.expandedNodes || [],\r",
+                    "len = nodes.length;\r",
+                    "me.collapseAll();\r",
+                    "Ext.each(nodes, function (path) {\r",
+                    "  me.expandPath(path, 'text');\r",
+                    "});\r",
+                    "me.callParent(arguments);"
+                ]
+            },
+            "designerId": "3a9d7c9f-0c8e-4567-adf6-b7cc9e0383de"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getState",
+                "fn": "getState",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var nodes = [], state = me.callParent();\r",
+                    "me.getRootNode().eachChild(function (child) {\r",
+                    "  // function to store state of tree recursively \r",
+                    "  var storeTreeState = function (node, expandedNodes) {\r",
+                    "    if (node.isExpanded() && node.childNodes.length > 0) {\r",
+                    "      expandedNodes.push(node.getPath('text'));\r",
+                    "\r",
+                    "      node.eachChild(function (child) {\r",
+                    "        storeTreeState(child, expandedNodes);\r",
+                    "      });\r",
+                    "    }\r",
+                    "  };\r",
+                    "  storeTreeState(child, nodes);\r",
+                    "});\r",
+                    "Ext.apply(state, {\r",
+                    "  expandedNodes: nodes\r",
+                    "});\r",
+                    "return state;"
+                ]
+            },
+            "designerId": "60938214-271e-49cb-9193-46f378631790"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onReload",
+                "fn": "onReload",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var graphName = me.up('mappingpanel').graphName;\r",
+                    "var path, graphNode;\r",
+                    "var node = me.getSelectedNode();\r",
+                    "var store = me.store;\r",
+                    "var root = me.getRootNode();\r",
+                    "root.eachChild(function(child) {\r",
+                    "  if(child.data.text == graphName)\r",
+                    "    graphNode = child;\r",
+                    "});\r",
+                    "\r",
+                    "if (node) {\r",
+                    "  path = node.getPath('text');\r",
+                    "  store.load(node);\r",
+                    "if(node.isExpanded())\r",
+                    "  node.collapse();\r",
+                    "}\r",
+                    "\r",
+                    "if(path) {\r",
+                    " // alert(path);\r",
+                    "  me.expandPath(path, 'text');\r",
+                    "  me.getSelectionModel().select(node);\r",
+                    "}"
+                ]
+            },
+            "designerId": "73376ff7-78cf-4038-96dd-5bfbe415812b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSave",
+                "fn": "onSave",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var mapPanel = me.isContained;\r",
+                    "Ext.Ajax.request({\r",
+                    "  url: 'mapping/updateMapping',\r",
+                    "  method: 'POST',\r",
+                    "  params: {\r",
+                    "    contextName: mapPanel.context,\r",
+                    "    endpoint: mapPanel.endpoint,\r",
+                    "    baseUrl: mapPanel.baseUrl\r",
+                    "  },\r",
+                    "  success: function (result, request) {\r",
+                    "    me.onReload();\r",
+                    "  },\r",
+                    "  failure: function (result, request) {\r",
+                    "    return false;\r",
+                    "  }\r",
+                    "});"
+                ]
+            },
+            "designerId": "f7b5408b-67e1-4090-934b-208862d9e429"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getParentClass",
+                "fn": "getParentClass",
+                "designer|params": [
+                    "n"
+                ],
+                "implHandler": [
+                    "if (n.parentNode !== null && n.parentNode !== undefined) {\r",
+                    "  if ((n.parentNode.data.type == 'ClassMapNode' || \r",
+                    "  n.parentNode.data.type == 'GraphMapNode') && \r",
+                    "  n.parentNode.data.identifier !== undefined) {\r",
+                    "    this.parentClass = n.parentNode.data.identifier;\r",
+                    "    return this.parentClass;\r",
+                    "  }\r",
+                    "  else {\r",
+                    "    this.getParentClass(n.parentNode);\r",
+                    "  }\r",
+                    "}"
+                ]
+            },
+            "designerId": "797ba171-8f6e-4f14-92ac-a2e8956cf122"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onBeforeLoad",
+                "fn": "onBeforeLoad",
+                "implHandler": [
+                    "store.proxy.extraParams.type = operation.node.data.type;\r",
+                    "if (store.proxy.extraParams !== undefined) {\r",
+                    "  store.proxy.extraParams.id = operation.node.data.id;\r",
+                    "}"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "designerId": "de2f8b80-9cdf-47df-a77a-b671d685ae89"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getSelectedNode",
+                "fn": "getSelectedNode",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var selected = me.getSelectionModel().getSelection();\r",
+                    "return selected[0];"
+                ]
+            },
+            "designerId": "d33a65fb-af75-4cf5-93fe-b8e94ffef6e3"
+        },
+        {
+            "type": "rowselectionmodel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.RowModel",
+            "userConfig": {
+                "designer|userClassName": "MyRowSelectionModel1"
+            },
+            "designerId": "9a74fcfe-3f6f-4073-b6f8-8efa93d36867"
+        }
+    ]
+}

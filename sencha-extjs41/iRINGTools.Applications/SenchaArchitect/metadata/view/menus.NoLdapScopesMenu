@@ -1,0 +1,118 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.NoLdapScopesMenu",
+        "designer|userAlias": "noldapscopesmenu",
+        "floating": true,
+        "width": 130
+    },
+    "id": "ExtBox1-ext-gen26560",
+    "designerId": "066aa598-61b3-402a-8029-13803d2c2c42",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "neweditscope",
+                "designer|userClassName": "MyMenuItem8",
+                "icon": "Content/img/16x16/document-new.png",
+                "text": "New Folder"
+            },
+            "designerId": "78cabd92-eb72-4aeb-8c72-a07aac431e31",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuseparator",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySeparator2"
+            },
+            "designerId": "73d742dd-961a-42f2-9449-fc477951b552"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "newdatalayer",
+                "designer|userClassName": "MyMenuItem9",
+                "icon": "Content/img/16x16/document-new.png",
+                "text": "New Data Layer"
+            },
+            "designerId": "18e026f5-dd06-4b43-b56e-925c69f2d966",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "editdatalayer",
+                "designer|userClassName": "MyMenuItem10",
+                "icon": "Content/img/16x16/document-properties.png",
+                "text": "Edit Data Layer"
+            },
+            "designerId": "33c9bdb8-2448-4d90-a2ac-35b21d63f56c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "deletedatalayer",
+                "designer|userClassName": "MyMenuItem11",
+                "icon": "Content/img/16x16/edit-delete.png",
+                "text": "Delete Data Layer"
+            },
+            "designerId": "6c7da380-d558-4447-af91-8a55c05229fd",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

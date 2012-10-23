@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdfImportExport", "RdfImportExport\RdfImportExport.csproj", "{FFBAFDB9-201D-42BB-8BA4-A5F6180F0333}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFBAFDB9-201D-42BB-8BA4-A5F6180F0333}.Debug|x86.ActiveCfg = Debug|x86
+		{FFBAFDB9-201D-42BB-8BA4-A5F6180F0333}.Debug|x86.Build.0 = Debug|x86
+		{FFBAFDB9-201D-42BB-8BA4-A5F6180F0333}.Release|x86.ActiveCfg = Release|x86
+		{FFBAFDB9-201D-42BB-8BA4-A5F6180F0333}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

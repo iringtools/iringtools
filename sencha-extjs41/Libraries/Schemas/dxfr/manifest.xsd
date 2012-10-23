@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://www.iringtools.org/dxfr/manifest"  targetNamespace="http://www.iringtools.org/dxfr/manifest"
+  xmlns:map="http://www.iringtools.org/mapping" 
+  elementFormDefault="qualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc">
+
+  <xs:annotation>
+    <xs:appinfo>
+      <jaxb:globalBindings>
+        <xjc:simple />
+      </jaxb:globalBindings>
+    </xs:appinfo>
+  </xs:annotation>
+
+<xs:import namespace="http://www.iringtools.org/mapping" schemaLocation="../mapping/mapping.xsd" />
+
+  <xs:element name="manifest" type="Manifest" />
+
+  <xs:complexType name="Manifest">
+    <xs:sequence>
+      <xs:element name="graphs" type="Graphs" />
+      <xs:element name="version" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Graphs">
+    <xs:sequence>
+      <xs:element name="graph" type="Graph" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Graph">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="classTemplatesList" type="ClassTemplatesList" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ClassTemplatesList">
+    <xs:sequence>
+      <xs:element name="classTemplates" type="ClassTemplates" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ClassTemplates">
+    <xs:sequence>
+      <xs:element name="class" type="Class" />
+      <xs:element name="templates" type="Templates" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Class">
+    <xs:sequence>
+      <xs:element name="classId" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Templates">
+    <xs:sequence>
+      <xs:element name="template" type="Template" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Template">
+    <xs:sequence>
+      <xs:element name="templateId" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="roles" type="Roles" />
+      <xs:element name="transferOption" type="map:TransferOption" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Roles">
+    <xs:sequence>
+      <xs:element name="role" type="Role" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Role">
+    <xs:sequence>
+      <xs:element name="type" type="map:RoleType" />
+      <xs:element name="roleId" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="dataType" type="xs:string" />
+      <xs:element name="value" type="xs:string" />
+      <xs:element name="class" type="Class" />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

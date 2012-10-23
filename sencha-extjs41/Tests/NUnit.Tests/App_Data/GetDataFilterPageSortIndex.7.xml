@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinesList xmlns="http://www.example.com/ABC/12345_000/LINES/">
+  <Lines>
+    <Tag>90006-O</Tag>
+    <Id>0100000045</Id>
+    <Area>90</Area>
+    <Trainnumber></Trainnumber>
+    <Spec>AAB3</Spec>
+    <System>O</System>
+    <Lineno>006</Lineno>
+    <Nomdiameter>250</Nomdiameter>
+    <Insulationtype>IP</Insulationtype>
+    <Htraced></Htraced>
+    <Consttype>NEW</Consttype>
+    <Despressure>34.5</Despressure>
+    <Testpressure></Testpressure>
+    <Pwht></Pwht>
+    <Testmedia></Testmedia>
+    <Matltype></Matltype>
+    <Ndt></Ndt>
+    <Nde></Nde>
+    <Pipeclass></Pipeclass>
+    <Pidnumber>90-AO5676</Pidnumber>
+    <Destemperature>147</Destemperature>
+    <Paintsystem></Paintsystem>
+    <Designcode></Designcode>
+    <Colourcode></Colourcode>
+    <Ewp>***</Ewp>
+    <User1></User1>
+    <Tagstatus>NEW</Tagstatus>
+    <Fullline>90-O-006</Fullline>
+    <Uom_nomdiameter>mm</Uom_nomdiameter>
+    <Uom_despressure>kPag</Uom_despressure>
+    <Uom_destemperature>Deg C</Uom_destemperature>
+  </Lines>
+</LinesList>

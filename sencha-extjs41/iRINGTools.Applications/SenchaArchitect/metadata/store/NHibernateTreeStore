@@ -1,0 +1,80 @@
+{
+    "type": "treestore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NHibernateTreeStore",
+        "autoLoad": false,
+        "storeId": "NHibernateTreeStore",
+        "model": "NHibernateTreeModel",
+        "root": [
+            "{\r",
+            "        expanded: true,\r",
+            "        text: 'Data Objects',\r",
+            "        iconCls: 'folder'\r",
+            "    }"
+        ]
+    },
+    "id": "ExtBox1-ext-gen22120",
+    "designerId": "a3fb05dd-4586-4c2d-82bb-23b8d97d9bc9",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"read\":\"POST\"}"
+                ],
+                "designer|userClassName": "MyAjaxProxy6",
+                "extraParams": [
+                    "{\r",
+                    "  contextName: null,\r",
+                    "  endpoint: null,\r",
+                    "  dbProvider: null,\r",
+                    "  dbServer: null,\r",
+                    "  dbInstance: null,\r",
+                    "  dbName: null,\r",
+                    "  dbSchema: null,\r",
+                    "  dbUserName: null,\r",
+                    "  dbPassword: null,\r",
+                    "  portNumber: null,\r",
+                    "  tableNames: null,\r",
+                    "  serName: null,\r",
+                    "  baseUrl:null\r",
+                    "}"
+                ],
+                "timeout": 600000,
+                "url": "NHibernate/DBObjects"
+            },
+            "designerId": "33e0092b-58da-454c-9de8-cb78073da37c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "object"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader6"
+                    },
+                    "designerId": "e9706447-dbdf-4be5-8da2-17f703d15a60"
+                }
+            ]
+        }
+    ]
+}

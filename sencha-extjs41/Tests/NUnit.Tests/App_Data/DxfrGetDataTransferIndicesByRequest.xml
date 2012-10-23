@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfdataTransferIndex xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iringtools.org/dxfr/dti">
+  <dataTransferIndex>
+    <identifier>90003-SC</identifier>
+    <sortIndex>90003-SC</sortIndex>
+    <internalIdentifier>90003-SC</internalIdentifier>
+  </dataTransferIndex>
+  <dataTransferIndex>
+    <identifier>90005-RV</identifier>
+    <sortIndex>90005-RV</sortIndex>
+    <internalIdentifier>90005-RV</internalIdentifier>
+  </dataTransferIndex>
+  <dataTransferIndex>
+    <identifier>90010-O</identifier>
+    <sortIndex>90010-O</sortIndex>
+    <internalIdentifier>90010-O</internalIdentifier>
+  </dataTransferIndex>
+  <dataTransferIndex>
+    <identifier>90011-O</identifier>
+    <sortIndex>90011-O</sortIndex>
+    <internalIdentifier>90011-O</internalIdentifier>
+  </dataTransferIndex>
+  <dataTransferIndex>
+    <identifier>90014-RV</identifier>
+    <sortIndex>90014-RV</sortIndex>
+    <internalIdentifier>90014-RV</internalIdentifier>
+  </dataTransferIndex>
+  <dataTransferIndex>
+    <identifier>90058-O</identifier>
+    <sortIndex>90058-O</sortIndex>
+    <internalIdentifier>90058-O</internalIdentifier>
+  </dataTransferIndex>
+</ArrayOfdataTransferIndex>

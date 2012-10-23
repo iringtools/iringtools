@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "Content/css/adaptermanager-gray.css"
+    },
+    "id": "ExtBox1-ext-gen80044",
+    "designerId": "ac4d90f8-b4e0-485c-a04a-e19fd423b21c"
+}

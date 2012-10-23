@@ -1,0 +1,1107 @@
+2012-09-07 10:13:41,907 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 10:15:56,292 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 10:20:54,848 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 10:25:22,638 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 10:25:49,919 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 10:26:46,978 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 10:27:38,554 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 10:28:05,590 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 10:28:15,408 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 10:29:43,386 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 10:30:10,031 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 10:30:14,153 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 11:39:49,468 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 11:40:05,955 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 11:40:08,731 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 11:42:37,491 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 11:42:55,628 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 11:42:58,427 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 11:57:36,646 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 11:57:55,700 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 11:57:59,484 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:00:35,404 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 12:00:54,032 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:00:56,971 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:06:43,489 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 12:12:05,369 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:12:07,868 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:18:00,242 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 12:18:30,124 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:18:37,687 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:18:37,703 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 12:19:08,592 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 12:19:08,611 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:19:08,627 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 12:19:08,641 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-07 12:31:32,961 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 12:32:00,266 [40] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:32:03,178 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:32:03,201 [40] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 12:47:03,188 [40] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 12:47:25,431 [152] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:47:28,616 [152] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:47:28,673 [152] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 12:52:40,574 [152] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 12:53:26,692 [152] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:53:31,046 [152] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:53:31,064 [152] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 12:53:31,095 [152] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 12:56:56,923 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 12:56:57,046 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 12:56:57,063 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 12:56:57,531 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 12:58:27,081 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:01:26,942 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:01:26,964 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:01:26,980 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:01:27,464 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:13:06,611 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:13:11,414 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:13:11,461 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:13:11,478 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:13:11,810 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:15:49,893 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:15:53,907 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:15:53,943 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:15:53,976 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:15:54,397 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:18:09,444 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:18:18,279 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:18:18,305 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:18:18,321 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:18:18,775 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:21:22,057 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:21:26,656 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:21:26,681 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:21:26,699 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:21:27,175 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:22:25,073 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:22:30,992 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:22:31,014 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:22:31,030 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:22:31,480 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:24:03,995 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:24:04,019 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:24:04,035 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:24:04,494 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 13:25:54,077 [151] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 13:25:57,696 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 13:25:57,739 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 13:25:57,757 [151] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 13:25:58,210 [151] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:05:17,633 [16] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:06:05,632 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 17:06:05,973 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 17:06:05,990 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 17:06:06,445 [16] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:11:46,686 [16] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:12:07,510 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 17:12:07,513 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 17:12:07,515 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 17:12:08,011 [16] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:23:18,486 [16] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:23:56,858 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 17:23:56,908 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 17:23:56,925 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 17:23:57,272 [16] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:29:44,500 [16] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:29:51,868 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 17:29:51,872 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 17:29:51,875 [16] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 17:29:52,372 [16] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:34:16,815 [16] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:34:31,345 [21] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:34:37,618 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 17:34:37,621 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 17:34:37,623 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 17:34:38,134 [21] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:39:27,334 [21] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:39:38,513 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-07 17:39:38,564 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-07 17:39:38,579 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-07 17:39:38,951 [21] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-07 17:42:31,215 [21] ERROR org.iringtools.adapter.AdapterProvider - Error in UpdateBindingConfiguration: System.IO.FileNotFoundException: Could not find file 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'.
+File name: 'E:\iring-tools\branches\sencha-extjs41\iRINGTools.Services\App_Data\BindingConfiguration.12345_000.TESTER.xml'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   at System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   at System.Xml.Linq.XElement.Load(String uri)
+   at org.iringtools.adapter.AdapterProvider.GetBinding(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 781
+2012-09-07 17:42:38,634 [21] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'

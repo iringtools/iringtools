@@ -1,0 +1,246 @@
+2012-09-20 16:18:25,173 [15] ERROR org.iringtools.nhibernate.ext.NHibernateAuthorization - KeyRing is empty.
+2012-09-20 16:18:25,325 [15] ERROR org.iringtools.adapter.AdapterProvider - Error in GetProjection: System.UnauthorizedAccessException: User not authorized to access NHibernate data layer of [12345_000.ABC]
+   at org.iringtools.adapter.datalayer.NHibernateDataLayer.Get(String objectType, DataFilter filter, Int32 pageSize, Int32 startIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateDataLayer.cs:line 357
+   at org.iringtools.adapter.AdapterProvider.GetDataProjection(String projectName, String applicationName, String resourceName, DataFilter filter, String& format, Int32 start, Int32 limit, Boolean fullIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 2158
+2012-09-20 16:18:25,539 [15] ERROR org.iringtools.nhibernate.ext.NHibernateAuthorization - KeyRing is empty.
+2012-09-20 16:18:25,558 [15] ERROR org.iringtools.adapter.AdapterProvider - Error in GetProjection: System.UnauthorizedAccessException: User not authorized to access NHibernate data layer of [12345_000.ABC]
+   at org.iringtools.adapter.datalayer.NHibernateDataLayer.Get(String objectType, DataFilter filter, Int32 pageSize, Int32 startIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateDataLayer.cs:line 357
+   at org.iringtools.adapter.AdapterProvider.GetDataProjection(String projectName, String applicationName, String resourceName, DataFilter filter, String& format, Int32 start, Int32 limit, Boolean fullIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 2158
+2012-09-20 16:45:54,815 [41] ERROR org.iringtools.nhibernate.ext.NHibernateAuthorization - KeyRing is empty.
+2012-09-20 16:45:54,844 [41] ERROR org.iringtools.adapter.AdapterProvider - Error in GetProjection: System.UnauthorizedAccessException: User not authorized to access NHibernate data layer of [12345_000.ABC]
+   at org.iringtools.adapter.datalayer.NHibernateDataLayer.Get(String objectType, DataFilter filter, Int32 pageSize, Int32 startIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateDataLayer.cs:line 357
+   at org.iringtools.adapter.AdapterProvider.GetDataProjection(String projectName, String applicationName, String resourceName, DataFilter filter, String& format, Int32 start, Int32 limit, Boolean fullIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 2158
+2012-09-20 16:45:55,235 [41] ERROR org.iringtools.nhibernate.ext.NHibernateAuthorization - KeyRing is empty.
+2012-09-20 16:45:55,251 [41] ERROR org.iringtools.adapter.AdapterProvider - Error in GetProjection: System.UnauthorizedAccessException: User not authorized to access NHibernate data layer of [12345_000.ABC]
+   at org.iringtools.adapter.datalayer.NHibernateDataLayer.Get(String objectType, DataFilter filter, Int32 pageSize, Int32 startIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateDataLayer.cs:line 357
+   at org.iringtools.adapter.AdapterProvider.GetDataProjection(String projectName, String applicationName, String resourceName, DataFilter filter, String& format, Int32 start, Int32 limit, Boolean fullIndex) in E:\iring-tools\branches\sencha-extjs41\Libraries\AdapterLibrary\AdapterProvider.cs:line 2158
+2012-09-20 16:47:02,785 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:02,869 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:02,929 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:24,462 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:24,540 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:24,605 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:49,776 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:49,837 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:49,899 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:55,515 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:55,580 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:47:55,641 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:49:13,104 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:49:13,186 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:49:13,247 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:53:58,518 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:53:58,601 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://rdl.rdlfacade.org/data']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:53:58,674 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:53:58,741 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:56:16,087 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/SandboxPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:56:31,211 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://rdl.rdlfacade.org/data']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:56:39,803 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://www.iringsandbox.org/repositories/TempInitSetPt8/query']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052
+2012-09-20 16:56:52,592 [41] ERROR org.iringtools.refdata.ReferenceDataProvider - Failed to read repository['http://posccaesar.org/endpoint/sparql']
+VDS.RDF.Query.RdfQueryException: A HTTP Error occurred while trying to make the SPARQL Query, see inner exception for details ---> System.Net.WebException: The proxy name could not be resolved: 'proxy.hatch.local'
+   at System.Net.HttpWebRequest.GetResponse()
+   at VDS.RDF.Query.SparqlRemoteEndpoint.ExecuteQuery(Uri target, String postData, String accept)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryInternal(String sparqlQuery, String acceptHeader)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   --- End of inner exception stack trace ---
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler handler, String sparqlQuery)
+   at VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(String sparqlQuery)
+   at org.iringtools.refdata.ReferenceDataProvider.QueryFromRepository(Repository repository, String sparql) in E:\iring-tools\branches\sencha-extjs41\Libraries\ReferenceDataLibrary\ReferenceDataProvider.cs:line 2052

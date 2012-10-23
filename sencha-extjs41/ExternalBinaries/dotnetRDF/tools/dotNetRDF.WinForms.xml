@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dotNetRDF.WinForms</name>
+    </assembly>
+    <members>
+        <member name="T:VDS.RDF.GUI.Constants">
+            <summary>
+            Constants for use in GUI Applications
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.Constants.RdfFilter">
+            <summary>
+            Filename Filter for RDF Graphs for Open/Save Dialogs
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.Constants.RdfDatasetFilter">
+            <summary>
+            Filename Filter for RDF Datasets for Open/Save Dialogs
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.Constants.SparqlResultsFilter">
+            <summary>
+            Filname Filter for SPARQL Results for Open/Save Dialogs
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.Constants.SparqlQueryFilter">
+            <summary>
+            Filename Filter for SPARQL Queries
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.Constants.SparqlUpdateFilter">
+            <summary>
+            Filename Filter for SPARQL Updates
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.Constants.NonStandardFilter">
+            <summary>
+            Filename Filter for Formats which can be used to serialise RDF and SPARQL Results but which are not standardised
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.GUI.Constants.RdfOrDatasetFilter">
+            <summary>
+            Filename Filter for RDF Graphs/Datasets for Open/Save Dialogs
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.GUI.ToStringComparer`1">
+            <summary>
+            Comparer which compares objects based on the value of their ToString() method
+            </summary>
+            <typeparam name="T">Type to compare</typeparam>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm">
+            <summary>
+            A Form that can be used to select options for Exporting a SPARQL Result Set to a File
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm.#ctor">
+            <summary>
+            Creates a new Export SPARQL Results Options Form
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm.Writer">
+            <summary>
+            Gets the SPARQL Results Writer the user selected
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.GUI.WinForms.ExportResultSetOptionsForm.File">
+            <summary>
+            Gets the Target Filename the user selected
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.ResultSetViewerForm">
+            <summary>
+            A Form that displays a SPARQL Result Set using a DataGridView
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ResultSetViewerForm.#ctor(VDS.RDF.Query.SparqlResultSet)">
+            <summary>
+            Displays the given SPARQL Result Set
+            </summary>
+            <param name="results">SPARQL Result to display</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ResultSetViewerForm.#ctor(VDS.RDF.Query.SparqlResultSet,System.String)">
+            <summary>
+            Displays the given SPARQL Result Set and prefixes the Form Title with the given Title
+            </summary>
+            <param name="results">SPARQL Result Set to display</param>
+            <param name="title">Title</param>
+        </member>
+        <member name="F:VDS.RDF.GUI.WinForms.ResultSetViewerForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ResultSetViewerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ResultSetViewerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:VDS.RDF.GUI.WinForms.ResultSetViewerForm.UriClicked">
+            <summary>
+            Event which is raised when the User clicks a URI
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.UriClickedEventHandler">
+            <summary>
+            Event that occurs when a URI is clicked
+            </summary>
+            <param name="u">URI that was clicked</param>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm">
+            <summary>
+            A Form that can be used to select options for Exporting a Graph to a File
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm.#ctor">
+            <summary>
+            Creates a new Export Graph Options Form
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm.Writer">
+            <summary>
+            Gets the RDF Writer the user selected
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.GUI.WinForms.ExportGraphOptionsForm.File">
+            <summary>
+            Gets the Target Filename the user selected
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.OpenConnectionForm">
+            <summary>
+            A Form that can be used to select an IGenericIOManager instance defined in an RDF Graph using the dotNetRDF Configuration Vocabulary
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.OpenConnectionForm.#ctor(VDS.RDF.IGraph)">
+            <summary>
+            Creates a new Open Connection Form
+            </summary>
+            <param name="g">Graph contaning Connection Definitions</param>
+        </member>
+        <member name="F:VDS.RDF.GUI.WinForms.OpenConnectionForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.OpenConnectionForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.OpenConnectionForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.GUI.WinForms.OpenConnectionForm.Connection">
+            <summary>
+            Gets the Connection created when the User clicked the Open button
+            </summary>
+            <remarks>
+            May be null if the User closes/cancels the Form
+            </remarks>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.VisualiseGraphForm">
+            <summary>
+            A Form that can be used to Visualise a Graph using GraphViz (or produce DOT output for use with GraphViz)
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.VisualiseGraphForm.#ctor(VDS.RDF.IGraph)">
+            <summary>
+            Creates a new Form for Visualising Graphs
+            </summary>
+            <param name="g">Graph to visualise</param>
+        </member>
+        <member name="F:VDS.RDF.GUI.WinForms.VisualiseGraphForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.VisualiseGraphForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.VisualiseGraphForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.GUI.WinForms.GraphViewerForm">
+            <summary>
+            A Form that displays a Graph using a DataGridView
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.GraphViewerForm.#ctor(VDS.RDF.IGraph)">
+            <summary>
+            Displays the given Graph
+            </summary>
+            <param name="g">Graph to display</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.GraphViewerForm.#ctor(VDS.RDF.IGraph,System.String)">
+            <summary>
+            Displays the given Graph and prefixes the Form Title with the given Title
+            </summary>
+            <param name="g">Graph to display</param>
+            <param name="title">Title</param>
+        </member>
+        <member name="F:VDS.RDF.GUI.WinForms.GraphViewerForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.GraphViewerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VDS.RDF.GUI.WinForms.GraphViewerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:VDS.RDF.GUI.WinForms.GraphViewerForm.UriClicked">
+            <summary>
+            Event which is raised when a User clicks a URI
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+PREFIX dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rds: <http://posccaesar.org/rdl/>
+PREFIX rdl: <http://rdl.rdlfacade.org/data#> 
+SELECT ?uri ?label  ?rdsuri
+{
+  rdl:param1  rds:rdsWipEquivalent ?c .
+  ?s dm:hasClassified ?c  . 
+  ?s dm:hasClassifier ?rdsuri . 
+  OPTIONAL { ?uri rds:rdsWipEquivalent ?rdsuri . }
+  OPTIONAL { ?rdsuri rdfs:label ?label .} 
+}

@@ -1,0 +1,12 @@
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\RdfImportExport.exe
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\RdfImportExport.pdb
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\dotNetRDF.Data.Sql.dll
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\dotNetRDF.dll
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\Newtonsoft.Json.dll
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\HtmlAgilityPack.dll
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\dotNetRDF.xml
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\dotNetRDF.Data.Sql.xml
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\bin\Debug\HtmlAgilityPack.xml
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\obj\x86\Debug\RdfImportExport.exe
+E:\iring-tools\branches\sencha-extjs41\Utilities\RdfImportExport\RdfImportExport\obj\x86\Debug\RdfImportExport.pdb

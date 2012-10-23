@@ -1,0 +1,1333 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dotNetRDF.Data.Sql</name>
+    </assembly>
+    <members>
+        <member name="T:VDS.RDF.PluginExtensions">
+            <summary>
+            Represents common extensions that are useful across all Plugin libraries
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.PluginExtensions.ToSafeString(System.Object)">
+            <summary>
+            Gets either the String form of the Object of the Empty String
+            </summary>
+            <param name="obj">Object</param>
+            <returns>Result of calling <strong>ToString()</strong> on non-null objects and the empty string for null objects</returns>
+        </member>
+        <member name="M:VDS.RDF.PluginExtensions.EnsureObjectFactory(VDS.RDF.Configuration.ConfigurationSerializationContext,System.Type)">
+            <summary>
+            Ensures that a specific Object Factory type is registered in a Configuration Graph
+            </summary>
+            <param name="context">Configuration Serialization Context</param>
+            <param name="factoryType">Factory Type</param>
+        </member>
+        <member name="T:VDS.RDF.Query.Datasets.BaseAdoDataset`5">
+            <summary>
+            Abstract Base implementation of a dataset against an ADO Store
+            </summary>
+            <typeparam name="TConn">Connection Type</typeparam>
+            <typeparam name="TCommand">Command Type</typeparam>
+            <typeparam name="TParameter">Parameter Type</typeparam>
+            <typeparam name="TAdapter">Adaptor Type</typeparam>
+            <typeparam name="TException">Exception Type</typeparam>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.#ctor(VDS.RDF.Storage.BaseAdoStore{`0,`1,`2,`3,`4})">
+            <summary>
+            Creates a new Base ADO Dataset
+            </summary>
+            <param name="manager">ADO Store Manager</param>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.AddGraphInternal(VDS.RDF.IGraph)">
+            <summary>
+            Adds a Graph to the dataset
+            </summary>
+            <param name="g">Graph to add</param>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetModifiableGraphInternal(System.Uri)">
+            <summary>
+            Gets a modifiable graph from the dataset
+            </summary>
+            <param name="graphUri">Graph URI</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.RemoveGraphInternal(System.Uri)">
+            <summary>
+            Removes a Graph from the dataset
+            </summary>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.HasGraphInternal(System.Uri)">
+            <summary>
+            Determines whether the dataset has a specific Graph
+            </summary>
+            <param name="graphUri">Graph URI</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetGraphInternal(System.Uri)">
+            <summary>
+            Gets a Graph from the dataset
+            </summary>
+            <param name="graphUri">Graph URI</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.ContainsTripleInternal(VDS.RDF.Triple)">
+            <summary>
+            Gets whether the dataset contains a given Triple
+            </summary>
+            <param name="t">Triple</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetAllTriples">
+            <summary>
+            Gets all triples from the dataset
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetTriplesWithSubjectInternal(VDS.RDF.INode)">
+            <summary>
+            Gets triples with the given subject from the dataset
+            </summary>
+            <param name="subj">Subject</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetTriplesWithPredicateInternal(VDS.RDF.INode)">
+            <summary>
+            Gets triples with the given predicate from the dataset
+            </summary>
+            <param name="pred">Predicate</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetTriplesWithObjectInternal(VDS.RDF.INode)">
+            <summary>
+            Gets triples with the given object from the dataset
+            </summary>
+            <param name="obj">Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetTriplesWithSubjectPredicateInternal(VDS.RDF.INode,VDS.RDF.INode)">
+            <summary>
+            Gets triples with the given subject and predicate from the dataset
+            </summary>
+            <param name="subj">Subject</param>
+            <param name="pred">Predicate</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetTriplesWithSubjectObjectInternal(VDS.RDF.INode,VDS.RDF.INode)">
+            <summary>
+            Gets triples with the given subject and object from the dataset
+            </summary>
+            <param name="subj">Subject</param>
+            <param name="obj">Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GetTriplesWithPredicateObjectInternal(VDS.RDF.INode,VDS.RDF.INode)">
+            <summary>
+            Gets triples with the given predicate and object from the dataset
+            </summary>
+            <param name="pred">Predicate</param>
+            <param name="obj">Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.FlushInternal">
+            <summary>
+            Takes internal flush actions when a transaction is flushed
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoDataset`5.DiscardInternal">
+            <summary>
+            Takes internal discard actions when a transaction is discarded
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Query.Datasets.BaseAdoDataset`5.Graphs">
+            <summary>
+            Gets the Graphs from the Dataset
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Query.Datasets.BaseAdoDataset`5.GraphUris">
+            <summary>
+            Gets the URIs of Graphs contained in the dataset
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Query.Datasets.BaseAdoSqlClientDataset">
+            <summary>
+            Abstract implementation of a dataset against an ADO Store that uses the System.Data.SqlClient API to communicate with the database
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.BaseAdoSqlClientDataset.#ctor(VDS.RDF.Storage.BaseAdoSqlClientStore)">
+            <summary>
+            Creates a new ADO SQL Client Dataset
+            </summary>
+            <param name="manager">ADO SQL Client Store Manager</param>
+        </member>
+        <member name="T:VDS.RDF.Query.Datasets.MicrosoftAdoDataset">
+            <summary>
+            A dataset backed by an ADO Store on Microsoft SQL Server
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Query.Datasets.MicrosoftAdoDataset.#ctor(VDS.RDF.Storage.MicrosoftAdoManager)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Dataset
+            </summary>
+            <param name="manager">Microsoft SQL Server ADO Manager</param>
+        </member>
+        <member name="T:VDS.RDF.Configuration.AdoObjectFactory">
+            <summary>
+            An Object Factory that can create objects of the classes provided by the dotNetRDF.Data.Sql library
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Configuration.AdoObjectFactory.TryLoadObject(VDS.RDF.IGraph,VDS.RDF.INode,System.Type,System.Object@)">
+            <summary>
+            Attempts to load an Object of the given type identified by the given Node and returned as the Type that this loader generates
+            </summary>
+            <param name="g">Configuration Graph</param>
+            <param name="objNode">Object Node</param>
+            <param name="targetType">Target Type</param>
+            <param name="obj">Created Object</param>
+            <returns>True if the loader succeeded in creating an Object</returns>
+        </member>
+        <member name="M:VDS.RDF.Configuration.AdoObjectFactory.CanLoadObject(System.Type)">
+            <summary>
+            Returns whether this Factory is capable of creating objects of the given type
+            </summary>
+            <param name="t">Target Type</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.RDF.Query.Optimisation.BaseAdoOptimiser`5">
+            <summary>
+            An abstract algebra optimiser implementation that optimises the algebra to use Virtual Node terms in place of Node terms where the Virtual Nodes originate from an ADO Store
+            </summary>
+            <typeparam name="TConn">Connection Type</typeparam>
+            <typeparam name="TCommand">Command Type</typeparam>
+            <typeparam name="TParameter">Parameter Type</typeparam>
+            <typeparam name="TAdaptor">Adaptor Type</typeparam>
+            <typeparam name="TException">Exception Type</typeparam>
+        </member>
+        <member name="M:VDS.RDF.Query.Optimisation.BaseAdoOptimiser`5.#ctor(VDS.RDF.Storage.BaseAdoStore{`0,`1,`2,`3,`4})">
+            <summary>
+            Creates a new Base ADO Optimiser
+            </summary>
+            <param name="manager">ADO Store Manager</param>
+        </member>
+        <member name="M:VDS.RDF.Query.Optimisation.BaseAdoOptimiser`5.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)">
+            <summary>
+            Optimises the Algebra for evaluation against an ADO Store
+            </summary>
+            <param name="algebra">Algebra</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Optimisation.BaseAdoOptimiser`5.IsApplicable(VDS.RDF.Query.SparqlQuery)">
+            <summary>
+            Returns that the optimiser is applicable to all queries
+            </summary>
+            <param name="q">Query</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Query.Optimisation.BaseAdoOptimiser`5.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)">
+            <summary>
+            Returns that the optimiser is applicable to all updates
+            </summary>
+            <param name="cmds">Updates</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.RDF.Query.Optimisation.BaseAdoSqlClientOptimiser">
+            <summary>
+            An abstract implementation of the ADO Optimiser for System.Data.SqlClient based ADO Store implementations
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Query.Optimisation.BaseAdoSqlClientOptimiser.#ctor(VDS.RDF.Storage.BaseAdoStore{System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlParameter,System.Data.SqlClient.SqlDataAdapter,System.Data.SqlClient.SqlException})">
+            <summary>
+            Creates a new Base ADO SQL Client Optimiser
+            </summary>
+            <param name="manager">ADO SQL Client Store Manager</param>
+        </member>
+        <member name="T:VDS.RDF.Query.Optimisation.MicrosoftAdoOptimiser">
+            <summary>
+            An implementation of the ADO Optimiser for Microsoft SQL Server based ADO Store implementations
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Query.Optimisation.MicrosoftAdoOptimiser.#ctor(VDS.RDF.Storage.MicrosoftAdoManager)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Optimiser
+            </summary>
+            <param name="manager">Microsoft SQL Server ADO Store Manager</param>
+        </member>
+        <member name="T:VDS.RDF.Storage.AdoSchemaDefinition">
+            <summary>
+            Represents a database schema that provides the required ADO store stored procedures
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaDefinition.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Storage.AdoSchemaScriptDefinition})">
+            <summary>
+            Creates a new Schema Definition
+            </summary>
+            <param name="name">Schema Name</param>
+            <param name="descrip">Description</param>
+            <param name="scripts">Schema Scripts</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaDefinition.HasScript(VDS.RDF.Storage.AdoSchemaScriptType,VDS.RDF.Storage.AdoSchemaScriptDatabase)">
+            <summary>
+            Gets whether the definition has a specific script
+            </summary>
+            <param name="type">Script Type</param>
+            <param name="db">Database Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaDefinition.GetScript(VDS.RDF.Storage.AdoSchemaScriptType,VDS.RDF.Storage.AdoSchemaScriptDatabase)">
+            <summary>
+            Gets the Script resource name (or null if it doesn't exist) for a specific script
+            </summary>
+            <param name="type">Script Type</param>
+            <param name="db">Database Type</param>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaDefinition.Name">
+            <summary>
+            Gets the Schema Name
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaDefinition.Description">
+            <summary>
+            Gets the Schema Description
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaDefinition.ScriptDefinitions">
+            <summary>
+            Gets the available scripts for this Schema Definition
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.AdoSchemaScriptType">
+            <summary>
+            Possible Schema Script Types
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoSchemaScriptType.Create">
+            <summary>
+            Script for creating the database
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoSchemaScriptType.Drop">
+            <summary>
+            Script for dropping the database
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoSchemaScriptType.UpgradeToVersion2">
+            <summary>
+            Script for upgrading a version 1 schema to the version 2 schema
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.AdoSchemaScriptDatabase">
+            <summary>
+            Supported Database Types
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoSchemaScriptDatabase.MicrosoftSqlServer">
+            <summary>
+            Microsoft SQL Server (and SQL Azure)
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.AdoSchemaScriptDefinition">
+            <summary>
+            Represents the definition of a schema script
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaScriptDefinition.#ctor(VDS.RDF.Storage.AdoSchemaScriptType,VDS.RDF.Storage.AdoSchemaScriptDatabase,System.String)">
+            <summary>
+            Creates a new Schema Script Definition
+            </summary>
+            <param name="type">Script Type</param>
+            <param name="db">Database Type</param>
+            <param name="resource">Resource Name</param>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaScriptDefinition.ScriptType">
+            <summary>
+            Gets the Script Type
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaScriptDefinition.Database">
+            <summary>
+            Gets the Database Type
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaScriptDefinition.ScriptResource">
+            <summary>
+            Gets the Script Resource Name
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.AdoSchemaHelper">
+            <summary>
+            Static Helper class which managers the available database schemas
+            </summary>
+            <remarks>
+            <para>
+            The ADO Store was specifically designed to be completely based upon use of stored procedures so any schema can potentially be used provided it exposed the stored procedures that the code expects to exist.
+            </para>
+            <para>
+            There are two schemas provided by default, the <strong>Hash</strong> schema is recommended but requires SQL Server 2005 or higher.  The <strong>Simple</strong> schema is less performant but has a version that works with earlier versions of SQL Server e.g. SQL Server 2000.  We <strong>strongly</strong> recommend the Hash schema for all new development!
+            </para>
+            </remarks>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoSchemaHelper.Version1">
+            <summary>
+            Constants for Schema Versions
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoSchemaHelper.Version2">
+            <summary>
+            Constants for Schema Versions
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaHelper.AddSchema(VDS.RDF.Storage.AdoSchemaDefinition)">
+            <summary>
+            Adds a new Schema Definition
+            </summary>
+            <param name="def">Definition</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaHelper.RemoveSchema(VDS.RDF.Storage.AdoSchemaDefinition)">
+            <summary>
+            Removes a Schema Definition
+            </summary>
+            <param name="def">Definition</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.AdoSchemaHelper.GetSchema(System.String)">
+            <summary>
+            Gets the Schema with the given name or null if it does not exist
+            </summary>
+            <param name="name">Schema Name</param>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaHelper.SchemaDefinitions">
+            <summary>
+            Gets the available built-in schemas
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.AdoSchemaHelper.DefaultSchema">
+            <summary>
+            Gets/Sets the Default Schema
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.AzureAdoManager">
+            <summary>
+            An implementation of an ADO Store Manager for use with SQL Azure
+            </summary>
+            <remarks>
+            Essentially just derived from the more general <see cref="T:VDS.RDF.Storage.MicrosoftAdoManager">MicrosoftAdoManager</see> with a constructor which reduces the amount of input you need to create an instance that will connect to SQL Azure successfully
+            </remarks>
+        </member>
+        <member name="T:VDS.RDF.Storage.MicrosoftAdoManager">
+            <summary>
+            Implementation of the ADO Store against Microsoft SQL Server
+            </summary>
+            <remarks>
+            <para>
+            This code cannot communicate with legacy SQL Stores and this is by design, please see <a href="http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20Store#migration">this page</a> for details on migrating legacy stores
+            </para>
+            </remarks>
+        </member>
+        <member name="T:VDS.RDF.Storage.BaseAdoSqlClientStore">
+            <summary>
+            Abstract Base implementation of the ADO Store for stores that are accessed using the System.Data.SqlClient API
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.BaseAdoStore`5">
+            <summary>
+            Abstract Base implementation of the ADO Store
+            </summary>
+            <typeparam name="TConn">Connection Type</typeparam>
+            <typeparam name="TCommand">Command Type</typeparam>
+            <typeparam name="TParameter">Parameter Type</typeparam>
+            <typeparam name="TAdapter">Adapter Type</typeparam>
+            <typeparam name="TException">Exception Type</typeparam>
+            <remarks>
+            <para>
+            The ADO Store is a complete redesign of our SQL backed storage that does everything via stored procedures which provides a much better level of abstraction between the code and the SQL database schema.  This allows the database schemas to be flexible and take adavantage of the features of different SQL backends, we ship with three default ADO Schemas, use the <see cref="T:VDS.RDF.Storage.AdoSchemaHelper">AdoSchemaHelper</see> class to get information about these.
+            </para>
+            <para>
+            This code cannot communicate with legacy SQL Stores and this is by design, please see <a href="http://www.dotnetrdf.org?content.asp?pageID=dotNetRDF%20Store#migration">this page</a> for details on migrating legacy stores
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new ADO Store
+            </summary>
+            <param name="parameters">Parameters for the connection</param>
+            <param name="accessMode">Access Mode</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.Finalize">
+            <summary>
+            Finalizer for the ADO Store Manager which ensures that it is disposed of properly
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.CreateConnection(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Method that will be called by the constructor to allow the derived class to instantiate the connection
+            </summary>
+            <param name="parameters">Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetCommand">
+            <summary>
+            Gets a Command for sending SQL Commands to the underlying Database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetParameter(System.String)">
+            <summary>
+            Gets a Parameter with the given name for sending parameters with SQL Commands to the underlying Database
+            </summary>
+            <param name="name">Parameter Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetAdapter">
+            <summary>
+            Gets an Adaptor for converting results from SQL queries on the underlying Database into a DataTable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EnsureSetup(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Ensures that the Database is setup and returns the Version of the Database Schema
+            </summary>
+            <param name="parameters">Parameters for the connection</param>
+            <returns>The Version of the Database Schema</returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.CheckForUpgrades(System.Int32)">
+            <summary>
+            Allows the derived implementation to check whether an upgrade to the database schema is required and apply it if necessary
+            </summary>
+            <param name="currVersion">Current Version</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ExecuteSqlFromResource(System.String)">
+            <summary>
+            Executes the SQL from an embedded resource
+            </summary>
+            <param name="resource">Embedded Resource Name</param>
+            <remarks>
+            Assumes that the resource is embedded in this assembly
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ExecuteSqlFromResource(System.Reflection.Assembly,System.String)">
+            <summary>
+            Executes the SQL from an embedded resource
+            </summary>
+            <param name="assm">Assembly</param>
+            <param name="resource">Embedded Resource Name</param>
+            <remarks>
+            <para>
+            Heavily adapted from code used in <a href="http://www.bugnetproject.com">BugNet</a>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ExecuteSql(System.IO.Stream)">
+            <summary>
+            Executes the SQL from a stream
+            </summary>
+            <remarks>
+            <para>
+            Heavily adapted from code used in <a href="http://www.bugnetproject.com">BugNet</a>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ReadNextStatementFromStream(System.IO.StreamReader)">
+            <summary>
+            Reads the next statement from stream.
+            </summary>
+            <param name="reader">Stream to read from</param>
+            <returns></returns>
+            <remarks>
+            <para>
+            Taken from code used in <a href="http://www.bugnetproject.com">BugNet</a>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.CheckVersion">
+            <summary>
+            Checks the Version of the Store
+            </summary>
+            <remarks>
+            <para>
+            This is intended for two purposes:
+            <ol>
+                <li>Future proofing so later versions of the library can add additional stored procedures to the database and the code can decide which are available to it</li>
+                <li>Detecting when users try to use the class to connect to legacy databases created with the old Schema which are not compatible with this code</li>
+            </ol>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.CheckSchema">
+            <summary>
+            Checks the Schema of the Store
+            </summary>
+            <returns></returns>
+            <remarks>
+            <para>
+            As the ADO Store is designed entirely in terms of stored procedures the underlying database schema is up to the implementor, two different schemas are provided in the library by default.
+            </para>
+            <para>
+            This method should report the name of the schema, this may refer to one of the inbuilt schemas or may refer to a custom implemented schema.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ClearStore">
+            <summary>
+            Clears the Store
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ClearStore(System.Boolean)">
+            <summary>
+            Clears the Store
+            </summary>
+            <param name="fullClear">Whether to perform a full clear</param>
+            <remarks>
+            <para>
+            A Full Clear will remove all existing Node Value to ID mappings whereas a normal clear leaves those in place.  If the data you intend to insert into the store after clearing it is similar to the data in the store currently then you should <strong>not</strong> perform a full clear as leaving the Node Value to ID mappings will make future imports faster.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ExecuteScalar(System.String)">
+            <summary>
+            Executes a Scalar Query on the Database
+            </summary>
+            <param name="query">SQL Query</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EncodeNode(`1,VDS.RDF.INode)">
+            <summary>
+            Encodes the values for a Node onto a command
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="n">Node</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EncodeNode(`1,VDS.RDF.INode,System.Nullable{VDS.RDF.Writing.TripleSegment})">
+            <summary>
+            Encodes the values for a Node onto a command for the given triple segment
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="n">Node</param>
+            <param name="segment">Triple Segment</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EncodeNodeID(`1,VDS.RDF.Storage.AdoStoreNodeID)">
+            <summary>
+            Encodes the ID for a Node onto a command
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="id">Node ID</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EncodeNodeID(`1,System.Int32)">
+            <summary>
+            Encodes the ID for a Node onto a command
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="id">Node ID</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EncodeNodeID(`1,VDS.RDF.Storage.AdoStoreNodeID,System.Nullable{VDS.RDF.Writing.TripleSegment})">
+            <summary>
+            Encodes the ID for a Node onto a command for a given triple segment
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="id">Node ID</param>
+            <param name="segment">Triple Segment</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.EncodeNodeID(`1,System.Int32,System.Nullable{VDS.RDF.Writing.TripleSegment})">
+            <summary>
+            Encodes the ID for a Node onto a command for a given triple segment
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="id">Node ID</param>
+            <param name="segment">Triple segment</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DecodeNode(VDS.RDF.IGraph,System.Byte,System.String,System.String)">
+            <summary>
+            Decodes a Node from the constituent values in the database
+            </summary>
+            <param name="g">Graph</param>
+            <param name="type">Node Type</param>
+            <param name="value">Node Value</param>
+            <param name="meta">Node Meta</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DecodeNode(VDS.RDF.INodeFactory,System.Byte,System.String,System.String)">
+            <summary>
+            Decodes a Node from the constituent values in the database
+            </summary>
+            <param name="factory">Node Factory</param>
+            <param name="type">Node Type</param>
+            <param name="value">Node Value</param>
+            <param name="meta">Node Meta</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DecodeVirtualNode(VDS.RDF.INodeFactory,System.Byte,System.Int32)">
+            <summary>
+            Decodes a Virtual Node from ID and type
+            </summary>
+            <param name="factory">Node Factory</param>
+            <param name="type">Node Type</param>
+            <param name="id">Node ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DecodeVirtualNode(VDS.RDF.IGraph,System.Byte,System.Int32)">
+            <summary>
+            Decodes a Virtual Node from ID and type
+            </summary>
+            <param name="g">Graph</param>
+            <param name="type">Node Type</param>
+            <param name="id">Node ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DecodeMeta(System.Object)">
+            <summary>
+            Decodes the Node Meta information
+            </summary>
+            <param name="meta">Meta Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.Dispose">
+            <summary>
+            Disposes of the Store Manager
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the Store Manager
+            </summary>
+            <param name="disposing">Whether this was invoked by the Dispose() method (if not was invoked by the Finalizer)</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DisposeInternal">
+            <summary>
+            Does any additional dispose actions required by derived implementations
+            </summary>
+            <remarks>
+            Will be called <em>before</em> the Connection is closed so derived implementations may
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.LoadGraph(VDS.RDF.IGraph,System.Uri)">
+            <summary>
+            Loads a Graph from the store
+            </summary>
+            <param name="g">Graph to load into</param>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)">
+            <summary>
+            Loads a Graph from the store
+            </summary>
+            <param name="handler">RDF Handler</param>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.LoadGraph(VDS.RDF.IGraph,System.String)">
+            <summary>
+            Loads a Graph from the store
+            </summary>
+            <param name="g">Graph to load into</param>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.LoadGraph(VDS.RDF.IRdfHandler,System.String)">
+            <summary>
+            Loads a Graph from the store
+            </summary>
+            <param name="handler">RDF Handler</param>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.SaveGraph(VDS.RDF.IGraph)">
+            <summary>
+            Saves a Graph to the store
+            </summary>
+            <param name="g">Graph to save</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})">
+            <summary>
+            Updates a Graph in the Store
+            </summary>
+            <param name="graphUri">URI of the Graph to update</param>
+            <param name="additions">Triples to add</param>
+            <param name="removals">Triples to remove</param>
+            <remarks>
+            Removals happen prior to additions, if you wish to change this order then make separate calls providing only additions/removals to each call
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})">
+            <summary>
+            Updates a Graph in the Store
+            </summary>
+            <param name="graphUri">URI of the Graph to update</param>
+            <param name="additions">Triples to add</param>
+            <param name="removals">Triples to remove</param>
+            <remarks>
+            Removals happen prior to additions, if you wish to change this order then make separate calls providing only additions/removals to each call
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DeleteGraph(System.Uri)">
+            <summary>
+            Deletes a Graph from the store
+            </summary>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.DeleteGraph(System.String)">
+            <summary>
+            Deletes a Graph from the store
+            </summary>
+            <param name="graphUri">Graph URI</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ListGraphs">
+            <summary>
+            Lists the Graphs in the store
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.Query(System.String)">
+            <summary>
+            Makes a SPARQL Query against the Store
+            </summary>
+            <param name="sparqlQuery">SPARQL Query</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)">
+            <summary>
+            Makes a SPARQL Query against the Store processing the results with an appropriate handler from those provided
+            </summary>
+            <param name="rdfHandler">RDF Handler</param>
+            <param name="resultsHandler">Results Handler</param>
+            <param name="sparqlQuery">SPARQL Query</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetDataset">
+            <summary>
+            Gets the <see cref="T:VDS.RDF.Query.Datasets.ISparqlDataset">ISparqlDataset</see> implementation that should be used within the Query methods of this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetOptimisers">
+            <summary>
+            Gets the <see cref="T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser">IAlgebraOptimiser</see> instances that should be used to optimise queries made via the Query methods of this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.Update(System.String)">
+            <summary>
+            Performa a SPARQL Update on the Store
+            </summary>
+            <param name="sparqlUpdate">SPARQL Update</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetValue(VDS.RDF.IGraph,System.Int32)">
+            <summary>
+            Gets the materialised value based on a Node ID
+            </summary>
+            <param name="g">Graph to materialise the value in</param>
+            <param name="id">Node ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetGraphUri(System.Int32)">
+            <summary>
+            Gets the Graph URI based on a Graph ID
+            </summary>
+            <param name="graphID">Graph ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetID(VDS.RDF.INode)">
+            <summary>
+            Gets the Node ID for a value (if such a value exists in the store)
+            </summary>
+            <param name="value">Value</param>
+            <returns>Either a Node ID or zero if the value does not exist in the store</returns>
+            <remarks>
+            <para>
+            This overload does not create Node IDs if the value does not exist, if you need to create a value use the overload which allows you to specify whether to create new Node IDs as needed
+            </para>
+            <para>
+            <strong>Cannot be used to get IDs for Blank Nodes</strong>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetGraphID(VDS.RDF.IGraph)">
+            <summary>
+            Gets the Graph ID for a Graph (if such a graph exists in the store)
+            </summary>
+            <param name="g">Graph</param>
+            <returns>Either a Graph ID or zero if the Graph does not exist in the store</returns>
+            <remarks>
+            This overload does not create Graph IDs if the value does not exist, if you need to create a value use the overload which allows you to specify whether to create new Graph IDs as needed
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetGraphID(VDS.RDF.IGraph,System.Boolean)">
+            <summary>
+            Gets the Graph ID for a Graph potentially creating a new ID if <paramref name="createIfNotExists"/> was set to true and the graph does not exist in the store
+            </summary>
+            <param name="g">Graph</param>
+            <param name="createIfNotExists">Whether to create a new Graph ID if there is no existing ID for the graph</param>
+            <returns>
+            Either a Graph ID or zero if such a graph does not exist and <paramref name="createIfNotExists"/> was set to false
+            </returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetGraphID(System.Uri)">
+            <summary>
+            Gets the Graph ID for a Graph (if such a graph exists in the store)
+            </summary>
+            <param name="graphUri">Graph URI</param>
+            <returns>Either a Graph ID or zero if the Graph does not exist in the store</returns>
+            <remarks>
+            This overload does not create Graph IDs if the value does not exist, if you need to create a value use the overload which allows you to specify whether to create new Graph IDs as needed
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetGraphID(System.Uri,System.Boolean)">
+            <summary>
+            Gets the Graph ID for a Graph potentially creating a new ID if <paramref name="createIfNotExists"/> was set to true and the graph does not exist in the store
+            </summary>
+            <param name="graphUri">Graph URI</param>
+            <param name="createIfNotExists">Whether to create a new Graph ID if there is no existing ID for the graph</param>
+            <returns>
+            Either a Graph ID or zero if such a graph does not exist and <paramref name="createIfNotExists"/> was set to false
+            </returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetID(VDS.RDF.INode,System.Boolean)">
+            <summary>
+            Gets the Node ID for a value potentially creating a new ID if <paramref name="createIfNotExists"/> was set to true and the value does not exist in the store
+            </summary>
+            <param name="value">Value</param>
+            <param name="createIfNotExists">Whether to create a new Node ID if there is no existing ID for the value</param>
+            <returns>
+            Either a Node ID or zero if such a value does not exist and <paramref name="createIfNotExists"/> was set to false
+            </returns>
+            <remarks>
+            <strong>Cannot be used to get IDs for Blank Nodes</strong>
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetBlankNodeID(VDS.RDF.IBlankNode,System.Boolean)">
+            <summary>
+            Gets the Node ID for a blank node value potentially creating a new ID if <paramref name="createIfNotExists"/> was set to true and the value does not exist in the store
+            </summary>
+            <param name="value">Value</param>
+            <param name="createIfNotExists">Whether to create a new Node ID if there is no existing ID for the value</param>
+            <returns>
+            Either a Node ID or zero if such a value does not exist and <paramref name="createIfNotExists"/> was set to false
+            </returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.GetBlankNodeID(VDS.RDF.IBlankNode)">
+            <summary>
+            Gets the Node ID for a blank node value (if it already exists in the store)
+            </summary>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.LoadGraphVirtual(VDS.RDF.IGraph,System.Uri)">
+            <summary>
+            Loads a Graph from the store as virtual nodes
+            </summary>
+            <param name="g">Graph to load into</param>
+            <param name="graphUri">URI of the Graph to load</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)">
+            <summary>
+            Serializes this connection to a Configuration Graph
+            </summary>
+            <param name="context">Configuration Serialization Context</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoStore`5.ToString">
+            <summary>
+            Gets the string representation of this connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.AccessMode">
+            <summary>
+            Gets/Sets what mode is used to retrieve data from the ADO Store
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.Version">
+            <summary>
+            Gets the Version as detected when this instance was created, use <see cref="M:VDS.RDF.Storage.BaseAdoStore`5.CheckVersion">CheckVersion()</see> to directly query the store for its version
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.Schema">
+            <summary>
+            Gets the Schema as detected when this instance was created, use <see cref="M:VDS.RDF.Storage.BaseAdoStore`5.CheckSchema">CheckSchema()</see> to directly query the store for its schema
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.DatabaseType">
+            <summary>
+            Gets the Database Type that is used by this ADO Store
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.Connection">
+            <summary>
+            Gets the Connection to the underlying database
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.IOBehaviour">
+            <summary>
+            Gets the IO Behaviour of an ADO Store
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.UpdateSupported">
+            <summary>
+            Returns that Updates are supported
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.DeleteSupported">
+            <summary>
+            Returns that deleting graphs is supported
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.ListGraphsSupported">
+            <summary>
+            Returns that listing graphs is supported
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.IsReady">
+            <summary>
+            Returns that the store is ready
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.IsReadOnly">
+            <summary>
+            Returns that the store is not read-only
+            </summary>
+        </member>
+        <member name="P:VDS.RDF.Storage.BaseAdoStore`5.NullID">
+            <summary>
+            Gets the ID which signifies that no ID exists for the input (Is zero for ADO Stores)
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoSqlClientStore.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new SQL Client based ADO Store
+            </summary>
+            <param name="parameters">Connection Parameters</param>
+            <param name="mode">Access Mode</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.BaseAdoSqlClientStore.#ctor(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Creates a new SQL Client based ADO Store
+            </summary>
+            <param name="parameters">Connection Parameters</param>
+        </member>
+        <member name="F:VDS.RDF.Storage.MicrosoftAdoManager.DefaultServer">
+            <summary>
+            Default Server if none is explicitly specified (localhost)
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.MicrosoftAdoManager._server">
+            <summary>
+            Connection Parameters
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.MicrosoftAdoManager._db">
+            <summary>
+            Connection Parameters
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.MicrosoftAdoManager._user">
+            <summary>
+            Connection Parameters
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.MicrosoftAdoManager._password">
+            <summary>
+            Connection Parameters
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.MicrosoftAdoManager._encrypt">
+            <summary>
+            Connection Encryption setting
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,System.String,System.Boolean,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <param name="mode">Access Mode</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,System.String,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <param name="mode">Access Mode</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,System.Boolean,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="user">Username</param>
+            <param name="password">Password</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.Boolean,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            Will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <remarks>
+            Will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            Will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="server">Server</param>
+            <param name="db">Database</param>
+            <remarks>
+            Will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.Boolean,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server and will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="encrypt">Whether to encrypt the connection</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server and will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server and will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.#ctor(System.String)">
+            <summary>
+            Creates a new Microsoft SQL Server ADO Store Manager
+            </summary>
+            <param name="db">Database</param>
+            <remarks>
+            Will use <strong>localhost</strong> as the server and will assume a Trusted Connection (i.e. Windows authentication) since no username and password are specified
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.CreateConnection(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Creates the connection to Microsoft SQL Server
+            </summary>
+            <param name="parameters">Connection Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.GetCommand">
+            <summary>
+            Gets a SQL Command that can be executed against Microsoft SQL Server
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.GetParameter(System.String)">
+            <summary>
+            Gets a SQL Parameter that can be attached to an SQL Command
+            </summary>
+            <param name="name">Parameter Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.GetAdapter">
+            <summary>
+            Gets a SQL Data Adapter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.CheckForUpgrades(System.Int32)">
+            <summary>
+            Checks whether a schema upgrade is required and applies it if necessary
+            </summary>
+            <param name="currVersion">Current Version</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.EnsureSetup(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Ensures that the database is setup appropriately
+            </summary>
+            <param name="parameters">Connection Parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.GetDataset">
+            <summary>
+            Gets a <see cref="T:VDS.RDF.Query.Datasets.ISparqlDataset">ISparqlDataset</see> instance for use in queries and updates
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.GetOptimisers">
+            <summary>
+            Gets the optimisers for use with queries
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)">
+            <summary>
+            Serializes the connection's configuration
+            </summary>
+            <param name="context">Configuration Serialization Context</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.MicrosoftAdoManager.ToString">
+            <summary>
+            Gets the string representation of the connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.RDF.Storage.MicrosoftAdoManager.DatabaseType">
+            <summary>
+            Gets the Database Type
+            </summary>
+        </member>
+        <member name="M:VDS.RDF.Storage.AzureAdoManager.#ctor(System.String,System.String,System.String,System.String,VDS.RDF.Storage.AdoAccessMode)">
+            <summary>
+            Creates a new Azure ADO Manager instance
+            </summary>
+            <param name="server">Server Name (this is the alphanumeric server name issues by the Azure platform which precedes <em>.database.windows.net</em> in the Server hostname)</param>
+            <param name="db">Database</param>
+            <param name="username">Username (will automatically have the @server appended to it)</param>
+            <param name="password">Password</param>
+            <param name="mode">Access Mode</param>
+            <remarks>
+            SQL Azure connections are always encrypted
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.AzureAdoManager.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new Azure ADO Manager instance
+            </summary>
+            <param name="server">Server Name (this is the alphanumeric server name issues by the Azure platform which precedes <em>.database.windows.net</em> in the Server hostname)</param>
+            <param name="db">Database</param>
+            <param name="username">Username (will automatically have the @server appended to it)</param>
+            <param name="password">Password</param>
+            <remarks>
+            SQL Azure connections are always encrypted
+            </remarks>
+        </member>
+        <member name="M:VDS.RDF.Storage.AzureAdoManager.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)">
+            <summary>
+            Serializes the connection's configuration
+            </summary>
+            <param name="context">Configuration Serialization Context</param>
+        </member>
+        <member name="M:VDS.RDF.Storage.AzureAdoManager.ToString">
+            <summary>
+            Gets the String representation of the connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.RDF.Storage.AzureAdoManager.DatabaseType">
+            <summary>
+            Gets the Database Type
+            </summary>
+        </member>
+        <member name="T:VDS.RDF.Storage.AdoAccessMode">
+            <summary>
+            Possible modes of operation for accessing an ADO Store
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoAccessMode.Streaming">
+            <summary>
+            Streaming is the default mode based upon <see cref="T:System.Data.Common.DbDataReader">DbDataReader</see> usage, uses the least memory but performs poorly when the network distance between the client and server is large
+            </summary>
+        </member>
+        <member name="F:VDS.RDF.Storage.AdoAccessMode.Batched">
+            <summary>
+            Batched is the alternative mode based upon <see cref="T:System.Data.Common.DbDataAdapter">DbDataAdapter</see> usage, this uses more memory but performs much better when the network distance between the client and server is large
+            </summary>
+        </member>
+    </members>
+</doc>

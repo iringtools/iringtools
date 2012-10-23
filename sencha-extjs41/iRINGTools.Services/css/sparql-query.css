@@ -1,0 +1,80 @@
+﻿@import "reset.css";
+
+h3 {
+  visibility: hidden;
+  height: 0px;
+}
+
+body {
+  margin-left: 10px;
+  background: #f0f0f0 url(../img/blue-fade.png) repeat-x;
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12;
+  color: #30332D;
+}
+
+p {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+img {
+  vertical-align: text-bottom;
+}
+
+a {
+  color: #3E62A6;
+}
+
+form {
+  width: 662px;
+}
+
+textarea {
+  font-family: "Courier New";
+	font-size: small;
+  margin: 0px 0px 10px auto;
+}
+
+input {
+  margin: 0px 0px 10px auto;
+}
+
+table {
+	border: 1px solid black;
+	width: auto;
+	margin: 20px 20px 20px 10px;
+}
+
+tr {
+	vertical-align: top;
+	padding: 3px;
+}
+
+
+td {
+	background: white;
+	padding: 3px;
+	font-family: "Courier New";
+	font-size: small;
+	border: 1px solid black;
+}
+
+th {
+	background: white;
+	padding: 3px;
+	text-align: center;
+	font-family: "Courier New";
+	font-size: small;
+	font-weight: bold;
+	border: 1px solid black;
+}
+
+a.datatype {
+  font-family: "Verdana";
+	font-size: smaller;
+	vertical-align: super;
+}

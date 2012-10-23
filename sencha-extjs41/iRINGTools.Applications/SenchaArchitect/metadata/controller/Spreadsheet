@@ -1,0 +1,297 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Spreadsheet",
+        "models": [
+            "SpreadsheetModel"
+        ],
+        "stores": [
+            "SpreadsheetStore"
+        ],
+        "views": [
+            "spreadsheet.SpreadsheetTree",
+            "spreadsheet.SpreadsheetWindow",
+            "spreadsheet.SpreadsheetForm"
+        ]
+    },
+    "id": "ExtBox1-ext-gen71057",
+    "designerId": "3021e323-c731-4792-a77c-abef556efa44",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dirTree",
+                "ref": "dirTree",
+                "selector": "viewport > directorypanel > directorytree",
+                "xtype": "directorytree"
+            },
+            "designerId": "bbee0692-0d9c-4c53-88d0-8c64ec2e7807"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "mainContent",
+                "ref": "mainContent",
+                "selector": "viewport > centerpanel > contentpanel",
+                "xtype": "contentpanel"
+            },
+            "designerId": "cdc390a6-396d-4317-b5b6-b8b5014035cd"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "me.application.addEvents('configspreadsheet');"
+                ]
+            },
+            "designerId": "186cf54d-efbf-4a14-a6ec-f22f16780c98"
+        },
+        {
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onConfigSpreadsheet",
+                "fn": "onConfigSpreadsheet",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var dirTree = me.getDirTree(),\r",
+                    "dirNode = dirTree.getSelectedNode(),\r",
+                    "content = me.getMainContent(),\r",
+                    "title = 'Spreadsheet Configuration - ' + contextName + '.' + endpoint;\r",
+                    "\r",
+                    "var contextName = dirNode.data.record.context;\r",
+                    "var datalayer = dirNode.data.record.DataLayer;\r",
+                    "var endpoint = dirNode.data.record.endpoint;\r",
+                    "var baseUrl = dirNode.data.record.BaseUrl;\r",
+                    "\r",
+                    "\r",
+                    "var scPanel = content.down('spreadsheetpanel[title=' + title+']');\r",
+                    "\r",
+                    "if(!scPanel) {\r",
+                    "  scPanel = Ext.widget('spreadsheetpanel', {\r",
+                    "    'title': title\r",
+                    "  });\r",
+                    "  var scTree = scPanel.down('spreadsheettree');\r",
+                    "  scTree.context = contextName;\r",
+                    "  scTree.datalayer = datalayer;\r",
+                    "  scTree.endpoint = endpoint;\r",
+                    "  scTree.baseUrl = baseUrl;\r",
+                    "\r",
+                    "  var treeStore = scTree.getStore();\r",
+                    "  var scProp = scPanel.down('propertypanel');\r",
+                    "  treeStore.on('beforeload', function (store, operation, eopts) {\r",
+                    "    var params = store.getProxy().extraParams;\r",
+                    "    params.context = contextName;\r",
+                    "    params.endpoint = endpoint;\r",
+                    "    params.baseurl = baseUrl;\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  scTree.on('beforeitemexpand', function () {\r",
+                    "    content.getEl().mask('Loading...');\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  scTree.on('load', function () {\r",
+                    "    content.getEl().unmask();\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  scTree.on('itemexpand', function () {\r",
+                    "    content.getEl().unmask();\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  scTree.on('itemclick', function (view, model, n, index) {\r",
+                    "    var obj = model.store.getAt(index).data;\r",
+                    "    if (obj.record !== null && obj.record !== \"\") {\r",
+                    "      scProp.setSource(obj.record);\r",
+                    "    }\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  scPanel.on('save', function () {\r",
+                    "    dirtree.onReload(node);\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  content.add(scPanel);\r",
+                    "  treeStore.load();\r",
+                    "}\r",
+                    "\r",
+                    "content.setActiveTab(scPanel);"
+                ],
+                "name": "configspreadsheet",
+                "scope": "this"
+            },
+            "designerId": "0f62b8ee-7f81-4669-bbaf-0a3c3bc4ad8c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onOpenUploadForm",
+                "fn": "onOpenUploadForm",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.getSpreadsheetSourceWindow();\r",
+                    "var panel = button.up('spreadsheettree');\r",
+                    "var title = 'Upload Spreadsheet for ' + panel.context + '.' + panel.endpoint;\r",
+                    "\r",
+                    "win.setTitle(title);\r",
+                    "\r",
+                    "var form = win.down('spreadsheetsourceform');\r",
+                    "\r",
+                    "form.getForm().findField('context').setValue(panel.context);\r",
+                    "form.getForm().findField('endpoint').setValue(panel.endpoint);\r",
+                    "form.getForm().findField('baseUrl').setValue(panel.baseUrl);\r",
+                    "form.getForm().findField('datalayer').setValue(panel.datalayer);\r",
+                    "\r",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[action=openuploadform]"
+            },
+            "designerId": "4cf6890b-1c46-43fa-a227-ef3b3436a20d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "spreadsheetPanel",
+                "ref": "spreadsheetPanel",
+                "selector": "spreadsheetpanel"
+            },
+            "designerId": "c1146ac9-467a-48cb-92bd-069ed057bc4d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onUploadSpreadsheet",
+                "fn": "onUploadSpreadsheet",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.getSpreadsheetSourceWindow();\r",
+                    "var form = win.down('spreadsheetsourceform');\r",
+                    "var pan = me.getSpreadsheetPanel();\r",
+                    "var tree = pan.down('spreadsheettree');\r",
+                    "form.getForm().submit({\r",
+                    "  waitMsg: 'Uploading file...',\r",
+                    "  success: function (f, a) {\r",
+                    "    win.close();\r",
+                    "    tree.onReload();\r",
+                    "  },\r",
+                    "  failure: function (f, a) {\r",
+                    "    Ext.Msg.alert('Warning', 'Error uploading file \"' + f.items[3] + '\"!');\r",
+                    "  }\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "spreadsheetsourcewindow button[action=uploadspreadsheet]"
+            },
+            "designerId": "27da7aa5-c5f9-4901-b370-d95e30096a65"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "spreadsheetSourceWindow",
+                "autoCreate": true,
+                "ref": "spreadsheetSourceWindow",
+                "selector": "spreadsheetsourcewindow",
+                "xtype": "spreadsheetsourcewindow"
+            },
+            "designerId": "3cf7b3c9-4fbd-470c-bcc7-1215bd9d9841"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSaveSpreadsheet",
+                "fn": "onSaveSpreadsheet",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var pan = me.getSpreadsheetPanel();\r",
+                    "var tree = pan.down('spreadsheettree');\r",
+                    "var context = pan.context;\r",
+                    "var endpoint = pan.endpoint;\r",
+                    "var datalayer = pan.datalayer;\r",
+                    "var baseUrl = pan.baseUrl;\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "  url: 'Spreadsheet/Configure',    // where you wanna post\r",
+                    "  method: 'POST',\r",
+                    "  params: {\r",
+                    "    'context': context,\r",
+                    "    'endpoint': endpoint,\r",
+                    "    'baseurl': baseUrl,\r",
+                    "    'DataLayer': datalayer\r",
+                    "  },\r",
+                    "  success: function (f, a) {\r",
+                    "    showDialog(350, 80, 'Saving Result', 'Configuration has been saved successfully.', Ext.Msg.OK, null);          \r",
+                    "    tree.onReload();\r",
+                    "  },   // function called on success\r",
+                    "  failure: function (f, a) {\r",
+                    "\r",
+                    "  }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "spreadsheetpanel button[action=savespreadsheet]"
+            },
+            "designerId": "86d87efd-0845-47e9-bbe9-85497d2c6ed9"
+        }
+    ]
+}

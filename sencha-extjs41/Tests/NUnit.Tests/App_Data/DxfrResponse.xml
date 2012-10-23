@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<response xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iringtools.org/common/response">
+  <level>Success</level>
+  <dateTimeStamp>2012-08-13T15:21:52.3410718-04:00</dateTimeStamp>
+  <statusList>
+    <status>
+      <level>Success</level>
+      <identifier>90005-RV</identifier>
+      <results />
+      <messages>
+        <message>Record [90005-RV] have been saved successfully.</message>
+      </messages>
+    </status>
+    <status>
+      <level>Success</level>
+      <identifier>90010-O</identifier>
+      <results />
+      <messages>
+        <message>Record [90010-O] have been saved successfully.</message>
+      </messages>
+    </status>
+    <status>
+      <level>Success</level>
+      <identifier>90011-O</identifier>
+      <results />
+      <messages>
+        <message>Record [90011-O] have been saved successfully.</message>
+      </messages>
+    </status>
+    <status>
+      <level>Success</level>
+      <identifier>90014-RV</identifier>
+      <results />
+      <messages>
+        <message>Record [90014-RV] have been saved successfully.</message>
+      </messages>
+    </status>
+    <status>
+      <level>Success</level>
+      <identifier>90058-O</identifier>
+      <results />
+      <messages>
+        <message>Record [90058-O] have been saved successfully.</message>
+      </messages>
+    </status>
+    <status>
+      <level>Success</level>
+      <identifier>99999-O</identifier>
+      <results />
+      <messages>
+        <message>Record [99999-O] have been saved successfully.</message>
+      </messages>
+    </status>
+    <status>
+      <level>Success</level>
+      <identifier>90003-SC</identifier>
+      <results />
+      <messages>
+        <message>Record [90003-SC] have been deleted successfully.</message>
+      </messages>
+    </status>
+  </statusList>
+  <messages />
+</response>

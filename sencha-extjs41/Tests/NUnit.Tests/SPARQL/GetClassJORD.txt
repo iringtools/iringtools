@@ -1,0 +1,22 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rds: <http://posccaesar.org/rdl/> 
+PREFIX tpl: <http://tpl.rdlfacade.org/data#> 
+SELECT DISTINCT ?label ?type
+  ?definition ?creator ?creationDate ?class
+  ?comment ?authority ?recorded ?from
+{ 
+  <param1> rds:rdsWipEquivalent ?rdsid .
+  ?rdsid  rdfs:label ?label .
+  OPTIONAL { ?rdsid  rdfs:comment  ?comment }
+  OPTIONAL { ?rdsid  rds:hasDefinition ?definition } 
+  OPTIONAL { ?rdsid  a  ?type }
+  OPTIONAL { ?rdsid  rds:hasCreator  ?creator } 
+  OPTIONAL { ?rdsid  rds:hasCreationDate ?creationDate } 
+  OPTIONAL { ?rdsid  rds:hasStatus   ?class } 
+#OPTIONAL { ?status   a   tpl:R20247551573 } 
+#OPTIONAL { ?status   tpl:R64574858717  ?rdsid  } 
+#OPTIONAL { ?status   tpl:R56599656536  ?authority } 
+#OPTIONAL { ?status   tpl:R61794465713  ?recorded } 
+#OPTIONAL { ?status   tpl:R42656850346  ?from } 
+}

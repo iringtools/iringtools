@@ -1,0 +1,52 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "spreadsheet.SpreadsheetPanel",
+        "designer|userAlias": "spreadsheetpanel",
+        "height": null,
+        "width": null,
+        "layout": "border",
+        "closable": true,
+        "iconCls": null,
+        "title": null
+    },
+    "id": "ExtBox1-ext-gen45156",
+    "designerId": "cc1939a2-a481-40e0-98f8-931125e7aa86",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "SpreadsheetTree",
+                "layout|region": "center"
+            },
+            "designerId": "ba2a6f93-c26d-4b9e-8ea4-918011a40d67",
+            "masterInstanceId": "ExtBox1-ext-gen71300"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 250,
+                "title": "Spreadsheet Details",
+                "layout|region": "east",
+                "layout|split": true
+            },
+            "designerId": "f6322331-6519-4db3-9f8f-2856b60ceba7",
+            "masterInstanceId": "ExtBox1-ext-gen36671"
+        }
+    ]
+}

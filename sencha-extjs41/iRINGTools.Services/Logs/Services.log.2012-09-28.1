@@ -1,0 +1,803 @@
+2012-09-28 06:16:41,067 [16] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 06:21:55,347 [27] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 06:22:37,033 [27] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 06:22:37,165 [27] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 06:22:37,180 [27] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 06:22:37,194 [27] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 06:34:07,098 [27] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 06:34:07,120 [27] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in UpdateDatabaseDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.Generate(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 73
+2012-09-28 06:34:07,139 [27] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in SaveDatabaseDictionary: System.Exception: Error updating database dictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.Generate(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 73
+   at org.iringtools.nhibernate.NHibernateProvider.PostDictionary(String projectName, String applicationName, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 158
+2012-09-28 06:34:35,186 [27] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 06:34:35,205 [27] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 06:50:09,754 [42] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 06:50:30,311 [42] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 06:50:30,419 [42] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 06:50:30,432 [42] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 06:50:30,448 [42] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 07:20:05,259 [42] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:24:31,519 [42] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:26:31,750 [42] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:28:31,940 [88] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:31:03,149 [88] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:31:10,146 [88] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 07:31:44,455 [119] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:34:10,659 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:35:25,890 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:40:16,119 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:45:33,996 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:47:47,386 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:54:50,027 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:57:19,942 [126] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetTableNames: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 25 - Connection string is not valid)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   at NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   at NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at org.iringtools.nhibernate.NHibernateProvider.GetNHSession(String dbProvider, String dbServer, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String portNumber, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 584
+   at org.iringtools.nhibernate.NHibernateProvider.GetTableNames(String projectName, String applicationName, String dbProvider, String dbServer, String portNumber, String dbInstance, String dbName, String dbSchema, String dbUserName, String dbPassword, String serName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 412
+2012-09-28 07:59:57,170 [126] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 07:59:57,566 [126] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 07:59:57,611 [126] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 07:59:57,629 [126] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 07:59:57,642 [126] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 08:07:30,518 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting [RGF0YSBTb3VyY2U9LlxTUUxFWFBSRVNTO0luaXRpYWwgQ2F0YWxvZz1ERUY7VXNlciBJRD1kZWY7UGFzc3dvcmQ9ZGVm]System.Security.Cryptography.CryptographicException: Length of the data to decrypt is invalid.
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:07:30,554 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting [RGF0YSBTb3VyY2U9LlxTUUxFWFBSRVNTO0luaXRpYWwgQ2F0YWxvZz1ERUY7VXNlciBJRD1kZWY7UGFzc3dvcmQ9ZGVm]System.Security.Cryptography.CryptographicException: Length of the data to decrypt is invalid.
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:12:26,570 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 08:12:26,688 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 08:12:26,721 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 08:12:26,735 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 08:12:27,052 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:14:04,629 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 08:14:04,731 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 08:14:04,756 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 08:14:04,774 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 08:14:05,145 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:16:19,180 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:16:19,738 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 08:16:19,753 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 08:16:19,766 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 08:16:19,780 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 08:19:28,461 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 08:19:28,578 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 08:19:28,600 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 08:19:28,615 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 08:19:29,014 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:23:42,779 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:24:28,943 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:24:28,971 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:25:05,830 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:25:31,713 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:25:31,730 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:25:31,748 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in SaveDatabaseDictionary: System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.nhibernate.NHibernateProvider.PostDictionary(String projectName, String applicationName, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 145
+2012-09-28 08:26:19,506 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:26:19,527 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:26:19,546 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in SaveDatabaseDictionary: System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.nhibernate.NHibernateProvider.PostDictionary(String projectName, String applicationName, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 145
+2012-09-28 08:26:42,506 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:26:42,526 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:26:42,545 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in SaveDatabaseDictionary: System.NullReferenceException: Object reference not set to an instance of an object.
+   at org.iringtools.nhibernate.NHibernateProvider.PostDictionary(String projectName, String applicationName, DatabaseDictionary databaseDictionary) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 145
+2012-09-28 08:26:52,249 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:26:52,268 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:27:18,005 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name
+2012-09-28 08:27:38,129 [59] ERROR org.iringtools.utility.EncryptionUtility - Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+2012-09-28 08:27:38,146 [59] ERROR org.iringtools.nhibernate.NHibernateProvider - Error in GetDbDictionary: System.Exception: Error decrypting []System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Security.Cryptography.RijndaelManagedTransform.DecryptData(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode paddingMode, Boolean fLast)
+   at System.Security.Cryptography.RijndaelManagedTransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 65
+   at org.iringtools.utility.EncryptionUtility.Decrypt(String cipherText) in E:\iring-tools\branches\sencha-extjs41\Libraries\UtilityLibrary\EncryptionUtility.cs:line 72
+   at org.iringtools.nhibernate.NHibernateUtility.LoadDatabaseDictionary(String path) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateUtility.cs:line 29
+   at org.iringtools.nhibernate.NHibernateProvider.GetDictionary(String projectName, String applicationName) in E:\iring-tools\branches\sencha-extjs41\Libraries\NHibernateLibrary\NHibernateProvider.cs:line 113
+2012-09-28 08:29:09,316 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'VALVES'
+2012-09-28 08:29:09,420 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'EQUIPMENT'
+2012-09-28 08:29:09,435 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'INSTRUMENTS'
+2012-09-28 08:29:09,450 [59] DEBUG NHibernate.SQL - 
+          select t2.name as column_name, type_name(t2.user_type_id) as data_type, 
+          t2.max_length as data_length, t2.is_identity as is_identity, 
+          t2.is_nullable as is_nullable, t4.column_id as is_primary_key from sys.objects t1
+          inner join sys.columns t2 on t2.object_id = t1.object_id  
+          left join sys.index_columns t4 on t4.object_id = t1.object_id and t4.column_id = t2.column_id
+          left join sys.indexes t3 on t3.object_id = t1.object_id and t3.is_unique = 1
+          and t3.index_id = t4.index_id
+          where (upper(t1.type) = 'U' or upper(t1.type) = 'V') 
+          and upper(schema_name(t1.schema_id)) = 'DBO' and upper(t1.name) = 'LINES'
+2012-09-28 08:29:09,993 [59] DEBUG NHibernate.SQL - 
+          select name from sys.objects where (upper(type) = 'U' or upper(type) = 'V') 
+          and upper(schema_name(schema_id)) = 'DBO' order by name

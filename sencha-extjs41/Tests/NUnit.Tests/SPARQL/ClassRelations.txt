@@ -1,0 +1,20 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdl: <http://rdl.rdlfacade.org/data#>
+PREFIX dm: <http://dm.rdlfacade.org/data#>
+PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+SELECT DISTINCT ?turi ?label
+{
+  ?rr a  tpl:R76288246068 .
+  ?rr tpl:R98983340497 rdl:param1 .
+  ?rr tpl:R99672026745 ?turi .
+  ?r  a  tpl:R76288246068 .
+  ?turi  rdfs:label ?label .
+  ?r  tpl:R99672026745 ?turi .
+  ?r  tpl:R98983340497 ?uri .
+  FILTER (!regex(str(?uri),'param1','i'))       
+  FILTER (!regex(str(?uri),'float','i')) 
+  FILTER (!regex(str(?uri),'string','i'))
+}

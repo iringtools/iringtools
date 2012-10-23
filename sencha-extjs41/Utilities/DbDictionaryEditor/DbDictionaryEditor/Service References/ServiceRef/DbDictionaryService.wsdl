@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="DbDictionaryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4361/DbDictionaryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4361/DbDictionaryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4361/DbDictionaryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/org.iringtools.library" />
+      <xsd:import schemaLocation="http://localhost:4361/DbDictionaryService.svc?xsd=xsd3" namespace="http://ns.iringtools.org/library" />
+      <xsd:import schemaLocation="http://localhost:4361/DbDictionaryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDbDictionaryService_GetScopes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScopes" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetScopes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScopesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetDbDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDbDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetDbDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDbDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetDatabaseSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabaseSchema" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetDatabaseSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabaseSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_SaveDabaseDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDabaseDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_SaveDabaseDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDabaseDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetExistingDbDictionaryFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExistingDbDictionaryFiles" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetExistingDbDictionaryFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExistingDbDictionaryFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetProviders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviders" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_GetProviders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_PostDictionaryToAdapterService_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostDictionaryToAdapterService" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_PostDictionaryToAdapterService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostDictionaryToAdapterServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_ClearTripleStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTripleStore" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_ClearTripleStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTripleStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_DeleteApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApp" />
+  </wsdl:message>
+  <wsdl:message name="IDbDictionaryService_DeleteApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDbDictionaryService">
+    <wsdl:operation name="GetScopes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/GetScopes" message="tns:IDbDictionaryService_GetScopes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/GetScopesResponse" message="tns:IDbDictionaryService_GetScopes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDbDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/GetDbDictionary" message="tns:IDbDictionaryService_GetDbDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/GetDbDictionaryResponse" message="tns:IDbDictionaryService_GetDbDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseSchema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/GetDatabaseSchema" message="tns:IDbDictionaryService_GetDatabaseSchema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/GetDatabaseSchemaResponse" message="tns:IDbDictionaryService_GetDatabaseSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDabaseDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/SaveDabaseDictionary" message="tns:IDbDictionaryService_SaveDabaseDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/SaveDabaseDictionaryResponse" message="tns:IDbDictionaryService_SaveDabaseDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExistingDbDictionaryFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/GetExistingDbDictionaryFiles" message="tns:IDbDictionaryService_GetExistingDbDictionaryFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/GetExistingDbDictionaryFilesResponse" message="tns:IDbDictionaryService_GetExistingDbDictionaryFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/GetProviders" message="tns:IDbDictionaryService_GetProviders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/GetProvidersResponse" message="tns:IDbDictionaryService_GetProviders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostDictionaryToAdapterService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/PostDictionaryToAdapterService" message="tns:IDbDictionaryService_PostDictionaryToAdapterService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/PostDictionaryToAdapterServiceResponse" message="tns:IDbDictionaryService_PostDictionaryToAdapterService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearTripleStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/ClearTripleStore" message="tns:IDbDictionaryService_ClearTripleStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/ClearTripleStoreResponse" message="tns:IDbDictionaryService_ClearTripleStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDbDictionaryService/DeleteApp" message="tns:IDbDictionaryService_DeleteApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDbDictionaryService/DeleteAppResponse" message="tns:IDbDictionaryService_DeleteApp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDbDictionaryService" type="tns:IDbDictionaryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetScopes">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/GetScopes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDbDictionary">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/GetDbDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseSchema">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/GetDatabaseSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDabaseDictionary">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/SaveDabaseDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExistingDbDictionaryFiles">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/GetExistingDbDictionaryFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviders">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/GetProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostDictionaryToAdapterService">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/PostDictionaryToAdapterService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearTripleStore">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/ClearTripleStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApp">
+      <soap:operation soapAction="http://tempuri.org/IDbDictionaryService/DeleteApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DbDictionaryService">
+    <wsdl:port name="BasicHttpBinding_IDbDictionaryService" binding="tns:BasicHttpBinding_IDbDictionaryService">
+      <soap:address location="http://localhost:4361/DbDictionaryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

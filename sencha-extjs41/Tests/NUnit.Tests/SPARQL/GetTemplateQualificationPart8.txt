@@ -1,0 +1,12 @@
+﻿PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX p8: <http://standards.tc184-sc4.org/iso/15926/-8/template-model#>
+SELECT ?qualifies ?name ?description 
+{
+  tpl:param1 rdfs:subClassOf p8:SpecializedTemplateStatement .
+  tpl:param1 rdfs:label ?name .
+  tpl:param1 rdfs:subClassOf ?qualifies . 
+  OPTIONAL { tpl:param1 rdfs:comment ?description . }
+  FILTER (?qualifies != p8:SpecializedTemplateStatement)
+}

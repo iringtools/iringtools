@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module name="12345_000.ABC">
+  <bind name="Summary" service="org.iringtools.nhibernate.ISummary, NHibernateLibrary" 
+		to="org.iringtools.nhibernate.ext.NHibernateSummary, NHibernateExtension" />
+</module>

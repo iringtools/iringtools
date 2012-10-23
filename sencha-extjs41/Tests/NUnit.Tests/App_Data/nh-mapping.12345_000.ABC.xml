@@ -1,0 +1,111 @@
+﻿<hibernate-mapping default-lazy="true" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="org.iringtools.adapter.datalayer.proj_12345_000.ABC.EQUIPMENT, NUnit.Tests" table="&quot;EQUIPMENT&quot;">
+    <id name="Id" column="&quot;TAG&quot;">
+      <generator class="assigned" />
+    </id>
+    <property name="TAG" column="&quot;TAG&quot;" update="false" insert="false" />
+    <property name="INTERNAL_TAG" column="&quot;INTERNAL_TAG&quot;" />
+    <property name="ID" column="&quot;ID&quot;" />
+    <property name="AREA" column="&quot;AREA&quot;" />
+    <property name="TRAINNUMBER" column="&quot;TRAINNUMBER&quot;" />
+    <property name="EQTYPE" column="&quot;EQTYPE&quot;" />
+    <property name="EQPPREFIX" column="&quot;EQPPREFIX&quot;" />
+    <property name="EQSEQNO" column="&quot;EQSEQNO&quot;" />
+    <property name="EQPSUFF" column="&quot;EQPSUFF&quot;" />
+    <property name="EQUIPDESC1" column="&quot;EQUIPDESC1&quot;" />
+    <property name="EQUIPDESC2" column="&quot;EQUIPDESC2&quot;" />
+    <property name="CONSTTYPE" column="&quot;CONSTTYPE&quot;" />
+    <property name="EWP" column="&quot;EWP&quot;" />
+    <property name="USER1" column="&quot;USER1&quot;" />
+    <property name="USER2" column="&quot;USER2&quot;" />
+    <property name="USER3" column="&quot;USER3&quot;" />
+    <property name="TAGSTATUS" column="&quot;TAGSTATUS&quot;" />
+    <property name="COMMODITY" column="&quot;COMMODITY&quot;" />
+  </class>
+  <class name="org.iringtools.adapter.datalayer.proj_12345_000.ABC.INSTRUMENTS, NUnit.Tests" table="&quot;INSTRUMENTS&quot;">
+    <id name="Id" column="&quot;TAG&quot;">
+      <generator class="assigned" />
+    </id>
+    <property name="TAG" column="&quot;TAG&quot;" update="false" insert="false" />
+    <property name="KEYTAG" column="&quot;KEYTAG&quot;" />
+    <property name="TAG_NO" column="&quot;TAG_NO&quot;" />
+    <property name="TAG_CODE" column="&quot;TAG_CODE&quot;" />
+    <property name="ASSOC_EQ" column="&quot;ASSOC_EQ&quot;" />
+    <property name="IAREA" column="&quot;IAREA&quot;" />
+    <property name="ITRAIN" column="&quot;ITRAIN&quot;" />
+    <property name="ITYP" column="&quot;ITYP&quot;" />
+    <property name="INUM" column="&quot;INUM&quot;" />
+    <property name="ISUFFIX" column="&quot;ISUFFIX&quot;" />
+    <property name="MODIFIER1" column="&quot;MODIFIER1&quot;" />
+    <property name="MODIFIER2" column="&quot;MODIFIER2&quot;" />
+    <property name="MODIFIER3" column="&quot;MODIFIER3&quot;" />
+    <property name="MODIFIER4" column="&quot;MODIFIER4&quot;" />
+    <property name="STD_DETAIL" column="&quot;STD_DETAIL&quot;" />
+    <property name="DESCRIPT" column="&quot;DESCRIPT&quot;" />
+    <property name="TAG_TYPE" column="&quot;TAG_TYPE&quot;" />
+    <property name="CONST_TYPE" column="&quot;CONST_TYPE&quot;" />
+    <property name="COMP_ID" column="&quot;COMP_ID&quot;" />
+    <property name="PROJ_STAT" column="&quot;PROJ_STAT&quot;" />
+    <property name="PID_NO" column="&quot;PID_NO&quot;" />
+    <property name="LINE_NO" column="&quot;LINE_NO&quot;" />
+  </class>
+  <class name="org.iringtools.adapter.datalayer.proj_12345_000.ABC.LINES, NUnit.Tests" table="&quot;LINES&quot;">
+    <id name="Id" column="&quot;TAG&quot;">
+      <generator class="assigned" />
+    </id>
+    <property name="TAG" column="&quot;TAG&quot;" update="false" insert="false" />
+    <property name="ID" column="&quot;ID&quot;" />
+    <property name="AREA" column="&quot;AREA&quot;" />
+    <property name="TRAINNUMBER" column="&quot;TRAINNUMBER&quot;" />
+    <property name="SPEC" column="&quot;SPEC&quot;" />
+    <property name="SYSTEM" column="&quot;SYSTEM&quot;" />
+    <property name="LINENO" column="&quot;LINENO&quot;" />
+    <property name="NOMDIAMETER" column="&quot;NOMDIAMETER&quot;" />
+    <property name="INSULATIONTYPE" column="&quot;INSULATIONTYPE&quot;" />
+    <property name="HTRACED" column="&quot;HTRACED&quot;" />
+    <property name="CONSTTYPE" column="&quot;CONSTTYPE&quot;" />
+    <property name="DESPRESSURE" column="&quot;DESPRESSURE&quot;" />
+    <property name="TESTPRESSURE" column="&quot;TESTPRESSURE&quot;" />
+    <property name="PWHT" column="&quot;PWHT&quot;" />
+    <property name="TESTMEDIA" column="&quot;TESTMEDIA&quot;" />
+    <property name="MATLTYPE" column="&quot;MATLTYPE&quot;" />
+    <property name="NDT" column="&quot;NDT&quot;" />
+    <property name="NDE" column="&quot;NDE&quot;" />
+    <property name="PIPECLASS" column="&quot;PIPECLASS&quot;" />
+    <property name="PIDNUMBER" column="&quot;PIDNUMBER&quot;" />
+    <property name="DESTEMPERATURE" column="&quot;DESTEMPERATURE&quot;" />
+    <property name="PAINTSYSTEM" column="&quot;PAINTSYSTEM&quot;" />
+    <property name="DESIGNCODE" column="&quot;DESIGNCODE&quot;" />
+    <property name="COLOURCODE" column="&quot;COLOURCODE&quot;" />
+    <property name="EWP" column="&quot;EWP&quot;" />
+    <property name="USER1" column="&quot;USER1&quot;" />
+    <property name="TAGSTATUS" column="&quot;TAGSTATUS&quot;" />
+    <property name="FULLLINE" column="&quot;FULLLINE&quot;" />
+    <property name="UOM_NOMDIAMETER" column="&quot;UOM_NOMDIAMETER&quot;" />
+    <property name="UOM_DESPRESSURE" column="&quot;UOM_DESPRESSURE&quot;" />
+    <property name="UOM_DESTEMPERATURE" column="&quot;UOM_DESTEMPERATURE&quot;" />
+  </class>
+  <class name="org.iringtools.adapter.datalayer.proj_12345_000.ABC.VALVES, NUnit.Tests" table="&quot;VALVES&quot;">
+    <id name="Id" column="&quot;TAG_NO&quot;">
+      <generator class="assigned" />
+    </id>
+    <property name="TAG_NO" column="&quot;TAG_NO&quot;" update="false" insert="false" />
+    <property name="KEYTAG" column="&quot;KEYTAG&quot;" />
+    <property name="VAREA" column="&quot;VAREA&quot;" />
+    <property name="VTYP" column="&quot;VTYP&quot;" />
+    <property name="VTRAIN" column="&quot;VTRAIN&quot;" />
+    <property name="VNUM" column="&quot;VNUM&quot;" />
+    <property name="VSUFFIX" column="&quot;VSUFFIX&quot;" />
+    <property name="TAG_TYPE" column="&quot;TAG_TYPE&quot;" />
+    <property name="CONST_TYPE" column="&quot;CONST_TYPE&quot;" />
+    <property name="COMP_ID" column="&quot;COMP_ID&quot;" />
+    <property name="VSIZE" column="&quot;VSIZE&quot;" />
+    <property name="UOM_VSIZE" column="&quot;UOM_VSIZE&quot;" />
+    <property name="VSPEC_TYPE" column="&quot;VSPEC_TYPE&quot;" />
+    <property name="VSPEC_NUM" column="&quot;VSPEC_NUM&quot;" />
+    <property name="VPRESRATE" column="&quot;VPRESRATE&quot;" />
+    <property name="VCONDITION" column="&quot;VCONDITION&quot;" />
+    <property name="PID_NO" column="&quot;PID_NO&quot;" />
+    <property name="PROJ_STAT" column="&quot;PROJ_STAT&quot;" />
+  </class>
+</hibernate-mapping>

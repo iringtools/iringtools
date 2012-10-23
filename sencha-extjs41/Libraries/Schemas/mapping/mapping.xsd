@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://www.iringtools.org/mapping"  targetNamespace="http://www.iringtools.org/mapping" 
+  elementFormDefault="qualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc">
+
+  <xs:annotation>
+    <xs:appinfo>
+      <jaxb:globalBindings>
+        <xjc:simple />
+      </jaxb:globalBindings>
+    </xs:appinfo>
+  </xs:annotation>
+
+  <xs:element name="mapping" type="Mapping" />
+
+  <xs:complexType name="Mapping">
+    <xs:sequence>
+      <xs:element name="graphMaps" type="GraphMaps" />
+      <xs:element name="valueListMaps" type="ValueListMaps" />
+      <xs:element name="version" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ValueListMaps">
+    <xs:sequence>
+      <xs:element name="valueListMaps" type="ValueListMap" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ValueListMap">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="valueMaps" type="ValueMaps"/>
+    </xs:sequence>
+  </xs:complexType>
+	
+	<xs:complexType name="ValueMaps">
+    <xs:sequence>
+      <xs:element name="valueMap" type="ValueMap" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+    <xs:complexType name="ValueMap">
+    <xs:sequence>
+      <xs:element name="internalValue" type="xs:string" />
+      <xs:element name="uri" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GraphMaps">
+    <xs:sequence>
+      <xs:element name="graphMap" type="GraphMap" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GraphMap">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="classTemplateMaps" type="ClassTemplateMapList" />
+      <xs:element name="dataObjectName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ClassTemplateMapList">
+    <xs:sequence>
+      <xs:element name="classTemplateMap" type="ClassTemplateMap" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ClassTemplateMap">
+    <xs:sequence>
+      <xs:element name="classMap" type="ClassMap" />
+      <xs:element name="templateMaps" type="TemplateMaps" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Identifiers">
+    <xs:sequence>
+      <xs:element name="identifier" type="xs:string" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ClassMap">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="classId" type="xs:string" />
+      <xs:element name="identifierDelimiter" type="xs:string" minOccurs="0"/>
+      <xs:element name="identifiers" type="Identifiers"/>
+      <xs:element name="identifierValue" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TemplateMaps">
+    <xs:sequence>
+      <xs:element name="templateMap" type="TemplateMap" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TemplateMap">
+    <xs:sequence>
+      <xs:element name="templateId" type="xs:string" />
+      <xs:element name="templateType" type="TemplateType" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="roleMaps" type="RoleMaps" />
+      <xs:element name="transferOption" type="TransferOption"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoleMaps">
+    <xs:sequence>
+      <xs:element name="roleMap" type="RoleMap" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoleMap">
+    <xs:sequence>
+      <xs:element name="type" type="RoleType" />
+      <xs:element name="roleId" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="dataType" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+      <xs:element name="propertyName" type="xs:string" minOccurs="0"/>
+      <xs:element name="valueListName" type="xs:string" minOccurs="0"/>
+      <xs:element name="classMap" type="ClassMap" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+	<xs:simpleType name="RoleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Property" />
+			<xs:enumeration value="Possessor" />
+			<xs:enumeration value="Reference" />
+			<xs:enumeration value="FixedValue" />
+			<xs:enumeration value="DataProperty" />
+			<xs:enumeration value="ObjectProperty" />
+		</xs:restriction>
+	</xs:simpleType>
+
+  <xs:simpleType name="TransferOption">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Desired" />
+      <xs:enumeration value="Required" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+    <xs:simpleType name="TemplateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Qualification" />
+      <xs:enumeration value="Definition" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

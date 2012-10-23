@@ -1,0 +1,195 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Search",
+        "models": [
+            "SearchModel"
+        ],
+        "stores": [
+            "SearchStore",
+            "SearchCmbStore"
+        ],
+        "views": [
+            "search.SearchPanel",
+            "search.SearchToolbar",
+            "search.SearchTree"
+        ]
+    },
+    "id": "ExtBox1-ext-gen3536",
+    "designerId": "5b36ea62-f472-4b96-bf97-b38668a73c4b",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "searchPanel",
+                "ref": "searchPanel",
+                "selector": "viewport > centerpanel > searchpanel"
+            },
+            "designerId": "1689f746-d148-414f-8b80-8cf818c0bb74"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "searchProperty",
+                "ref": "searchProperty",
+                "selector": "viewport > centerpanel > searchpanel > propertypanel"
+            },
+            "designerId": "b0870b20-333e-4ab6-bd7d-2060032fe9f0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "searchContent",
+                "ref": "searchContent",
+                "selector": "viewport > centerpanel > searchpanel > contentpanel"
+            },
+            "designerId": "2bb3506e-c87a-4ce6-bbda-c3f4a1cea7c5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSearchRdl",
+                "fn": "onSearchRdl",
+                "implHandler": [
+                    "var me = this;  \r",
+                    "var pan = me.getSearchPanel(), tree, \r",
+                    "searchText = pan.dockedItems.items[1].items.items[0].value,\r",
+                    "isreset = pan.dockedItems.items[1].items.items[2].checked,\r",
+                    "content = me.getSearchContent(),\r",
+                    "propPanel = me.getSearchProperty(),\r",
+                    "value = pan.down('#searchLimitCombo').value;\r",
+                    "if (!searchText && searchText.length === 0) return;\r",
+                    "\r",
+                    "var conf = {\r",
+                    "  title: searchText,\r",
+                    "  id: 'tab_' + searchText\r",
+                    "};\r",
+                    "var exist = content.items.map[conf.id];\r",
+                    "if(exist) {\r",
+                    "  tree = exist;\r",
+                    "} else {\r",
+                    "  tree = Ext.widget('searchtree', conf);\r",
+                    "  content.add(tree);\r",
+                    "}\r",
+                    "tree.on('itemexpand', function () {\r",
+                    "  pan.getEl().unmask();\r",
+                    "}, me);\r",
+                    "tree.on('itemclick', me.onSearchClick, me);\r",
+                    "tree.on('beforeload', function (store, action) {\r",
+                    "  pan.getEl().mask('Loading...');\r",
+                    "  var repo = null;\r",
+                    "  var params = store.proxy.extraParams;\r",
+                    "  if (action.node.data.type != \"SearchNode\" && action.node.data.type != \"TemplateNode\") {\r",
+                    "    repo = action.node.data.text;\r",
+                    "    if (repo !== undefined && repo.indexOf(\"[\") != -1) {\r",
+                    "      repo = action.node.parentNode.data.text;\r",
+                    "    }\r",
+                    "  }\r",
+                    "  params.type = (action.node.data.type === '' ? 'SearchNode' : action.node.data.type);\r",
+                    "  if (searchText !== undefined && searchText !== '') {\r",
+                    "    params.query = searchText;\r",
+                    "    params.reset = isreset;\r",
+                    "    params.limit = value;        \r",
+                    "  }\r",
+                    "  if (repo) {\r",
+                    "    params.repositoryName = repo.substring(repo.indexOf(\"[\") + 1, repo.indexOf(\"]\"));\r",
+                    "  }\r",
+                    "  if (action.node.parentNode && \r",
+                    "  (action.node.data.identifier === null || \r",
+                    "  action.node.data.identifier === '')) {\r",
+                    "    params.id = action.node.parentNode.data.identifier;\r",
+                    "  } else {\r",
+                    "    params.id = action.node.data.identifier;\r",
+                    "  }\r",
+                    "\r",
+                    "}, me);\r",
+                    "tree.on('beforeitemexpand', function () {\r",
+                    "  pan.getEl().mask('Loading...'); \r",
+                    "}, me);\r",
+                    "tree.on('load', function (store, model) {\r",
+                    "  pan.getEl().unmask();\r",
+                    "  if (model.data.type == \"ClassNode\") {\r",
+                    "    try {\r",
+                    "      if (model.childNodes.length > 0) {\r",
+                    "        propPanel.setSource(model.childNodes[0].data.record);\r",
+                    "      }\r",
+                    "      else {\r",
+                    "        propPanel.setSource(model.data.record);\r",
+                    "      }\r",
+                    "    } catch (ex) { }\r",
+                    "    }\r",
+                    "  }, me);\r",
+                    "\r",
+                    "  tree.show();\r",
+                    "  tree.getStore().load();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[action=search]"
+            },
+            "designerId": "0a8d81b5-7a46-4fb6-a060-b188f4b9aa20"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSearchClick",
+                "fn": "onSearchClick",
+                "designer|params": [
+                    "view",
+                    "model",
+                    "n",
+                    "idx"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "var content = me.getSearchContent(),\r",
+                    "propPanel = me.getSearchProperty();\r",
+                    "var node = model.store.getAt(idx);\r",
+                    "try {\r",
+                    "  node.on('expand', function () {\r",
+                    "    content.getEl().unmask();\r",
+                    "  }, me);\r",
+                    "  if (node.data.type == \"ClassNode\" && model.firstChild) {\r",
+                    "    propPanel.setSource(model.firstChild.data.record);\r",
+                    "  } else {\r",
+                    "    propPanel.setSource(node.data.record);\r",
+                    "  }\r",
+                    "} catch (e) { }\r",
+                    "  node.expand();"
+                ]
+            },
+            "designerId": "771aed73-9b15-45af-ad15-24ee667ed02b"
+        }
+    ]
+}

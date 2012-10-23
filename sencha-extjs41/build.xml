@@ -1,0 +1,211 @@
+<Project DefaultTargets="All" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+
+  <PropertyGroup>
+    <AssemblyInfoFile>$(MSBuildProjectDirectory)\AssemblyInfo.cs;</AssemblyInfoFile>
+    <Major>2</Major>
+    <Minor>4</Minor>
+    <Build>0</Build>
+    <Revision>0</Revision>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MSTestCmd>"$(VSINSTALLDIR)\Common7\IDE\MSTest.exe"</MSTestCmd>
+    <ZipCmd>"$(MSBuildProjectDirectory)\ExternalBinaries\7-Zip\7z.exe"</ZipCmd>
+	<NUnit-ToolPath>$(MSBuildProjectDirectory)\ExternalBinaries\Nunit</NUnit-ToolPath>
+    <ServicesDir>$(MSBuildProjectDirectory)\iRINGTools.Services</ServicesDir>
+    <ApplicationsDir>$(MSBuildProjectDirectory)\iRINGTools.Applications</ApplicationsDir>
+    <LandingPageDir>$(MSBuildProjectDirectory)\iRINGTools.Landing</LandingPageDir>
+    <UtilitiesDir>$(MSBuildProjectDirectory)\Utilities</UtilitiesDir>
+    <RDFImportExportDir>$(UtilitiesDir)\RDFImportExport\RDFImportExport</RDFImportExportDir>
+    <QMXFGeneratorDir>$(UtilitiesDir)\QMXFGenerator</QMXFGeneratorDir>
+    <FacadeExchangeDir>$(UtilitiesDir)\FacadeExchange</FacadeExchangeDir>
+    <UnitTestsDir>$(MSBuildProjectDirectory)\UnitTests</UnitTestsDir>
+    <AdapterServiceTestsDir>$(UnitTestsDir)\AdapterService.Tests</AdapterServiceTestsDir>
+    <RefDataServiceTestsDir>$(UnitTestsDir)\ReferenceDataService.Tests</RefDataServiceTestsDir>    
+    <DeploymentDir>$(MSBuildProjectDirectory)\Deployment</DeploymentDir>
+    <ServicesDeploymentDir>$(DeploymentDir)\iRINGTools\Services</ServicesDeploymentDir>
+    <AppsDeploymentDir>$(DeploymentDir)\iRINGTools\Apps</AppsDeploymentDir>
+    <UtilitiesDeploymentDir>$(DeploymentDir)\iRINGTools\Utils</UtilitiesDeploymentDir>
+    <LandingDeploymentDir>$(DeploymentDir)\iRINGTools</LandingDeploymentDir>
+    <SolutionFile>iring-tools.sln</SolutionFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ServicesDeployment
+      Include="$(ServicesDir)\**;"
+      Exclude="$(ServicesDir).Tests\**;
+               $(ServicesDir)\AdapterSettings.xml;
+               $(ServicesDir)\KeyRing.xml;
+               $(ServicesDir)\App_Code\**;
+               $(ServicesDir)\App_Data\config_Developer.ttl;
+               $(ServicesDir)\bin\*.pdb;
+               $(ServicesDir)\obj\**;
+               $(ServicesDir)\Properties\**;
+               $(ServicesDir)\Logs\**;
+               $(ServicesDir)\Templates\**;
+               $(ServicesDir)\Transforms\**;
+               $(ServicesDir)\obj\**;
+               $(ServicesDir)\*.suo;
+               $(ServicesDir)\*.cs;
+               $(ServicesDir)\*.csproj;
+               $(ServicesDir)\*.user;
+               $(ServicesDir)\*.vspscc;
+               $(ServicesDir)\*.log;
+               $(ServicesDir)\web.config;
+               $(ServicesDir)\Service.cs;
+               $(ServicesDir)\IService.cs;
+               $(ServicesDir)\Global.asax.cs;
+               $(ServicesDir)\.svn\**;
+               $(ServicesDir)\*\.svn\**;
+               $(ServicesDir)\*\*\.svn\**;
+               $(ServicesDir)\*\*\*\.svn\**;">
+    </ServicesDeployment>
+
+    <LandingDeployment
+      Include="$(LandingPageDir)\**"
+      Exclude="$(LandingPageDir)\.svn\**;
+               $(LandingPageDir)\*\.svn\**;
+               $(LandingPageDir)\.settings\**;
+               $(LandingPageDir)\.project;">
+    </LandingDeployment>
+
+    <AppsDeployment
+      Include="$(ApplicationsDir)\**"
+      Exclude="$(ApplicationsDir)\bin\*.pdb;
+               $(ApplicationsDir)\obj\**;
+               $(ApplicationsDir)\Properties\**;
+               $(ApplicationsDir)\*.suo;
+               $(ApplicationsDir)\*.cs;
+               $(ApplicationsDir)\*.csproj;
+               $(ApplicationsDir)\*.user;
+               $(ApplicationsDir)\*.vspscc;
+               $(ApplicationsDir)\web.config;
+               $(ApplicationsDir)\.svn\**;
+               $(ApplicationsDir)\**\.svn\**;
+               $(ApplicationsDir)\*\*\.svn\**;
+               $(ApplicationsDir)\*\*\*\.svn\**;
+               $(ApplicationsDir)\*\*\*\*\.svn\**;
+               $(ApplicationsDir)\*\*\*\*\*\.svn\**;
+               $(ApplicationsDir)\*\*\*\*\*\*\.svn\**;">
+    </AppsDeployment>
+
+    <UtilitiesDeployment
+      Include="Libraries\iRINGLibrary\bin\Debug\iRINGLibrary.dll;
+               Libraries\iRINGLibrary\bin\Debug\UtilityLibrary.dll;
+               Utilities\EncryptCredentials\bin\Debug\EncryptCredentials.exe;
+               Utilities\ConfigurationTool\bin\Debug\ConfigurationTool.exe;
+               Utilities\RDFImportExport\RDFImportExport\bin\Debug\dotNetRDF.dll;
+               Utilities\RDFImportExport\RDFImportExport\bin\Debug\dotNetRDF.xml;
+               Utilities\RDFImportExport\RDFImportExport\bin\Debug\HtmlAgilityPack.dll;
+               Utilities\RDFImportExport\RDFImportExport\bin\Debug\RDFImportExport.exe;
+               Utilities\RDFImportExport\RDFImportExport\RDFImportExport_Default.config;
+               Utilities\QMXFGenerator\bin\Debug\QMXFGenerator.exe;
+               Utilities\QMXFGenerator\QMXFGenerator_Default.config;
+               Utilities\QMXFGenerator\InformationModel.xlsx;
+               Utilities\QMXFTransforms\*.dtd;
+               Utilities\QMXFTransforms\*.xsd;
+               Utilities\QMXFTransforms\*.xsl;
+               Utilities\FacadeExchange\bin\Debug\FacadeExchange.exe;
+               Utilities\FacadeExchange\App_Default.config;
+               Utilities\FacadeExchange\bin\Debug\*.dll;
+               Utilities\FacadeExchange\bin\Debug\*.xml;">
+    </UtilitiesDeployment>
+  </ItemGroup>
+
+  <ItemGroup>
+    <DeploymentPackage Include="*.*" Exclude="*.zip">
+      <Options>a -tzip -y -r</Options>
+      <OutputDir>$(DeploymentDir)</OutputDir>
+      <FileSet>$(ServicesDeploymentDir) $(AppsDeploymentDir) $(UtilitiesDeploymentDir) $(LandingDeploymentDir)\*</FileSet>
+      <ZipFile>$(DeploymentDir)\iRINGTools-$(Major).$(Minor).$(Build).zip</ZipFile>
+    </DeploymentPackage>
+  </ItemGroup>
+
+  <Target Name="Version">
+    <Message Text="Updating assembly info ..." />
+
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory)">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+
+    <FileUpdate
+      Files="$(AssemblyInfoFile)"
+      Regex="(\d+)\.(\d+)\.(\d+)(\.(\d+))*"
+      ReplacementText="$(Major).$(Minor).$(Build).$(Revision)"/>
+  </Target>
+
+  <Target Name="CleanBuild">
+    <Message Text="Performing MSBuild clean-up ..." />
+    <MSBuild Projects="$(SolutionFile)" Targets="Clean"/>
+  </Target>
+   
+  <Target Name="PrepareBuild">
+    <Message Text="Preparing build ..." />
+    <Exec Condition="!Exists('$(ServicesDir)\Web.config')" 
+          Command="Copy $(ServicesDir)\Web_Default.config $(ServicesDir)\Web.config" />
+    <Exec Condition="!Exists('$(ServicesDir)\App_Data\Federation.xml')" 
+          Command="Copy $(ServicesDir)\App_Data\Federation_Default.xml $(ServicesDir)\App_Data\Federation.xml" />
+    <Exec Condition="!Exists('$(ServicesDir)\App_Data\config.ttl')" 
+          Command="Copy $(ServicesDir)\App_Data\config_Default.ttl $(ServicesDir)\App_Data\config.ttl" />
+    <Exec Condition="!Exists('$(ApplicationsDir)\Web.config')"
+          Command="Copy $(ApplicationsDir)\Web_Default.config $(ApplicationsDir)\Web.config" />
+    <Exec Condition="!Exists('$(FacadeExchangeDir)\App.config')"
+      Command="Copy $(FacadeExchangeDir)\App_Default.config $(FacadeExchangeDir)\App.config" />
+    <Exec Condition="!Exists('$(QMXFGeneratorDir)\App.config')"
+          Command="Copy $(QMXFGeneratorDir)\QMXFGenerator_Default.config $(QMXFGeneratorDir)\App.config" />
+    <Exec Condition="!Exists('$(RDFImportExportDir)\App.config')"
+          Command="Copy $(RDFImportExportDir)\RDFImportExport_Default.config $(RDFImportExportDir)\App.config" />
+  </Target>
+
+  <Target Name="CoreBuild" DependsOnTargets="Version">
+    <Message Text="Performing MSBuild ..." />
+    <MSBuild Projects="$(SolutionFile)" Targets="Build"/>
+  </Target>
+
+  <Target Name="Test">
+    <NUnit ToolPath="$(NUnit-ToolPath)" DisableShadowCopy="true" Assemblies="Tests\NUnit.Tests\Bin\NUnit.Tests.dll" OutputXmlFile="test-reports\test-results.xml" />
+	</Target>
+
+  <Target Name="CreateDeployment">
+    <Message Text="Cleaning up old deployment folders..." />
+    <Exec Command="RmDir /S /Q $(DeploymentDir)" />
+    <MakeDir Directories="$(ServicesDeploymentDir); $(AppsDeploymentDir); $(LandingDeploymentDir); $(UtilitiesDeploymentDir);"/>
+    
+    <Message Text="Creating Services deployment ..." />
+    <Copy SourceFiles="@(ServicesDeployment)"
+          DestinationFiles="@(ServicesDeployment ->'$(ServicesDeploymentDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Exec Command="Move /Y $(ServicesDeploymentDir)\Web_Default.config $(ServicesDeploymentDir)\Web.config" />
+    <Exec Command="Move /Y $(ServicesDeploymentDir)\App_Data\Repositories_Default.xml $(ServicesDeploymentDir)\App_Data\Repositories.xml" />
+    <Exec Command="Move /Y $(ServicesDeploymentDir)\App_Data\Config_Default.ttl $(ServicesDeploymentDir)\App_Data\Config.ttl" />
+    <Exec Command="Mkdir $(ServicesDeploymentDir)\Logs" />
+    <Exec Command="Mkdir $(ServicesDeploymentDir)\App_Code"/>
+
+    <Message Text="Creating Applications deployment ..." />
+    <Copy SourceFiles="@(AppsDeployment)"
+          DestinationFiles="@(AppsDeployment->'$(AppsDeploymentDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Exec Command="Move /Y $(AppsDeploymentDir)\Web_Default.config $(AppsDeploymentDir)\Web.config" />
+
+    <Message Text="Creating Utilities deployment ..." />
+    <Copy SourceFiles="@(UtilitiesDeployment)"
+          DestinationFiles="@(UtilitiesDeployment->'$(UtilitiesDeploymentDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Exec Command="Move /Y $(UtilitiesDeploymentDir)\App_Default.config $(UtilitiesDeploymentDir)\FacadeExchange.exe.config" />
+    <Exec Command="Move /Y $(UtilitiesDeploymentDir)\QMXFGenerator_Default.config $(UtilitiesDeploymentDir)\QMXFGenerator.exe.config" />
+    <Exec Command="Move /Y $(UtilitiesDeploymentDir)\RDFImportExport_Default.config $(UtilitiesDeploymentDir)\RDFImportExport.exe.config" />
+
+    <Message Text="Creating landing page deployment ..." />
+    <Copy SourceFiles="@(LandingDeployment)"
+          DestinationFiles="@(LandingDeployment->'$(LandingDeploymentDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+
+  <Target Name="CreatePackages" DependsOnTargets="CreateDeployment">
+    <Exec Command="$(zipCmd) %(DeploymentPackage.Options) %(DeploymentPackage.ZipFile) %(DeploymentPackage.FileSet)" />
+    <Exec Command="RmDir /S /Q $(DeploymentDir)\iRINGTools" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="CoreBuild"/>
+
+  <Target Name="Rebuild" DependsOnTargets="CleanBuild; PrepareBuild; CoreBuild"/>
+
+  <Target Name="All" DependsOnTargets="Rebuild; Test; CreatePackages"/>
+</Project>

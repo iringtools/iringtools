@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module name="DataLayerBinding.12345_000.ABC">
+  <bind name="DataLayer" service="org.iringtools.library.IDataLayer, iRINGLibrary" to="org.iringtools.adapter.datalayer.NHibernateDataLayer, NHibernateLibrary" />
+</module>

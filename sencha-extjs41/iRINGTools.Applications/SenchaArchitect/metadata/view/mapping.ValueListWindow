@@ -1,0 +1,66 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mapping.ValueListWindow",
+        "designer|userAlias": "valuelistwindow",
+        "border": false,
+        "floating": true,
+        "frame": false,
+        "height": 110,
+        "width": 430,
+        "layout": "fit",
+        "iconCls": "tabsValueList",
+        "title": null
+    },
+    "configAlternates": {
+        "border": "boolean"
+    },
+    "id": "ExtBox1-ext-gen3761",
+    "designerId": "ebfb5e34-f67f-4b6e-84ab-6406558c42a5",
+    "cn": [
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent",
+                "name": "save"
+            },
+            "designerId": "e7f6a17a-c4db-4880-a15a-b65538584612"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent1",
+                "name": "reset"
+            },
+            "designerId": "28211626-7cea-400a-95d0-ddd35e11aeac"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "ValueListForm"
+            },
+            "designerId": "a04e5323-7f33-4c19-b83e-dbea41fb148c",
+            "masterInstanceId": "ExtBox1-ext-gen24004"
+        }
+    ]
+}

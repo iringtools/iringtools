@@ -1,0 +1,24 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rds: <http://rds.posccaesar.org/2008/06/OWL/RDL#> 
+PREFIX tpl: <http://tpl.rdlfacade.org/data#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?label ?type
+  ?definition ?creator ?creationDate ?class
+  ?comment ?authority ?recorded ?from
+{ 
+  <param1>  rdfs:label ?label .
+  OPTIONAL { <param1>  rdfs:comment  ?comment }
+  OPTIONAL { <param1>  rds:hasDefinition ?definition } 
+  OPTIONAL { <param1>  a  ?type }
+  OPTIONAL { <param1>  rds:hasCreator  ?creator } 
+  OPTIONAL { <param1>  rds:hasCreationDate ?creationDate } 
+  OPTIONAL { <param1>  rds:hasStatus   ?class } 
+  OPTIONAL { ?status   a   tpl:R20247551573 } 
+  OPTIONAL { ?status   tpl:R64574858717  <param1>  } 
+  OPTIONAL { ?status   tpl:R56599656536  ?authority } 
+  OPTIONAL { ?status   tpl:R61794465713  ?recorded } 
+  OPTIONAL { ?status   tpl:R42656850346  ?from } 
+  FILTER (?type != owl:Class) 
+}

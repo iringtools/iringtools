@@ -1,0 +1,62 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "datalayer": "",
+        "context": "",
+        "baseUrl": "",
+        "endpoint": "",
+        "designer|userClassName": "spreadsheet.SourceWindow",
+        "designer|userAlias": "spreadsheetsourcewindow",
+        "border": false,
+        "floating": true,
+        "frame": false,
+        "height": 130,
+        "width": 420,
+        "layout": "fit",
+        "title": null
+    },
+    "configAlternates": {
+        "border": "boolean"
+    },
+    "id": "ExtBox1-ext-gen9508",
+    "designerId": "4c4e87b7-3959-4971-a156-c456b3462eb5",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "datalayer",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "context",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "baseUrl",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "endpoint",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "9727128e-c5ed-4ac6-80b9-0f4d915b5807",
+            "masterInstanceId": "ExtBox1-ext-gen10144"
+        }
+    ]
+}

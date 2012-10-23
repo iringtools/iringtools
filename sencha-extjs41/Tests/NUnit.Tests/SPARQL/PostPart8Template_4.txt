@@ -1,0 +1,3 @@
+param1 rdfs:subClassOf _:bparam2 . 
+	_:bparam3 owl:type owl:Class ; 
+		owl:intersectionOf _:bparam4 . 

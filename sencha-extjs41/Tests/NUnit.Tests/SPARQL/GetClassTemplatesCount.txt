@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdl: <http://rdl.rdlfacade.org/data#>
+PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+SELECT (COUNT(DISTINCT  ?uri) AS ?label)
+{
+  ?classRole a tpl:R76288246068 .
+  ?classRole tpl:R98983340497 rdl:param1 .
+  ?classRole tpl:R99672026745 ?uri .
+  ?uri rdfs:label ?label
+}

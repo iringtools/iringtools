@@ -1,0 +1,17 @@
+﻿<Window x:Class="ConfigurationTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:ConfigurationTool.ViewModel"
+        xmlns:vw="clr-namespace:ConfigurationTool.View"
+        Title="iRINGTools Proxy Configuration Tool" Height="332" Width="490" MinHeight="332" MaxHeight="332" MinWidth="490" Icon="/ConfigurationTool;component/Resources/iRING.ico" FontFamily="Segue UI" WindowStartupLocation="CenterScreen">
+  <Window.Resources>
+    <DataTemplate DataType="{x:Type vm:ProxyParamsViewModel}">
+      <vw:ProxyParamsView />
+    </DataTemplate>
+  </Window.Resources>
+  <Grid>
+    <Border Background="#FFF0F0F0">
+      <ItemsControl ItemsSource="{Binding ViewModels}"/>
+    </Border>
+  </Grid>
+</Window>

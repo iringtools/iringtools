@@ -1,0 +1,68 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "directory.DataLayerWindow",
+        "designer|userAlias": "datalayerwindow",
+        "border": false,
+        "floating": true,
+        "frame": false,
+        "height": 180,
+        "width": 460,
+        "layout": "fit",
+        "bodyPadding": 1,
+        "iconCls": "tabsScope",
+        "title": null
+    },
+    "configAlternates": {
+        "border": "boolean",
+        "bodyPadding": "number"
+    },
+    "id": "ExtBox1-ext-gen34868",
+    "designerId": "f84720ec-a5c9-4ebd-94ae-2d99104ab3de",
+    "cn": [
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent9",
+                "name": "save"
+            },
+            "designerId": "3752f433-60ad-4d99-a64d-adfc38c0d2f9"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent10",
+                "name": "reset"
+            },
+            "designerId": "5ab3b591-95fe-4669-bc7b-263f824af719"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": null
+            },
+            "designerId": "41308c91-9917-4fdc-93fa-7303e27b1670",
+            "masterInstanceId": "ExtBox1-ext-gen80753"
+        }
+    ]
+}

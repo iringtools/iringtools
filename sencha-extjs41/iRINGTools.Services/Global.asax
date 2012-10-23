@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="org.iringtools.adapter.Global" Language="C#" %>

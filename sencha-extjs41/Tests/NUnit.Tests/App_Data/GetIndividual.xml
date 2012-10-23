@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinesList xmlns="http://www.example.com/ABC/12345_000/LINES/">
+  <Lines>
+    <Tag>90002-RV</Tag>
+    <Id>0100000025</Id>
+    <Area>90</Area>
+    <Trainnumber></Trainnumber>
+    <Spec>AAA3</Spec>
+    <System>RV</System>
+    <Lineno>002</Lineno>
+    <Nomdiameter>40</Nomdiameter>
+    <Insulationtype>IP</Insulationtype>
+    <Htraced></Htraced>
+    <Consttype>NEW</Consttype>
+    <Despressure>5.2</Despressure>
+    <Testpressure></Testpressure>
+    <Pwht></Pwht>
+    <Testmedia></Testmedia>
+    <Matltype></Matltype>
+    <Ndt></Ndt>
+    <Nde></Nde>
+    <Pipeclass></Pipeclass>
+    <Pidnumber>90-AO5676</Pidnumber>
+    <Destemperature>163</Destemperature>
+    <Paintsystem></Paintsystem>
+    <Designcode></Designcode>
+    <Colourcode></Colourcode>
+    <Ewp>***</Ewp>
+    <User1></User1>
+    <Tagstatus>NEW</Tagstatus>
+    <Fullline>90-RV-002</Fullline>
+    <Uom_nomdiameter>mm</Uom_nomdiameter>
+    <Uom_despressure>kPag</Uom_despressure>
+    <Uom_destemperature>Deg C</Uom_destemperature>
+  </Lines>
+</LinesList>

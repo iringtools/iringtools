@@ -1,0 +1,5 @@
+PREFIX tpl: <http://tpl.rdlfacade.org/data#>
+SELECT ?instance
+{
+ ?instance tpl:R64574858717 tpl:param1 
+} 
