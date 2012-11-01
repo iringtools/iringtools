@@ -1,0 +1,40 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.TemplatemapMenu",
+        "designer|userAlias": "templatemapmenu",
+        "floating": true,
+        "width": 140
+    },
+    "id": "ExtBox1-ext-gen2562",
+    "designerId": "f57a866d-01e3-41f0-aa33-5e4f7693a206",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "templatemapdelete",
+                "designer|userClassName": "MyMenuItem31",
+                "icon": "Content/img/16x16/edit-delete.png",
+                "text": "Delete TemplateMap"
+            },
+            "designerId": "d6485848-88a7-48c5-aa74-0e5056d6a194",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

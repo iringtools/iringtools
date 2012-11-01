@@ -1,0 +1,62 @@
+{
+    "type": "treestore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MappingStore",
+        "autoLoad": true,
+        "storeId": "MappingStore",
+        "model": "MappingModel",
+        "root": [
+            "{type: 'MappingNode', expanded: true}"
+        ]
+    },
+    "id": "ExtBox1-ext-gen34040",
+    "designerId": "73348ec9-a390-493b-aabd-e1cee85f950c",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"read\":\"POST\"}"
+                ],
+                "designer|userClassName": "MyAjaxProxy9",
+                "extraParams": [
+                    "{type: 'MappingNode',id: null,range: null,graphName: null, contextName: null,endpoint: null,baseUrl: null}"
+                ],
+                "timeout": 600000,
+                "url": "mapping/getnode"
+            },
+            "designerId": "fb8d3f0a-d31b-4fd2-8c6f-c2c29918128f",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "object"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader9"
+                    },
+                    "designerId": "efb158a5-d732-4f92-8985-a402a760a6e0"
+                }
+            ]
+        }
+    ]
+}

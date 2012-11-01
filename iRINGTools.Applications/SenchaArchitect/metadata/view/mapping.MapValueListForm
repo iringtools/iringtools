@@ -1,0 +1,497 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mapping.MapValueListForm",
+        "designer|userAlias": "mapvaluelistform",
+        "height": null,
+        "width": null,
+        "bodyPadding": null,
+        "bodyStyle": [
+            "padding:10px 5px 0\r",
+            ""
+        ],
+        "title": null,
+        "method": "POST",
+        "url": "mapping/mapvaluelist"
+    },
+    "id": "ExtBox1-ext-gen6527",
+    "designerId": "74ae9be1-debc-4ec9-b65c-72f3107b7df0",
+    "cn": [
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "valueListName",
+                "fieldLabel": null
+            },
+            "designerId": "50158e76-e675-41b4-8037-ab293713cd97"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "relatedObject",
+                "fieldLabel": null
+            },
+            "designerId": "6895e05b-ad3d-4bb4-b5e7-bf85942f7d4a"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "propertyName",
+                "fieldLabel": null
+            },
+            "designerId": "72432b26-ecb0-46ef-a4f3-a786a1fb925a"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "mappingNode",
+                "fieldLabel": null
+            },
+            "designerId": "b433308a-2bbf-46f8-8178-c8344788d150"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "index",
+                "fieldLabel": null
+            },
+            "designerId": "aefc1061-1552-404e-8dd9-1dd2799b49ad"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "classId",
+                "fieldLabel": null
+            },
+            "designerId": "a685a138-f05c-400e-bfa2-c7ead28973bd"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "graphName",
+                "fieldLabel": null
+            },
+            "designerId": "46c441c8-e98f-40b4-b741-653178b987eb"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "roleName",
+                "fieldLabel": null
+            },
+            "designerId": "a228190b-c727-40ee-a4a4-d9d3f101e701"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "contextName",
+                "fieldLabel": null
+            },
+            "designerId": "164e16dd-2e4e-4256-89a3-e1c6f2bdd753"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "endpoint",
+                "fieldLabel": null
+            },
+            "designerId": "ac1e9480-9528-4887-a952-3745bdf1789e"
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField54",
+                "name": "baseUrl",
+                "fieldLabel": null
+            },
+            "designerId": "5d395eae-25de-4bbb-b10f-eaf2205f1c1d"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "designer|userClassName": "MyToolbar12"
+            },
+            "designerId": "6fcbf2f4-b468-43a7-a162-fb16f4768695",
+            "cn": [
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill8"
+                    },
+                    "designerId": "d65acdf9-8463-47df-803d-40d8a8d2ae43"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton20",
+                        "text": "Ok"
+                    },
+                    "designerId": "6c1de92d-8d45-4856-9eaa-b712134686aa",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onSave();"
+                                ]
+                            },
+                            "designerId": "a7e6a3f1-c478-4e51-beee-2f6421ca38e2"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton21",
+                        "text": "Cancel"
+                    },
+                    "designerId": "c37ff24a-514f-4102-9e28-18d21b3bc376",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "me.onReset();"
+                                ]
+                            },
+                            "designerId": "8e5cbdfa-bdd2-4231-b516-29581aa241c8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFormAfterRender",
+                "fn": "onFormAfterRender",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var pcont = me.down('#mvlfpcontainer');\r",
+                    "var ccont = me.down('#mvlfccontainer');\r",
+                    "\r",
+                    "var propertydd = new Ext.dd.DropTarget(pcont.getEl(), {\r",
+                    "  ddGroup: 'propertyGroup',\r",
+                    "  notifyEnter: function (dd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'DataPropertyNode')\r",
+                    "    return me.dropNotAllowed;\r",
+                    "    else\r",
+                    "    return me.dropAllowed;\r",
+                    "  },\r",
+                    "  notifyOver: function (dd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'DataPropertyNode')\r",
+                    "    return me.dropNotAllowed;\r",
+                    "    else\r",
+                    "    return me.dropAllowed;\r",
+                    "  },\r",
+                    "  notifyDrop: function (dd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'DataPropertyNode') {\r",
+                    "      return false;\r",
+                    "    }\r",
+                    "    else {\r",
+                    "      me.getForm().findField('propertyName').setValue(data.records[0].data.property.Name);\r",
+                    "      me.getForm().findField('relatedObject').setValue(data.records[0].data.record.Ralated);\r",
+                    "      var msg = 'Property: ' + data.records[0].data.record.Name;\r",
+                    "      pcont.update(msg);\r",
+                    "      return true;\r",
+                    "    }\r",
+                    "  } //eo notifyDrop\r",
+                    "}); //eo propertydd\r",
+                    "\r",
+                    "var classdd = new Ext.dd.DropTarget(ccont.getEl(), {\r",
+                    "  ddGroup: 'propertyGroup',\r",
+                    "  notifyEnter: function (dd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'ValueListNode')\r",
+                    "    return me.dropNotAllowed;\r",
+                    "    else\r",
+                    "    return me.dropAllowed;\r",
+                    "  },\r",
+                    "  notifyOver: function (dd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'ValueListNode')\r",
+                    "    return me.dropNotAllowed;\r",
+                    "    else\r",
+                    "    return me.dropAllowed;\r",
+                    "  },\r",
+                    "  notifyDrop: function (classdd, e, data) {\r",
+                    "    if (data.records[0].data.type != 'ValueListNode') {\r",
+                    "      var message = 'Please slect a ValueList Node...';\r",
+                    "      showDialog(400, 100, 'Warning', message, Ext.Msg.OK, null);\r",
+                    "      return false;\r",
+                    "    }\r",
+                    "    me.getForm().findField('valueListName').setValue(data.records[0].data.record.record.name);\r",
+                    "    var msg = 'Value List: ' + data.records[0].data.record.record.name ;\r",
+                    "    ccont.update(msg);\r",
+                    "    return true;\r",
+                    "\r",
+                    "  } //eo notifyDrop\r",
+                    "}); //eo propertydd"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "designerId": "7239d61e-9dc6-404e-ba5e-86786843494e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onReset",
+                "fn": "onReset",
+                "implHandler": [
+                    "var me = this;\r",
+                    "win = me.up('window');\r",
+                    "win.fireEvent('reset', me);"
+                ]
+            },
+            "designerId": "fbb35171-3dd9-45ca-bcd4-46f620a9bae0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSave",
+                "fn": "onSave",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var win = me.up('window');\r",
+                    "var form = me.getForm();\r",
+                    "\r",
+                    "form.submit({\r",
+                    "  waitMsg: 'Saving Data...',\r",
+                    "  success: function (result, request) {\r",
+                    "    win.fireEvent('save', me);\r",
+                    "  },\r",
+                    "  failure: function (result, request) {\r",
+                    "    var message = 'Failed to Map ValueList to RoleMap';\r",
+                    "    showDialog(400, 100, 'Warning', message, Ext.Msg.OK, null);\r",
+                    "  }\r",
+                    "});"
+                ]
+            },
+            "designerId": "53066816-d4e9-4e41-834d-5a2cbdcf86d2"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "anchor": "100%",
+                "designer|userClassName": "mapping.PropertyContainer",
+                "designer|userAlias": "propertycontainer",
+                "html": [
+                    "Drop a Property Node here."
+                ],
+                "itemId": "mvlfpcontainer",
+                "style": [
+                    "border:1px silver solid;margin:5px;padding:8px;height:40px"
+                ],
+                "styleHtmlContent": true,
+                "anchorSize": null
+            },
+            "designerId": "afb8c092-88cb-4d3c-ab52-a2a069a19526",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "anchor",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "anchor": "100%",
+                "designer|userClassName": "mapping.ClassContainer",
+                "designer|userAlias": "classcontainer",
+                "height": null,
+                "html": [
+                    "Drop a Class Node here."
+                ],
+                "itemId": "mvlfccontainer",
+                "style": [
+                    "border:1px silver solid;margin:5px;padding:8px;height:40px"
+                ],
+                "styleHtmlContent": true,
+                "width": null
+            },
+            "designerId": "13f66bcb-80df-4c8c-a053-b91315952c53",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "anchor",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "updateDDContainers",
+                "fn": "updateDDContainers",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "var pcon = me.down('#propertycontainer');\r",
+                    "var ccon = me.down('#classcontainer');\r",
+                    "var identifier, label;\r",
+                    "if(record.record) {\r",
+                    "  identifier = getLastXString(record.record.classTemplateMaps[0].classMap.identifiers[0], 1).split('.')[1];\r",
+                    "  label = record.record.classTemplateMaps[0].classMap.name;\r",
+                    "} else {\r",
+                    "  return true;\r",
+                    "}\r",
+                    "identifier = 'Property: ' + identifier;\r",
+                    "pcon.update(identifier);\r",
+                    "\r",
+                    "  var classlabel = 'Value List: ' + label;\r",
+                    "ccon.update(classlabel);"
+                ]
+            },
+            "designerId": "0b2aafdd-8c9f-422e-adbe-8c5fec961a32"
+        }
+    ]
+}

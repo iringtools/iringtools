@@ -1,0 +1,63 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.ValueListMapMenu",
+        "designer|userAlias": "valuelistmapmenu",
+        "floating": true,
+        "width": 130
+    },
+    "id": "ExtBox1-ext-gen37957",
+    "designerId": "ad5ba951-df8b-4126-a31c-144ce15fb6a1",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "editnewvaluemap",
+                "designer|userClassName": "MyMenuItem24",
+                "itemId": "editvaluemap",
+                "icon": "Content/img/16x16/document-properties.png",
+                "text": "Edit ValueMap"
+            },
+            "designerId": "3bc76631-79f3-440c-8fed-a30192af538c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "deletevaluemap",
+                "designer|userClassName": "MyMenuItem25",
+                "icon": "Content/img/16x16/edit-delete.png",
+                "text": "Delete ValueMap"
+            },
+            "designerId": "7a17aafd-edde-45fa-88cf-9690412b9e93",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

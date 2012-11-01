@@ -1,0 +1,276 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "nhibernate.SetPropertyForm",
+        "designer|userAlias": "setpropertyform",
+        "height": null,
+        "width": 400,
+        "bodyPadding": 10,
+        "bodyStyle": [
+            "background:#eee;padding:10px 0px 0px 10px"
+        ],
+        "title": null
+    },
+    "id": "ExtBox1-ext-gen3081",
+    "designerId": "d1c34e2a-9007-4641-b713-a25c592fadbd",
+    "cn": [
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel8",
+                "cls": "x-form-item",
+                "style": [
+                    "font-weight:bold;"
+                ],
+                "text": "Data Property"
+            },
+            "designerId": "996f144f-a6f4-40d8-a576-72bfe584a14c"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "columnName",
+                "readOnly": true,
+                "fieldLabel": "Column Name",
+                "labelWidth": 160
+            },
+            "designerId": "94332b66-0b83-4fd8-a427-a5849b01871f"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "propertyName",
+                "readOnly": false,
+                "fieldLabel": "Property Name (editable)",
+                "labelWidth": 160,
+                "allowBlank": false,
+                "regex": "/^[a-zA-Z_][a-zA-Z0-9_]*$/",
+                "regexText": "<b>Error</b></br>Invalid Value. A valid value should start with alphabet or \"_\", and follow by any number of \"_\", alphabet, or number characters"
+            },
+            "designerId": "3606017f-6f3e-48f8-98a4-5a909a556b35"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "dataType",
+                "readOnly": true,
+                "fieldLabel": "Data Type",
+                "labelWidth": 160
+            },
+            "designerId": "c839ad66-7968-43d3-922b-771db9a21566"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "dataLength",
+                "readOnly": true,
+                "fieldLabel": "Data Length",
+                "labelWidth": 160
+            },
+            "designerId": "efb80e26-5f12-4b5e-b534-fe641a3fee48"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "nullable",
+                "readOnly": true,
+                "fieldLabel": "Nullable",
+                "labelWidth": 160
+            },
+            "designerId": "78fdf052-b93f-4c29-b770-48aac7de154c"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "showOnIndex",
+                "readOnly": true,
+                "fieldLabel": "Show On Index",
+                "labelWidth": 160
+            },
+            "designerId": "a1060b2d-66fa-44bb-8c10-0cfa284d76f5"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField32",
+                "name": "numberOfDecimals",
+                "readOnly": true,
+                "fieldLabel": "Number of Decimals",
+                "labelWidth": 160
+            },
+            "designerId": "462404b2-dfb7-4843-85ad-3476f0b65a69"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "container|padding": 4,
+                "designer|userClassName": "MyToolbar24"
+            },
+            "designerId": "6bf00d34-09cc-4a30-829f-d7e86a39f428",
+            "cn": [
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer17",
+                        "width": 4
+                    },
+                    "designerId": "59a45ae1-c9bb-4559-aa79-17d5e72ca77f"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "savedataproperty",
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton48",
+                        "iconCls": "am-apply",
+                        "text": "Apply"
+                    },
+                    "designerId": "e02b4bcf-6f83-4ed9-9e19-ce3451f1be03",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer17",
+                        "width": 4
+                    },
+                    "designerId": "99437475-c75b-4e2b-a094-d355cb1fe74c"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "resetdataproperty",
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton48",
+                        "iconCls": "am-edit-clear",
+                        "text": "Reset"
+                    },
+                    "designerId": "4938890b-1b33-4e30-a084-30a2c6c774b7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setActiveRecord",
+                "fn": "setActiveRecord",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "if (record) {\r",
+                    "  me.getForm().setValues(record);\r",
+                    "} else {\r",
+                    "  me.getForm().reset();\r",
+                    "}"
+                ]
+            },
+            "designerId": "098c46bc-9f5f-462c-a9e3-c54dacb2674f"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.GraphsMenu",
+        "designer|userAlias": "graphsmenu",
+        "floating": true,
+        "width": 130
+    },
+    "id": "ExtBox1-ext-gen39536",
+    "designerId": "59c25f62-ca8a-48dc-b894-74dee72752b3",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "editnewgraph",
+                "designer|userClassName": "MyMenuItem26",
+                "icon": "Content/img/16x16/document-new.png",
+                "text": "New GraphMap"
+            },
+            "designerId": "aafe140f-7498-45f4-ba1a-08fb1b2f1e95",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

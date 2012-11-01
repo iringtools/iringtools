@@ -1,0 +1,198 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "nhibernate.MultiSelectionGrid",
+        "designer|userAlias": "multiselectiongrid",
+        "height": null,
+        "maxHeight": 260,
+        "maxWidth": null,
+        "width": null,
+        "autoScroll": true,
+        "frameHeader": false,
+        "header": false,
+        "title": null,
+        "enableColumnHide": false,
+        "enableColumnMove": false,
+        "enableColumnResize": false,
+        "scroll": "vertical",
+        "sortableColumns": false,
+        "store": "MultiStore"
+    },
+    "id": "ExtBox1-ext-gen55549",
+    "designerId": "806180c3-0c42-425f-b6f1-5b85a7b5017b",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadItems",
+                "fn": "loadItems",
+                "designer|params": [
+                    "items"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "var store = me.getStore();\r",
+                    "store.removeAll();\r",
+                    "var records = [];\r",
+                    "\r",
+                    "Ext.each(items, function(item) {\r",
+                    "  records.push({'DisplayField': item});\r",
+                    "});\r",
+                    "\r",
+                    "store.add(records);"
+                ]
+            },
+            "designerId": "7288c958-b431-4082-8850-fad847e355e2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "selectItems",
+                "fn": "selectItems",
+                "designer|params": [
+                    "items"
+                ],
+                "implHandler": [
+                    "var me = this;\r",
+                    "var sm = me.getSelectionModel();\r",
+                    "var selected = sm.getSelection();\r",
+                    "var store = me.getStore();\r",
+                    "sm.bindStore(store);\r",
+                    "var records = [];\r",
+                    "Ext.each(items, function(item) {\r",
+                    "  var record = store.findRecord('DisplayField', item);\r",
+                    "  if(record) {\r",
+                    "    records.push(record); \r",
+                    "  }           \r",
+                    "});\r",
+                    "\r",
+                    "sm.select(records, true, true);\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "029ebf7a-d52a-43fe-b6fa-dc367fcae10b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getSelectedItems",
+                "fn": "getSelectedItems",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var store = me.getStore();\r",
+                    "var selectionModel = me.getSelectionModel();\r",
+                    "var items = [];\r",
+                    "\r",
+                    "Ext.each(selectionModel.getSelection(), function(record) {\r",
+                    "  items.push(record.get('DisplayField'));\r",
+                    "});"
+                ]
+            },
+            "designerId": "89b2cd7e-33f8-4f96-b5dc-4740922f8384"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getAllItemNames",
+                "fn": "getAllItemNames",
+                "implHandler": [
+                    "var me = this;\r",
+                    "var store = me.getStore();\r",
+                    "var items = [];\r",
+                    "var count = store.getCount();\r",
+                    ""
+                ]
+            },
+            "designerId": "11b00b3c-148f-4b21-983a-2c93abe50fe0"
+        },
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView1"
+            },
+            "designerId": "b8b8dc12-7072-478f-9f73-ca3931d6f06c"
+        },
+        {
+            "type": "rowselectionmodel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.RowModel",
+            "userConfig": {
+                "designer|userClassName": "MyRowSelectionModel",
+                "mode": "MULTI"
+            },
+            "designerId": "81422dda-83e9-4cb4-8811-f0178769bc3b"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn6",
+                "width": 220,
+                "align": "center",
+                "dataIndex": "DisplayField",
+                "text": "DisplayField"
+            },
+            "designerId": "a4be971a-e012-42f6-be4d-5f879c0fe725",
+            "cn": [
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "setText",
+                        "fn": "setText",
+                        "designer|params": [
+                            "text"
+                        ],
+                        "implHandler": [
+                            "this.text = text;"
+                        ]
+                    },
+                    "designerId": "5ecaca99-216b-4945-bd35-31638c930292"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mapping.PropertyMapWindow",
+        "designer|userAlias": "propertymapwindow",
+        "floating": true,
+        "height": 140,
+        "width": 430,
+        "layout": "fit",
+        "title": "Map Data Property to RoleMap"
+    },
+    "id": "ExtBox1-ext-gen73310",
+    "designerId": "30a9aae0-b8d9-4577-bd7d-c9c9ae4978d3",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "PropertyMapForm"
+            },
+            "designerId": "001f96e1-ae57-4938-b430-bbb310279b2c",
+            "masterInstanceId": "ExtBox1-ext-gen73812"
+        }
+    ]
+}

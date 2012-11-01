@@ -1,0 +1,381 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "nhibernate.ConfigRelationForm",
+        "designer|userAlias": "configrelationform",
+        "height": null,
+        "width": null,
+        "bodyPadding": null,
+        "bodyStyle": [
+            "background:#eee;padding:10 0 0 10"
+        ],
+        "title": null
+    },
+    "id": "ExtBox1-ext-gen21986",
+    "designerId": "ef191768-2bd4-46be-864b-6386fbb488a5",
+    "cn": [
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel9",
+                "cls": "x-form-item",
+                "style": [
+                    "font-weight:bold;"
+                ],
+                "text": "Configure Relationship"
+            },
+            "designerId": "528dde09-4029-4027-87d5-0d7ce455debe"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField39",
+                "name": "relationshipName",
+                "fieldLabel": "Relationship Name",
+                "labelWidth": 160,
+                "allowBlank": false
+            },
+            "designerId": "122595ff-0943-4dc6-a9a5-31b91573fbec"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyTextField39",
+                "name": "objectName",
+                "readOnly": true,
+                "fieldLabel": "Object Name",
+                "labelWidth": 160,
+                "allowBlank": false
+            },
+            "designerId": "0acef42a-c096-48c2-9bef-6bbb9a33a25e"
+        },
+        {
+            "type": "combobox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyComboBox5",
+                "name": "relatedObjectName",
+                "fieldLabel": "Related Object Name",
+                "labelWidth": 160,
+                "selectOnFocus": true,
+                "editable": false,
+                "queryMode": "local",
+                "store": "RelatedObjectStore",
+                "valueField": "value"
+            },
+            "designerId": "7653805a-1914-4c72-b309-f4128eee9c5a",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onRelatedObjectSelect",
+                        "fn": "onRelatedObjectSelect",
+                        "implHandler": [
+                            "var me = this;\r",
+                            "var form = combo.up('configrelationform');\r",
+                            "var relatedObjectName = record[0].data.text;\r",
+                            "\r",
+                            "if (relatedObjectName !== '') {\r",
+                            "  var relatedDataObjectNode = rootNode.findChild('text', relatedObjectName);\r",
+                            "  var relationConfigPanel = me.getForm();\r",
+                            "  var mappingProperties = [];\r",
+                            "\r",
+                            "  if (relatedDataObjectNode.childNodes[1]) {\r",
+                            "    keysNode = relatedDataObjectNode.childNodes[0];\r",
+                            "    propertiesNode = relatedDataObjectNode.childNodes[1];\r",
+                            "    var ii = 0;\r",
+                            "\r",
+                            "    for (var i = 0; i < keysNode.childNodes.length; i++) {\r",
+                            "      mappingProperties.push([ii, keysNode.childNodes[i].data.text, \r",
+                            "                        keysNode.childNodes[i].data.property.columnName]);\r",
+                            "      ii++;\r",
+                            "    }\r",
+                            "\r",
+                            "    for (var j = 0; j < propertiesNode.childNodes.length; j++) {\r",
+                            "      mappingProperties.push([ii, propertiesNode.childNodes[j].data.text, \r",
+                            "                        propertiesNode.childNodes[j].data.property.columnName]);\r",
+                            "      ii++;\r",
+                            "    }\r",
+                            "  }\r",
+                            "\r",
+                            "  var mapCombo = relationConfigPanel.findField('mappingProperty');\r",
+                            "\r",
+                            "  if (mapCombo.store.data) {\r",
+                            "    mapCombo.store.removeAll();\r",
+                            "  }\r",
+                            "  mapCombo.setValue(null);\r",
+                            "  mapCombo.setRawValue(null);\r",
+                            "  mapCombo.store.loadData(mappingProperties);\r",
+                            "  var proxyData = findNodeRelatedObjMap(node, relatedObjectName);\r",
+                            "  var dataGridPanel = me.items.items[7];\r",
+                            "  var gridPane = dataGridPanel.items.items[0];\r",
+                            "  var store = gridPane.store;\r",
+                            "\r",
+                            "  if (store.data) {\r",
+                            "    gridPane.store.removeAll();\r",
+                            "  }\r",
+                            "\r",
+                            "  gridPane.store.loadData(proxyData);\r",
+                            "  dataGridPanel.doLayout();\r",
+                            "  relationConfigPanel.findField('relatedTable').setValue(relatedDataObjectNode.data.property.tableName);\r",
+                            "}"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "designerId": "98d69f33-c1c9-48fb-9cc7-7c8467854579"
+                }
+            ]
+        },
+        {
+            "type": "combobox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyComboBox6",
+                "name": "relationType",
+                "fieldLabel": "Relation Type",
+                "labelWidth": 160,
+                "editable": false,
+                "queryMode": "local",
+                "store": "[[0, 'OneToOne'], [1, 'OneToMany']]",
+                "valueField": "value"
+            },
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "11386bca-6d99-441f-b01b-3c1478532b53"
+        },
+        {
+            "type": "combobox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyComboBox7",
+                "name": "propertyName",
+                "fieldLabel": "Property Name",
+                "labelWidth": 160,
+                "editable": false,
+                "queryMode": "local",
+                "store": "Property",
+                "valueField": "value"
+            },
+            "designerId": "43a96c5d-22be-47dc-87e4-52da32918e32"
+        },
+        {
+            "type": "combobox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "designer|userClassName": "MyComboBox8",
+                "name": "mappingProperty",
+                "fieldLabel": "Mapping Property",
+                "labelWidth": 160,
+                "queryMode": "local",
+                "store": "Property",
+                "valueField": "value"
+            },
+            "designerId": "955d6b40-2cee-499c-a781-f21f54482a73"
+        },
+        {
+            "type": "gridpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridPanel4",
+                "title": null
+            },
+            "designerId": "2587d3da-60a4-492e-8c80-6321f7fac876",
+            "cn": [
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn7",
+                        "dataIndex": "string",
+                        "text": "String"
+                    },
+                    "designerId": "db0ec12c-5c8f-4fa5-9ff5-02b915881ff7"
+                },
+                {
+                    "type": "numbercolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyNumberColumn",
+                        "dataIndex": "number",
+                        "text": "Number"
+                    },
+                    "designerId": "110261ff-4339-47d3-82ce-137f2fd2537a"
+                },
+                {
+                    "type": "datecolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDateColumn",
+                        "dataIndex": "date",
+                        "text": "Date"
+                    },
+                    "designerId": "3211e59c-7b66-4782-bfa0-a10affa7c621"
+                },
+                {
+                    "type": "booleancolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyBooleanColumn",
+                        "dataIndex": "bool",
+                        "text": "Boolean"
+                    },
+                    "designerId": "fc0dec90-e0f1-425d-a719-5bce332846f9"
+                },
+                {
+                    "type": "gridview",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyGridView4"
+                    },
+                    "designerId": "e32ce2b6-f436-48a7-8e7f-03354bb65914"
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar26"
+                    },
+                    "designerId": "3b4cd5a7-356c-47f3-bb81-379744c21ac0",
+                    "cn": [
+                        {
+                            "type": "tbspacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySpacer19",
+                                "width": 4
+                            },
+                            "designerId": "05e61cf9-1741-4b7d-acee-040471973680"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton52",
+                                "iconCls": "am-list-add",
+                                "text": "Add"
+                            },
+                            "designerId": "70a9c190-e8cc-4a31-941c-bb2bc6fd520e"
+                        },
+                        {
+                            "type": "tbspacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySpacer19",
+                                "width": 4
+                            },
+                            "designerId": "5da12e96-3443-4c33-b949-45bca425fb86"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton52",
+                                "iconCls": "am-list-remove",
+                                "text": "Remove"
+                            },
+                            "designerId": "9d4d66fb-71a0-48c1-bb83-a98671c29651"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

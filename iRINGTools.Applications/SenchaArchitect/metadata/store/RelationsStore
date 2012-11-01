@@ -1,0 +1,15 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RelationsStore",
+        "storeId": "RelationsStore",
+        "model": "RelationNameModel"
+    },
+    "id": "ExtBox1-ext-gen6503",
+    "designerId": "b93d62e3-52fe-4c8d-af23-be3ef7516ff4"
+}

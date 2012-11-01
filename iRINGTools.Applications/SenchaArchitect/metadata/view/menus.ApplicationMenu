@@ -1,0 +1,99 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.ApplicationMenu",
+        "designer|userAlias": "applicationmenu",
+        "floating": true,
+        "minWidth": null,
+        "width": 140,
+        "minButtonWidth": 85
+    },
+    "id": "ExtBox1-ext-gen31027",
+    "designerId": "053fa732-8da3-4a99-b955-917bc25f4cbe",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "neweditendpoint",
+                "designer|userClassName": "MyMenuItem16",
+                "itemId": "editendpoint",
+                "icon": "Content/img/16x16/document-properties.png",
+                "text": "Edit Endpoint"
+            },
+            "designerId": "4d50d77d-fa94-4fa9-94d9-2572c0e30878",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "deleteendpoint",
+                "designer|userClassName": "MyMenuItem17",
+                "icon": "Content/img/16x16/edit-delete.png",
+                "text": "Delete Endpoint"
+            },
+            "designerId": "99e248d5-4d9a-47b9-b343-9443ed9217e3",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuseparator",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySeparator4"
+            },
+            "designerId": "f7bd238d-8ec3-4390-b0ab-a45d9676ee7c"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "configureendpoint",
+                "designer|userClassName": "MyMenuItem18",
+                "icon": "Content/img/16x16/preferences-system.png",
+                "text": "Open Configuration"
+            },
+            "designerId": "3e838626-e784-4a3a-ac70-51b020504467",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

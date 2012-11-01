@@ -1,0 +1,40 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.ValueListsMenu",
+        "designer|userAlias": "valuelistsmenu",
+        "floating": true,
+        "width": 130
+    },
+    "id": "ExtBox1-ext-gen34488",
+    "designerId": "bcfb38e6-e465-49d3-991a-a24f67f9cf6b",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "editnewvaluelist",
+                "designer|userClassName": "MyMenuItem20",
+                "icon": "Content/img/16x16/document-new.png",
+                "text": "New ValueList"
+            },
+            "designerId": "692cc2b9-e79b-43f5-98ea-a77ecf344d2d",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

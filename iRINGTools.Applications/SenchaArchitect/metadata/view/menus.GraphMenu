@@ -1,0 +1,131 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "menus.GraphMenu",
+        "designer|userAlias": "graphmenu",
+        "floating": true,
+        "width": 130
+    },
+    "id": "ExtBox1-ext-gen41155",
+    "designerId": "b89bd8a3-9e2c-4842-89a1-ab5f17dcc936",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "refreshfacade",
+                "designer|userClassName": "MyMenuItem27",
+                "icon": "Content/img/table_refresh.png",
+                "text": "Refresh Facade"
+            },
+            "designerId": "b9b1a8ac-a72a-4dae-bb71-5eba1d7ce6b9",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuseparator",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySeparator6"
+            },
+            "designerId": "d8f13301-0125-4b9b-9929-b7a3ef639c5e"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "editnewgraph",
+                "designer|userClassName": "MyMenuItem28",
+                "itemId": "editgraph",
+                "icon": "Content/img/16x16/document-properties.png",
+                "text": "Edit GraphMap"
+            },
+            "designerId": "58b2bace-c78e-4c08-ade2-9cf958031580",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "deletegraph",
+                "designer|userClassName": "MyMenuItem29",
+                "icon": "Content/img/16x16/edit-delete.png",
+                "text": "Delete GraphMap"
+            },
+            "designerId": "2d2e9394-85d9-4a7a-8b62-9b39f7c6751b",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "menuseparator",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySeparator7"
+            },
+            "designerId": "4641f6e8-7efc-4e51-bd00-91a1de6418a5"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": "opengraph",
+                "designer|userClassName": "MyMenuItem30",
+                "icon": "Content/img/16x16/mapping.png",
+                "text": "Open GraphMap"
+            },
+            "designerId": "590ecc15-5deb-4a8a-9f5c-c1c1b2f0c11a",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

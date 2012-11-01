@@ -1,0 +1,121 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "nhibernate.RelationsGrid",
+        "designer|userAlias": "relationsgrid",
+        "frame": false,
+        "height": null,
+        "width": null,
+        "title": null,
+        "store": "RelationsStore"
+    },
+    "id": "ExtBox1-ext-gen3617",
+    "designerId": "17fb1af5-2569-49f4-927f-dd778c03c1a1",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView3"
+            },
+            "designerId": "35dff96c-8b35-4b48-b88f-49375f2929f1"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn7",
+                "dataIndex": "relationName",
+                "flex": 1,
+                "text": "Data Relationship Name"
+            },
+            "designerId": "f6cd348b-ea01-4063-8a26-ac7a14217b68"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar25"
+            },
+            "designerId": "7c95afc6-03ba-41ff-ad6a-45aa1703d2b0",
+            "cn": [
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator10",
+                        "width": 4
+                    },
+                    "designerId": "6eaa1ece-8dda-4d7f-bec4-629735813f79"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton50",
+                        "iconCls": "am-list-add",
+                        "text": "Add"
+                    },
+                    "designerId": "488367e7-889f-4a22-9464-236f4a34609d"
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator10",
+                        "width": 4
+                    },
+                    "designerId": "f014aa2c-0f67-4e62-8feb-2a9c4321dde9"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton50",
+                        "iconCls": "am-list-remove",
+                        "text": "Remove"
+                    },
+                    "designerId": "c211764f-bd6c-408e-ae74-c248a751f887"
+                }
+            ]
+        }
+    ]
+}

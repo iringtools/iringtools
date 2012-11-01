@@ -1,0 +1,166 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "dirNode": "",
+        "designer|userClassName": "nhibernate.SelectTablesForm",
+        "designer|userAlias": "selecttablesform",
+        "border": false,
+        "frame": false,
+        "height": null,
+        "padding": null,
+        "width": null,
+        "autoScroll": true,
+        "bodyBorder": null,
+        "bodyPadding": 5,
+        "bodyStyle": [
+            "background:#eee;padding:10px 0px 0px 10px"
+        ],
+        "title": null
+    },
+    "configAlternates": {
+        "border": "boolean"
+    },
+    "id": "ExtBox1-ext-gen83723",
+    "designerId": "05fae04d-5364-4b78-98b9-ee7f6b53db35",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "dirNode",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "container|padding": 4,
+                "designer|userClassName": "MyToolbar19"
+            },
+            "designerId": "e779d4b1-634a-4a69-84b7-c87450211e57",
+            "cn": [
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer5",
+                        "width": 4
+                    },
+                    "designerId": "4cdd8c9c-836d-4fd2-91b8-e9576063f711"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "applyobjects",
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton36",
+                        "icon": null,
+                        "iconCls": "am-apply",
+                        "text": "Apply"
+                    },
+                    "designerId": "1899cc11-47d7-4b50-aa53-ad61f9b5f01b",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer5",
+                        "width": 4
+                    },
+                    "designerId": "9f9298ae-495e-4c42-a762-6fc826d563d3"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "resetobjects",
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton36",
+                        "icon": null,
+                        "iconCls": "am-edit-clear",
+                        "text": "Reset"
+                    },
+                    "designerId": "422ded33-7aef-47a5-97f0-9b24a500ec68",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "tablesSelectionGrid",
+                "minHeight": 200,
+                "title": null
+            },
+            "designerId": "8e09f020-8cb8-4d42-b93e-75414c32a7e0",
+            "masterInstanceId": "ExtBox1-ext-gen55549"
+        },
+        {
+            "type": "checkboxfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyCheckbox3",
+                "name": "enableSummary",
+                "value": [
+                    "off"
+                ],
+                "fieldLabel": "Enable Summary:",
+                "labelWidth": 150,
+                "boxLabel": null,
+                "inputValue": "off"
+            },
+            "designerId": "a28b81f3-4b5e-4856-894d-cadba9b88a8a"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DynamicModel"
+    },
+    "id": "ExtBox1-ext-gen5526",
+    "designerId": "f6d4d4d1-064f-4282-8b9e-1344fb991f23"
+}

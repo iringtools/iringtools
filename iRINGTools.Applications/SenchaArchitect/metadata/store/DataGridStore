@@ -1,0 +1,62 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DataGridStore",
+        "autoLoad": true,
+        "remoteSort": true,
+        "storeId": "DataGridStore",
+        "model": "DynamicModel",
+        "pageSize": 25
+    },
+    "id": "ExtBox1-ext-gen67787",
+    "designerId": "bd0c2146-a07f-405b-85d7-72edd111ce14",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{\"read\":\"POST\"}"
+                ],
+                "designer|userClassName": "MyAjaxProxy3",
+                "extraParams": [
+                    "{context: null, start: 0, limit: 25, endpoint: null, graph: null, baseUrl: null}"
+                ],
+                "timeout": 600000,
+                "url": "datagrid/getdata"
+            },
+            "designerId": "b0af7d9e-bcbe-4b52-b5ba-d68ca976b737",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "object"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader3",
+                        "totalProperty": "totalCount"
+                    },
+                    "designerId": "9a65677e-94fc-42bd-987e-c085691146af"
+                }
+            ]
+        }
+    ]
+}

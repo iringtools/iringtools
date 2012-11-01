@@ -1,0 +1,106 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NHibernateTreeModel"
+    },
+    "id": "ExtBox1-ext-gen5946",
+    "designerId": "7e27edd9-2ea5-4b7a-951d-7831275af995",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField19",
+                "name": "id"
+            },
+            "designerId": "c56e8fd4-5ace-4473-a6c9-fe4f3770f5c2"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField20",
+                "name": "hidden"
+            },
+            "designerId": "ff054e06-f718-4d1f-b9fa-e29ce36da784"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField21",
+                "name": "property"
+            },
+            "designerId": "43cdec8b-8b61-45ee-b90e-4098855d44de"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField22",
+                "name": "identifier"
+            },
+            "designerId": "0be4ee24-f9e4-43a8-afce-100a805e105d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField23",
+                "name": "text"
+            },
+            "designerId": "add74d9b-8dfd-4378-b8a9-73002a123f10"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField24",
+                "name": "type"
+            },
+            "designerId": "b5443ffa-1991-47eb-8920-b11d9b76884c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField25",
+                "name": "record"
+            },
+            "designerId": "2bbf5e5f-5add-4ddf-a0c0-48d3adc66a4b"
+        }
+    ]
+}
