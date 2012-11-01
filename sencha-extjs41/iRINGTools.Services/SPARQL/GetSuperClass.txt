@@ -1,9 +1,0 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dm: <http://dm.rdlfacade.org/data#> 
-PREFIX rdl: <http://rdl.rdlfacade.org/data#> 
-SELECT ?uri ?label 
-WHERE {
-?s dm:hasSubclass   rdl:param1 . 
-?s dm:hasSuperclass ?uri . 
-OPTIONAL { ?uri rdfs:label ?label }
-} 

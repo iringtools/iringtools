@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Lines total="32" xmlns="http://www.example.com/ABC/12345_000/">
-  <PipingNetworkSystem>http://www.example.com/ABC/12345_000//Lines/90011-O</PipingNetworkSystem>
-  <PipingNetworkSystem>http://www.example.com/ABC/12345_000//Lines/90012-O</PipingNetworkSystem>
-  <PipingNetworkSystem>http://www.example.com/ABC/12345_000//Lines/90013-O</PipingNetworkSystem>
-  <PipingNetworkSystem>http://www.example.com/ABC/12345_000//Lines/90014-RV</PipingNetworkSystem>
-  <PipingNetworkSystem>http://www.example.com/ABC/12345_000//Lines/90020-O</PipingNetworkSystem>
-</Lines>

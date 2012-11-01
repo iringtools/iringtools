@@ -1,9 +1,0 @@
-﻿PREFIX rdl: <http://rdl.rdlfacade.org/data#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-SELECT DISTINCT ?uri ?label  
-{  
-    rdl:param1 a ?uri . 
-    OPTIONAL{ ?uri rdfs:label ?label . } 
-    FILTER (?uri != rdl:param1 && isIRI(?uri) && ?uri != owl:Class ) 
-}

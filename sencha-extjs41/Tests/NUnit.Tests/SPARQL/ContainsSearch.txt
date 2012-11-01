@@ -1,7 +1,0 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-SELECT ?uri ?label
-{ 
-  ?uri rdfs:label ?label .
-  FILTER (isLiteral(?label) && regex(str(?label),'param1','i'))
-}
-ORDER BY ?label

@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="DbDictionaryEditor.Web.DbDictionaryService" CodeBehind="DbDictionaryService.svc.cs" %>

@@ -1,5 +1,0 @@
-create table idGeneratorLog (srno int, url varchar(500),  idnumber varchar(50), comment varchar(100));
-
-
-insert into idGeneratorLog ( srno , url, idnumber, comment)
-values (1, 'http://dm.demolink.org/data#', 'R69978416937','demo');

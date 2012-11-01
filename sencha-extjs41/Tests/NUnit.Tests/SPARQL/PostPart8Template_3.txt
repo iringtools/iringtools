@@ -1,1 +1,0 @@
-rdfs:comment "param1"^^xsd:string

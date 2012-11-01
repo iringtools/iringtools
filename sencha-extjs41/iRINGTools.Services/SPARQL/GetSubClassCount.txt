@@ -1,9 +1,0 @@
-PREFIX dm: <http://dm.rdlfacade.org/data#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX rdl: <http://rdl.rdlfacade.org/data#> 
-SELECT (COUNT(?uri) AS ?label) 
-{
-  ?s dm:hasSuperclass rdl:param1 . 
-  ?s dm:hasSubclass ?uri . 
-  ?uri rdfs:label ?label 
-} 

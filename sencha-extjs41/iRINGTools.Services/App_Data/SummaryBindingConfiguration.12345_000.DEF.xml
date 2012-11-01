@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<module name="SummaryBinding.12345_000.DEF">
-  <bind name="SummaryBinding" service="org.iringtools.nhibernate.ISummary, NHibernateLibrary" to="org.iringtools.nhibernate.ext.NHibernateSummary, NHibernateExtension" />
-</module>

@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<module name="AuthorizationBinding.12345.ABC">
-  <bind name="AuthorizationBinding" 
-		service="org.iringtools.nhibernate.IAuthorization, NHibernateLibrary" 
-		to="org.iringtools.nhibernate.ext.NHibernateAuthorization, NHibernateExtension" />
-</module>
